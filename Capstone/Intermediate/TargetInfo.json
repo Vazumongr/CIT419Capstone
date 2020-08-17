@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Capstone",
+			"Path": "C:\\Users\\troy\\Documents\\Repositories\\Githubslabs\\CIT419Capstone\\CIT419Capstone\\Capstone\\Source\\Capstone.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "CapstoneEditor",
+			"Path": "C:\\Users\\troy\\Documents\\Repositories\\Githubslabs\\CIT419Capstone\\CIT419Capstone\\Capstone\\Source\\CapstoneEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

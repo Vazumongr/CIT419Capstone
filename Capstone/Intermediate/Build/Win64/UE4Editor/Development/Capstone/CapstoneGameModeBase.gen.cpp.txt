@@ -1,0 +1,9 @@
+C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Definitions.Capstone.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Source\Capstone/CapstoneGameModeBase.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+c:\users\troy\documents\repositories\githubslabs\cit419capstone\cit419capstone\capstone\intermediate\build\win64\ue4editor\inc\capstone\CapstoneGameModeBase.generated.h

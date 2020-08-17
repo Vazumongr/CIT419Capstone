@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Capstone.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{8E221E61-7F50-4C82-A5CE-83340E080919}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Capstone.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\CapstoneEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{059101CA-D107-4D37-9403-D9C41CFC8A1C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Capstone">
+      <UniqueIdentifier>{E37B6691-A8BC-4C89-B896-F22D226C4806}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Capstone\Capstone.Build.cs">
+      <Filter>Source\Capstone</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Capstone\Capstone.cpp">
+      <Filter>Source\Capstone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Capstone\Capstone.h">
+      <Filter>Source\Capstone</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Capstone\CapstoneGameModeBase.cpp">
+      <Filter>Source\Capstone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Capstone\CapstoneGameModeBase.h">
+      <Filter>Source\Capstone</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

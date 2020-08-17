@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Capstone.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Intermediate\Build\Win64\CapstoneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Capstone.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\CapstoneGameModeBase.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Capstone.init.gen.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\CapstoneGameModeBase.gen.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Default.rc2.res"
+/OUT:"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\UE4Editor-Capstone.lib"
+/INCLUDE:IMPLEMENT_MODULE_Capstone

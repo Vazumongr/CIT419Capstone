@@ -3,10 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Capstone/Characters/PlayerCharacter.h"
-#include "Capstone/Controllers/ObservingPlayerController.h"
-#include "Capstone/Controllers/PlayerAIController.h"
-#include "Capstone/Pawns/ObservingPawn.h"
+
 #include "GameFramework/GameModeBase.h"
 #include "MainGameMode.generated.h"
 
@@ -24,13 +21,13 @@ public:
 private:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<APlayerCharacter> PlayerCharacterClass;
+	TSubclassOf<class APlayerCharacter> PlayerCharacterClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<AObservingPawn> ObservingPawnClass;
+	TSubclassOf<class AObservingPawn> ObservingPawnClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<AObservingPlayerController> ObservingPlayerControllerClass;
+	TSubclassOf<class AObservingPlayerController> ObservingPlayerControllerClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<APlayerAIController> PlayerAIControllerClass;
+	TSubclassOf<class APlayerAIController> PlayerAIControllerClass;
 	
 	
 };

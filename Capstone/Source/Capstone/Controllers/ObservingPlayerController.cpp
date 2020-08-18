@@ -26,3 +26,13 @@ void AObservingPlayerController::ToggleCameraLock()
 {
     UE_LOG(LogTemp, Warning, TEXT("ToggleCameraLock"));
 }
+
+void AObservingPlayerController::SetPlayerAIController(APlayerAIController* InController)
+{
+    PlayerAIController = InController;
+}
+
+void AObservingPlayerController::SetObservingPawn(AObservingPawn* InPawn)
+{
+    ObservingPawn = InPawn;
+}

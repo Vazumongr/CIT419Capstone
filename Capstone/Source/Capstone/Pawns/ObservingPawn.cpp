@@ -2,9 +2,11 @@
 
 
 #include "ObservingPawn.h"
+
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Components/SceneComponent.h"
+#include "Capstone/Controllers/ObservingPlayerController.h"
 
 // Sets default values
 AObservingPawn::AObservingPawn()
@@ -42,5 +44,10 @@ void AObservingPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void AObservingPawn::SetPlayerController(APlayerController* InController)
+{
+	ObservingPlayerController = Cast<AObservingPlayerController>(InController);
 }
 

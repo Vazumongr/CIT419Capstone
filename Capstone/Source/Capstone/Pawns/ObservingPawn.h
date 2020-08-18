@@ -34,4 +34,12 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* SpringArmComponent = nullptr;
 
+public:
+	void SetPlayerController(class APlayerController* InController);
+	
+	FORCEINLINE class AObservingPlayerController* GetPlayerController() const { return ObservingPlayerController; }
+
+private:
+	AObservingPlayerController* ObservingPlayerController = nullptr;
+
 };

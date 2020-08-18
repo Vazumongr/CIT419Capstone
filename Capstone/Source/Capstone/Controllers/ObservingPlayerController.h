@@ -24,5 +24,15 @@ private:
     void MoveCommand();
     UFUNCTION()
     void ToggleCameraLock();
+
+public:
+    void SetPlayerAIController(class APlayerAIController* InController);
+    void SetObservingPawn(class AObservingPawn* InPawn);
+    FORCEINLINE APlayerAIController* GetPlayerAIController() const { return PlayerAIController; }
+    FORCEINLINE AObservingPawn* GetObservingPawn() const { return ObservingPawn; }
+
+private:
+    APlayerAIController* PlayerAIController = nullptr;
+    AObservingPawn* ObservingPawn = nullptr;
     
 };

@@ -1,4 +1,4 @@
-C:/Users/troy/Documents/Repositories/Githubslabs/CIT419Capstone/CIT419Capstone/Capstone/Intermediate/Build/Win64/CapstoneEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h
+C:/Users/troy/Documents/Repositories/Githubslabs/CIT419Capstone/Capstone/Intermediate/Build/Win64/CapstoneEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h
 C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Public/EngineSharedPCH.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/ContainersFwd.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\CoreTypes.h

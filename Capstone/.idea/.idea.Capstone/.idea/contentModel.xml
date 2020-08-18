@@ -43381,14 +43381,17 @@
       <e p="UE4Game.Target.cs" t="Include" />
     </e>
     <e p="C:\Users\troy\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\troy\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Capstone.562128379.00" t="ExcludeRecursive" />
-    <e p="C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\CIT419Capstone\Capstone" t="IncludeFlat">
+    <e p="C:\Users\troy\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Capstone.-1413962640.00" t="ExcludeRecursive" />
+    <e p="C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
       <e p="Capstone.sln" t="IncludeFlat" />
       <e p="Capstone.uproject" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
+        <e p="DefaultEditorPerProjectUserSettings.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
         <e p="DefaultGame.ini" t="Include" />
+        <e p="DefaultInput.ini" t="Include" />
       </e>
       <e p="Engine" t="Include" />
       <e p="Games" t="Include" />
@@ -43405,6 +43408,24 @@
           <e p="Capstone.h" t="Include" />
           <e p="CapstoneGameModeBase.cpp" t="Include" />
           <e p="CapstoneGameModeBase.h" t="Include" />
+          <e p="Characters" t="Include">
+            <e p="PlayerCharacter.cpp" t="Include" />
+            <e p="PlayerCharacter.h" t="Include" />
+          </e>
+          <e p="Controllers" t="Include">
+            <e p="ObservingPlayerController.cpp" t="Include" />
+            <e p="ObservingPlayerController.h" t="Include" />
+            <e p="PlayerAIController.cpp" t="Include" />
+            <e p="PlayerAIController.h" t="Include" />
+          </e>
+          <e p="GameModes" t="Include">
+            <e p="MainGameMode.cpp" t="Include" />
+            <e p="MainGameMode.h" t="Include" />
+          </e>
+          <e p="Pawns" t="Include">
+            <e p="ObservingPawn.cpp" t="Include" />
+            <e p="ObservingPawn.h" t="Include" />
+          </e>
         </e>
         <e p="Capstone.Target.cs" t="Include" />
         <e p="CapstoneEditor.Target.cs" t="Include" />

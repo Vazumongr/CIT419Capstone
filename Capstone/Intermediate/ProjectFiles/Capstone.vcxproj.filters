@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Capstone.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{8E221E61-7F50-4C82-A5CE-83340E080919}</UniqueIdentifier>
+      <UniqueIdentifier>{AAD774BF-252C-4D55-8A7B-3406D5D98A64}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Capstone.Target.cs">
       <Filter>Source</Filter>
@@ -11,10 +11,14 @@
     <None Include="..\..\Source\CapstoneEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{059101CA-D107-4D37-9403-D9C41CFC8A1C}</UniqueIdentifier>
+      <UniqueIdentifier>{BA08D430-52F3-42E3-BFBC-12F15CB53994}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
       <Filter>Config</Filter>
     </None>
     <None Include="..\..\Config\DefaultEngine.ini">
@@ -23,8 +27,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\Capstone">
-      <UniqueIdentifier>{E37B6691-A8BC-4C89-B896-F22D226C4806}</UniqueIdentifier>
+      <UniqueIdentifier>{40997EFF-1506-41BF-9E87-DD485811DF17}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Capstone\Capstone.Build.cs">
       <Filter>Source\Capstone</Filter>
@@ -40,6 +47,48 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Capstone\CapstoneGameModeBase.h">
       <Filter>Source\Capstone</Filter>
+    </ClInclude>
+    <Filter Include="Source\Capstone\Characters">
+      <UniqueIdentifier>{36222496-4BF2-487D-AF21-E4806A6D35A1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Capstone\Characters\PlayerCharacter.cpp">
+      <Filter>Source\Capstone\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Capstone\Characters\PlayerCharacter.h">
+      <Filter>Source\Capstone\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\Capstone\Controllers">
+      <UniqueIdentifier>{624EE5CB-5C3B-41E0-9E5A-61F74FBB8FF6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Capstone\Controllers\ObservingPlayerController.cpp">
+      <Filter>Source\Capstone\Controllers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Capstone\Controllers\ObservingPlayerController.h">
+      <Filter>Source\Capstone\Controllers</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Capstone\Controllers\PlayerAIController.cpp">
+      <Filter>Source\Capstone\Controllers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Capstone\Controllers\PlayerAIController.h">
+      <Filter>Source\Capstone\Controllers</Filter>
+    </ClInclude>
+    <Filter Include="Source\Capstone\GameModes">
+      <UniqueIdentifier>{08BDFC05-E6AD-4387-BC30-4A2FC1058AEA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Capstone\GameModes\MainGameMode.cpp">
+      <Filter>Source\Capstone\GameModes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Capstone\GameModes\MainGameMode.h">
+      <Filter>Source\Capstone\GameModes</Filter>
+    </ClInclude>
+    <Filter Include="Source\Capstone\Pawns">
+      <UniqueIdentifier>{E17041DB-0F35-44C7-8C37-56EA1DE2F71F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Capstone\Pawns\ObservingPawn.cpp">
+      <Filter>Source\Capstone\Pawns</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Capstone\Pawns\ObservingPawn.h">
+      <Filter>Source\Capstone\Pawns</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

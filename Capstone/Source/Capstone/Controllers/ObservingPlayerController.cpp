@@ -5,6 +5,7 @@
 
 #include "Kismet/KismetSystemLibrary.h"
 #include "Capstone/Controllers/PlayerAIController.h"
+#include "Capstone/Pawns/ObservingPawn.h"
 
 void AObservingPlayerController::BeginPlay()
 {
@@ -18,6 +19,7 @@ void AObservingPlayerController::SetupInputComponent()
     Super::SetupInputComponent();
     InputComponent->BindAction("MoveCommand", IE_Pressed, this, &AObservingPlayerController::MoveCommand);
     InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
+    InputComponent->BindAxis("CameraZoom", this, &AObservingPlayerController::CameraZoom);
 }
 
 void AObservingPlayerController::MoveCommand()
@@ -42,7 +44,17 @@ void AObservingPlayerController::MoveCommand()
 
 void AObservingPlayerController::ToggleCameraLock()
 {
-    UE_LOG(LogTemp, Warning, TEXT("ToggleCameraLock"));
+    ensure(ObservingPawn);
+    ObservingPawn->ToggleCameraLock();
+}
+
+void AObservingPlayerController::CameraZoom(float AxisValue)
+{
+    ensure(ObservingPawn);
+    if(AxisValue < 0)
+        ObservingPawn->CameraZoomOut();
+    else if(AxisValue > 0)
+        ObservingPawn->CameraZoomIn();
 }
 
 void AObservingPlayerController::SetPlayerAIController(APlayerAIController* InController)

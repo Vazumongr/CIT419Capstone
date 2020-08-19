@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeCapstone_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x0D65C894,
+				0x03BE0955,
 				0x34AB9F5C,
 				METADATA_PARAMS(nullptr, 0)
 			};

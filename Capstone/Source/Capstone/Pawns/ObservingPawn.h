@@ -26,6 +26,12 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Toggle the camera lock obvi
+	void ToggleCameraLock();
+
+	void CameraZoomOut();
+	void CameraZoomIn();
+
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	class USceneComponent* SceneComponent = nullptr;
@@ -34,12 +40,20 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* SpringArmComponent = nullptr;
 
+	UPROPERTY(EditAnywhere, Category = "Camera", meta = (AllowPrivateAccess = "true"))
+	bool CameraLocked = true;
+
+
+	// Setters and Getters. I want them out of my way
 public:
 	void SetPlayerController(class APlayerController* InController);
-	
+	void SetPlayerCharacter(class APlayerCharacter* InCharacter);
+
+	FORCEINLINE APlayerCharacter* GetPlayerCharacter() const { return PlayerCharacter; }
 	FORCEINLINE class AObservingPlayerController* GetPlayerController() const { return ObservingPlayerController; }
 
 private:
 	AObservingPlayerController* ObservingPlayerController = nullptr;
+	APlayerCharacter* PlayerCharacter = nullptr;
 
 };

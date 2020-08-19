@@ -24,6 +24,7 @@ void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* Ne
     AObservingPawn* ObservingPawn = GetWorld()->SpawnActor<AObservingPawn>(ObservingPawnClass, SpawnParameters);
     NewPlayer->Possess(ObservingPawn);
     ObservingPawn->SetPlayerController(NewPlayer);    // TODO this most likely isn't needed. Bad design to have a 2 way street.
+    ObservingPawn->SetPlayerCharacter(PlayerCharacter);
 
     if(AObservingPlayerController* ObservingPlayerController = Cast<AObservingPlayerController>(NewPlayer))
     {

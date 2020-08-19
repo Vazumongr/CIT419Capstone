@@ -7,6 +7,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Components/SceneComponent.h"
 #include "Capstone/Controllers/ObservingPlayerController.h"
+#include "Capstone/Characters/PlayerCharacter.h"
 
 // Sets default values
 AObservingPawn::AObservingPawn()
@@ -37,6 +38,14 @@ void AObservingPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	// TODO set my location to PlayerCharacter location if camera is locked
+	// I need a reference to PlayerCharacter now
+	if(CameraLocked)
+	{
+		ensure(PlayerCharacter);
+		SetActorLocation(PlayerCharacter->GetActorLocation());
+	}
+
 }
 
 // Called to bind functionality to input
@@ -46,8 +55,29 @@ void AObservingPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 }
 
+void AObservingPawn::ToggleCameraLock()
+{
+	CameraLocked = !CameraLocked;
+}
+
+// TODO get rid of magic numbers
+void AObservingPawn::CameraZoomOut()
+{
+	SpringArmComponent->TargetArmLength = FMath::Clamp(SpringArmComponent->TargetArmLength += 50.0f, 600.0f, 2000.0f);
+}
+// TODO get rid of magic numbers
+void AObservingPawn::CameraZoomIn()
+{
+	SpringArmComponent->TargetArmLength = FMath::Clamp(SpringArmComponent->TargetArmLength -= 50.0f, 600.0f, 2000.0f);
+}
+
 void AObservingPawn::SetPlayerController(APlayerController* InController)
 {
 	ObservingPlayerController = Cast<AObservingPlayerController>(InController);
+}
+
+void AObservingPawn::SetPlayerCharacter(APlayerCharacter* InCharacter)
+{
+	PlayerCharacter = InCharacter;
 }
 

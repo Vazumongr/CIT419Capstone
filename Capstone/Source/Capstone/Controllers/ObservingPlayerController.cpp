@@ -3,6 +3,9 @@
 
 #include "ObservingPlayerController.h"
 
+#include "Kismet/KismetSystemLibrary.h"
+#include "Capstone/Controllers/PlayerAIController.h"
+
 void AObservingPlayerController::BeginPlay()
 {
     Super::BeginPlay();
@@ -19,6 +22,21 @@ void AObservingPlayerController::SetupInputComponent()
 
 void AObservingPlayerController::MoveCommand()
 {
+    ensure(PlayerAIController);
+    FHitResult HitResult;
+    FVector WorldLocation, WorldDirection;
+    DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
+
+    FVector StartLocation = PlayerCameraManager->GetCameraLocation();
+    FVector EndLocation = (StartLocation + (WorldDirection * 50000));
+    
+    TArray<AActor*> ActorsToIgnore;
+
+    bool bHit = UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_Camera),
+        false, ActorsToIgnore, EDrawDebugTrace::ForDuration, HitResult, true, FLinearColor::Yellow,
+        FLinearColor::White, 5.0f);
+
+    PlayerAIController->MoveToLocation(HitResult.Location);
     UE_LOG(LogTemp, Warning, TEXT("MoveCommand"));
 }
 

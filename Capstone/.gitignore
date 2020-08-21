@@ -4,6 +4,7 @@
 # Asset stuff
 Content/AdvancedCelShader/*
 Content/ParagonDrongo/*
+Content/ParagonRevenant/*
 
 # Compiled Object files
 *.slo

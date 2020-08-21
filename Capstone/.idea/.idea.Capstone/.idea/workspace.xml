@@ -20,24 +20,687 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f62275ea-b741-45b3-bda7-a8a130f3606a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BaseLootActor.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_E_Engage.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_LowMana.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_No.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_OnCooldown.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_RMB_Engage.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_ScoredCrit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_Ultimate_Enemy.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_Ultimate_Ready.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_Ultimate_Self.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Ability_UsedLastCharge.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Catchphrase.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Effort_Ability_Ultimate.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Effort_Attack.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Effort_Cheer.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Effort_Death.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Effort_PainHeavy.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Emote_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Emote_060.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Health_Critical.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Health_CriticalSave.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Health_SufferedCrit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Intro_Boast.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Intro_Statement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Kill_Enemy.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Kill_Revenge.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Kill_Shutdown.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Death_Drongo_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Drongo_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Drongo_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Drongo_070.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Drongo_080.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Emeritus_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Emeritus_050.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Emeritus_060.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Emeritus_070.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Emeritus_100.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Emeritus_110.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Kill_Emeritus.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Kill_Riktor.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Riktor_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Riktor_070.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Riktor_080.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Riktor_100.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Lore_Riktor_110.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_ProfileDizzy_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_ProfileDizzy_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_ProfileIdle_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_ProfileIdle_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_ProfilePoke_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_ProfilePoke_070.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Revive.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Cues/Revenant_Status_Danger.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_LMB_Engage_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_LMB_Engage_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_LMB_Engage_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_LowMana_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_LowMana_040_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_OnCooldown_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_OnCooldown_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_OnCooldown_040_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_Q_Engage_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_RMB_Engage_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_ScoredCrit_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_Ultimate_Ally_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_Ultimate_Self_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_UsedLastCharge_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Ability_UsedLastCharge_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Catchphrase_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Death_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Death_040_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Death_050_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Death_070_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_DraftSelect_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_E_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_E_012_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_E_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Primary_012_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Primary_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Primary_014_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Q_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Q_012_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Q_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_RMB_011_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_RMB_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_RMB_014_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Ultimate_011_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Ultimate_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Ability_Ultimate_014_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Attack_012_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Attack_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Attack_014_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Block_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Block_014_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_BreathingLowHealth_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_BreathingLowHealth_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_BreathingRun_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_BreathingRun_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Cheer_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Cheer_011_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Cheer_012_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Death_011_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Death_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Death_014_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Frustration_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_JumpHeavy_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Jump_011_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Jump_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Jump_014_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Laugh_012_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Laugh_013_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_PainHeavy_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_PainHeavy_011_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Pain_011_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Pain_014_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Swing_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Effort_Swing_011_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Emote_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Emote_070_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Emote_Taunt_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Emote_Taunt_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Health_CriticalSave_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Health_CriticalSave_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Health_Critical_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Health_Critical_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Intro_BoastResponse_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Intro_BoastResponse_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Intro_Boast_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Intro_Boast_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Intro_Question_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Intro_Statement_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_Assist_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_Enemy_060_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_Enemy_070_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_FirstBlood_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_FirstBlood_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_Revenge_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_Revenge_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_SameEnemy_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_Streak_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Kill_Streak_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_AbilityLevelConfirm_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_AbilityLevelConfirm_040_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_BoughtItem_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_CardPoints_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_CardPoints_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_CardPoints_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_Five_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_Up_040_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Level_Up_050_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Drongo_060_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Emeritus_040_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Emeritus_060_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Emeritus_070_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Emeritus_100_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Emeritus_120_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Kill_Drongo_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Kill_Drongo_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Kill_Emeritus_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Kill_Emeritus_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Riktor_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Riktor_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Riktor_050_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Riktor_060_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Riktor_070_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Riktor_110_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Lore_Riktor_120_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_ProfileDizzy_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_ProfileIdle_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_ProfileIdle_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_ProfilePoke_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_ProfilePoke_060_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Revive_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Revive_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Revive_050_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Ace_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Ace_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Celebrate_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Celebrate_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Danger_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Defeat_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Defeat_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Defeat_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Idle_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_OrbPrimeActivated_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_OrbPrimeActivated_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_OrbPrimeActivated_030_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Victory_010_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Victory_020_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/DialogueWaves/Revenant_Status_Victory_050_Dialogue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_LMB_Engage_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_No_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_No_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_OnCooldown_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_OnCooldown_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_Q_Engage_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_RMB_Engage_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_RMB_Engage_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_ScoredCrit_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_ScoredCrit_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_Ultimate_Enemy_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_UsedLastCharge_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Ability_UsedLastCharge_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Catchphrase_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Death_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Death_070.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_DraftLock_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_DraftLock_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_DraftSelect_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_E_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_E_013.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_Primary_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_Primary_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_Primary_012.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_Primary_013.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_Q_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_Q_013.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_RMB_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_RMB_013.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_RMB_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_Ultimate_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Ability_Ultimate_012.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Attack_012.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Attack_013.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Block_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Block_013.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Block_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_BreathingRun_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_BreathingRun_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Cheer_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Cheer_013.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Cheer_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Death_012.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Frustration_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Frustration_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_JumpHeavy_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_JumpHeavy_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_JumpHeavy_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Jump_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Jump_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Laugh_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Laugh_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_PainHeavy_011.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_PainHeavy_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Pain_012.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Pain_014.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Effort_Swing_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Emote_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Emote_060.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Emote_070.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Emote_080.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Emote_090.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Emote_Taunt_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Health_CriticalSave_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Health_CriticalSave_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Health_Critical_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Health_Healed_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Health_SufferedCrit_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Intro_BoastResponse_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Intro_BoastResponse_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Intro_Boast_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Intro_QuestionResponse_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Intro_Question_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Intro_Statement_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_Enemy_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_Enemy_050.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_Enemy_060.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_FirstBlood_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_FirstBlood_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_Revenge_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_Revenge_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_SameEnemy_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_SameEnemy_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_SameEnemy_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Kill_Shutdown_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Level_AbilityLevelConfirm_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Level_AbilityLevelConfirm_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Level_BoughtItem_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Level_Five_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Level_Up_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Death_Riktor_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Drongo_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Drongo_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Drongo_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Drongo_070.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Drongo_080.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Emeritus_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Emeritus_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Emeritus_090.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Emeritus_120.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Kill_Drongo_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Kill_Emeritus_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Kill_Riktor_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Kill_Riktor_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Riktor_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Riktor_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Riktor_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Riktor_070.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Riktor_080.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Riktor_110.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Lore_Riktor_120.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_ProfileDizzy_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_ProfileDizzy_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_ProfileDizzy_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_ProfileIdle_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_ProfilePoke_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_ProfilePoke_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Revive_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Ace_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Ace_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Celebrate_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Celebrate_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Danger_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Danger_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Defeat_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Defeat_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Idle_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Recall_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Recall_050.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_TeamDead_010.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_TeamDead_020.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Victory_030.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Audio/Wavs/Revenant_Status_Victory_040.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Feathers/T_Feather_Global_O.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Hair/SharedHairContent/AnimalHairSet01/T_AnimalHairSet01_Depth.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Hair/SharedHairContent/AnimalHairSet01/T_AnimalHairSet01_Root.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Hair/TestContent/T_HairClump02_Depth.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Hair/TestContent/T_HairClump02_DyeMask.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialFunctions/Events/WinterHoliday2016/MF_Snow_Accumulation.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialFunctions/MF_Character_MaterialLayerQuality.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialFunctions/MF_DeathFade.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialFunctions/MF_Fuzz_Layer.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialFunctions/MF_Normalboost.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialFunctions/MF_ParagonCharacterHairWind.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialFunctions/MaterialLayerConstructors/MF_BaseColorTintAndContrast.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialFunctions/PDO_Sheets/MF_POM_Samples.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Events/WinterHoliday2016/T_Crystals_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Events/WinterHoliday2016/T_Snow_Crystals_MASK.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Fabric/ML_Wool_Fabric.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Fabric/T_Fur_Brown_COLOR.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Fabric/T_Velvet_Thick_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Fabric/T_Velvet_Thick_RGBA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Fabric/T_Wool_Fabric_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Leather/ML_Light_Leather01_Green.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Leather/ML_ThinLeather01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Leather/T_Leather_Blue_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Leather/T_Light_Green.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Leather/T_SmoothLeather_D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/ML_FlatColor.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/ML_Dirty_Gun_Metal_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/ML_DullPanelMetal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/ML_Gold_Metal02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/ML_Gray_Gun_Metal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/ML_blue_Metal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/T_Blank_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/T_Blue_heat_Grime.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/T_Primer_Black_Metal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/T_Rust01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Metal/T_metal02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Rock/MaterialLayers/T_Crunchy_2_D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Special/MF_IcyNoise.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Special/ML_TranslucentIce.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Special/T_Glacier_Cap_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Special/T_Revenant_body_ice_DEMO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Synthetics/MF_SimpleEmissive.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Synthetics/T_ML_CleanPlastic01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Synthetics/T_ML_PlasticPattern06_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/MaterialLayers/Synthetics/T_Rough_Plastic_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Textures/Noise/T_AtmosphericCloudNoise01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Textures/Noise/T_AtmosphericCloudNoise01_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Textures/T_LinearUVs.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Textures/T_PerlinPlasma_Noisey_Packed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Textures/T_Turbulence_Seamless.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Global/Textures/T_Water_Screen_Noise_Soft2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/AnimationTestMap.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/Idle_AO_CD.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/Idle_AO_LBD.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/Idle_AO_RD.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/NonCombat_Idle_AO_CC.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/NonCombat_Idle_AO_LBD.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/NonCombat_Idle_AO_LC.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/NonCombat_Idle_AO_LU.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/NonCombat_Idle_AO_RBD.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/NonCombat_Idle_AO_RC.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/AimOffsets/Revenant_NonCombat_Idle_AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Blendspaces/JogBwdSlopeLean.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Blendspaces/JogFwdSlopeLean.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Blendspaces/NonCombat_JogFwdSlopeLean.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Blendspaces/NonCombat_JogLeftSlopeLean.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Death_Backward.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/E_Ability.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/E_Ability_Targeting_End_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/E_Ability_V2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/E_Targeting_Loop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/E_Targeting_Start_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Emote_HatSpin.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Emote_HatSpin_Loop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Emote_Hat_Lift.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Fire_Fast_Var_C.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/FrontEndPose_Default.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/HitReact_Back.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Idle_Alternate_Additive.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Idle_Hand_Additive.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Idle_NonCombat_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Idle_Turn_90_Left.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_BwdToFwd_Spin_cw_EGC.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Bwd_CircleLeft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Bwd_Downhill.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Bwd_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Bwd_Stop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Bwd_Uphill.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Fwd.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Fwd_CircleLeft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Fwd_Downhill_NonCombat_Additive.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Fwd_Pivot_180.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Fwd_Uphill.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Left.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Left_Pivot_180.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Left_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Left_Uphill.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_NonCombat_Additive.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Right_CircleLeft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jog_Right_Uphill.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jump_Apex.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jump_PreLand.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jump_Recovery_Additive.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Jump_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Knockback_Fwd.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Idle_Turn_180_Left.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Idle_Turn_90_Right.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_BwdToFwd_Spin_cw_EGC.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Bwd_CircleRight.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Bwd_Downhill.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Bwd_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Fwd_CircleLeft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Fwd_CircleRight.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Fwd_Uphill.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Left_CircleLeft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Left_Pivot_180.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Left_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jog_Right.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jump_Apex.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/NonCombat_Jump_Recovery.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Primary_Fire_Fast.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Primary_Fire_Fast_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Primary_Fire_Med_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Primary_Fire_Slow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Primary_Fire_Slow_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Q_Ability.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Q_Ability_Targeting_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/RMB_Reload_Fast.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/RMB_Reload_Fast_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/RMB_Reload_Slow_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/R_Ability.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/R_Ability_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/R_Ability_Targeting_End.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/R_Ability_Targeting_Loop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/R_Ability_Targeting_Loop_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Recall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Recall_End.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Recall_Finish.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/Reload_Recovery_MSA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Animations/SS_Idle.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Materials/MF_RevanantUltimate.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Materials/M_Revenant_Arms.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Materials/M_Revenant_EyesEffect.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Materials/M_Revenant_GlowEyes.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Materials/M_Revenant_GlowGun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Materials/M_Revenant_Gun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Materials/M_Revenant_Jacket.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Materials/M_Revenant_Weapon.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Meshes/Revenant.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Meshes/Revenant_Extents.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Meshes/Revenant_SkeletonRig.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/ChronoBoss/Material/MI_Revenant_GlowEyes_Inst_ChronoBoss.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/ChronoBoss/Material/M_Revenant_Gun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/ChronoBoss/Material/M_Revenant_Weapon.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/ChronoBoss/Textures/T_StarMap.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Materials/MI_Revenant_FrostKing_Darkness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Materials/MI_Revenant_FrostKing_Ice.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Materials/M_Revenant_FrostKing_GlowGun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Materials/M_Revenant_FrostKing_Gun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Materials/M_Revenant_FrostKing_Ice.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Materials/M_Revenant_FrostKing_Jacket.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Materials/M_Revenant_FrostKing_ShoulderFur.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Materials/M_Revenant_FrostKing_Weapon.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Meshes/Revenant_FrostKing.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_FrostKing_Arms_RGB.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_FrostKing_Arms_SnowMASK.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_FrostKing_Arms_graymask.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_FrostKing_Body_MASK.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_FrostKing_Fur_D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_FrostKing_Fur_RANDOM.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_FrostKing_Jacket_MASK.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_FrostKing_Weapon_RGB.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_Jacket_RGB.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/FrostKing/Textures/T_Revenant_Jacket_SnowMASK.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Materials/Layers/ML_CottonFabric.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Materials/Layers/ML_Duster_Grime.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Materials/Layers/ML_Duster_Leather.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Materials/Layers/ML_Duster_Scratches.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Materials/Layers/ML_Metal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Materials/Layers/ML_StrapsBelts_Leather.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Materials/Parent/M_Revenant_GlowEyes_Inst_RavenQuill.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Materials/Parent/M_Revenant_RavenQuill_Darkness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Textures/T_Revenant_Hat_Mask.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Textures/T_Revenant_Hat_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Skins/RavenQuill/Textures/T_Revenant_Hat_RGBA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Textures/T_Revenant_Body_MASK2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Textures/T_Revenant_Body_RGB.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Textures/T_Revenant_Weapon_DisplacementMask.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Heroes/Revenant/Textures/T_Revenant_Weapon_MASK2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Maps/BackGroundAssets/SM_AssetPlatform.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/Characters/Maps/Revenant.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Debris/M_Explosion_RockChunks.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Environment/Motes/M_Snowflake_FlipRandom_GPU.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Functions/MF_AlphaErosion.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Functions/MF_CameraDistanceFade.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Functions/MF_FX_EmissiveModulate.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Functions/MF_Tile_Isolate_XY.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/M_Death_Fire.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/M_Plasma_Shot_Shell.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/M_Wispy_Pulse_Dense.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/MI_Revenant_Mark_Particle_Decal_Glow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/M_Revenant_Obliterate_PanningEdge.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/M_Revenant_Primary_MeshFrontTrail.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/M_Revenant_Primary_MeshTrail.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/M_Revenant_Primary_MeshTrail_V3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/M_Revenant_Primary_MeshWindy.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/M_Revenant_Primary_WispySmokeTrail_v2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/M_Revenant_Ultimate_SkyCloudSpiral.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Abilities/M_Revenant_Ultimate_Skystreaks_Close_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/MI_Revenant_Recall_Mesh_CurlOnly_v2_Black.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/M_Revenant_SoftDistort.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/M_Revenant_Wispy_Pulse_Dense.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Skins/FrostKing/MI_Revenant_FairyDust_FrostKing.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Skins/FrostKing/MI_Revenant_FrostKing_MeshWobble_FX.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Skins/FrostKing/MI_Revenant_FrostKing_Obliterate_PanningEdge.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Skins/FrostKing/MI_Revenant_FrostKing_Primary_WispySmokeTrail.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Skins/FrostKing/M_Revenant_FrostKing_HoarFrost_GPU.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Skins/FrostKing/M_Revenant_FrostKing_MuzzleFlare.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Heroes/Revenant/Skins/FrostKing/M_Revenant_FrostKing_Ult_SkyIceSha.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Ice/M_Ice_Spike_Spline.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Ice/M_Particle_Decal_Frozen.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Ice/M_Snow_Fast_Blurry_Flakes.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/MaterialFunctions/MF_PDO_QualitySwitch.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/MaterialFunctions/Textures/Noise/T_Perlin_Noise_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/MaterialFunctions/Textures/Noise/T_TilingNoise03.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Misc/MI_Camera_Ripple_Blue.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Smoke/M_Inky_Smoke_Burst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Smoke/WispySmokeSoft/M_DustSoft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Sparks/M_Hotdog_VLerp_DirectionTint.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/VolumeFog/M_Fog_SphericalDensity.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Materials/Water/M_Water_Drops_Master.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/Revenant/SM_CamFacing_Chunks_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/Revenant/SM_Recall_Lines_4Vari_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/Revenant/SM_Revenant_Projectile_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/Revenant/SM_ThinSwirl_XFacing_Double_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/Revenant/S_Recall_Head_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/Revenant/S_Recall_Lines_4Vari_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/Revenant/S_ThinSwirl_XFacing_Double_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/SM_BigPortal_Torus.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Heroes/SM_PlasmaShot_Shell.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/MuzzleFlashes/SM_Muzzle_Flash.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Shapes/S_Sphere_FlippedNormals.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Smoke/SM_Plasma_Mesh_Reduced.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Meshes/Water/SM_WaterImpact_ImpactCylinder.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Mark/FX/P_Revenant_Mark_Ball.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Mark/FX/P_Revenant_Mark_Hit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Mark/FX/P_Revenant_Mark_Targeting.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Mark/FX/P_Revenant_Mark_Targeting_Upper.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Obliterate/FX/P_Revenant_Obliterate_Firing.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Obliterate/FX/P_Revenant_Obliterate_Trail_Remove.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Primary/FX/P_Revenant_LastShot_MuzzleFlash_Local.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Primary/FX/P_Revenant_LastShot_MuzzleFlash_Locked_Local.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Primary/FX/P_Revenant_Primary_HitWorld.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Primary/FX/P_Revenant_Primary_MuzzleFlash_Trail.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Primary/FX/P_Revenant_Primary_Trail_LastShot.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Reload/FX/P_Revenant_Reload_Start_Slow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Ultimate/FX/P_Revanent_Target_ShadeOutline.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Ultimate/FX/P_Revenant_Ultimate_Aim_RightArm.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Ultimate/FX/P_Revenant_Ultimate_CloudSpiral.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Ultimate/FX/P_Revenant_Ultimate_CloudSpiral2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Ultimate/FX/P_Revenant_Ultimate_Debris.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Ultimate/FX/P_Revenant_Ultimate_Sky_Portal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Abilities/Ultimate/FX/P_Revenant_Ultimate_Trail.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/P_Revenant_HandDrip.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/P_Revenant_Recall_Finish.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/P_Revenant_Recall_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Mark/FX/P_Revenant_FrostKing_Mark_Cast.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Mark/FX/P_Revenant_FrostKing_Mark_End.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Mark/FX/P_Revenant_FrostKing_Mark_Hit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Mark/FX/P_Revenant_FrostKing_Mark_Loop_v3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Mark/FX/P_Revenant_FrostKing_Mark_Targeting.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Obliterate/FX/P_Revenant_FrostKing_Oblit_FiringLocal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Obliterate/FX/P_Revenant_FrostKing_Obliterate_Hit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Primary/FX/P_Revenant_FrostKing_LastShot_MuzzleFlash.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Primary/FX/P_Revenant_FrostKing_Primary_HitWorld.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Primary/FX/P_Revenant_FrostKing_Primary_HitWorld_Water.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Primary/FX/P_Revenant_FrostKing_Primary_MuzzleFlash.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Primary/FX/P_Revenant_FrostKing_Primary_Trail_LastShot.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Reload/FX/P_Revenant_FrostKing_Reload_Insert.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Reload/FX/P_Revenant_FrostKing_Reload_Start_Slow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Ultimate/FX/P_Revenant_FrostKing_Target_ShadeOutline.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Ultimate/FX/P_Revenant_FrostKing_Ult_SnowClose.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Ultimate/FX/P_Revenant_FrostKing_Ult_Trail.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Ultimate/FX/P_Revenant_FrostKing_Ultimate_Exit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Abilities/Ultimate/FX/P_Revenant_FrostKing_Ultimate_Sky_Portal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Emotes/FX/P_Revenant_FrostKing_LevelStart.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Emotes/FX/P_Revenant_FrostKing_LevelStart_Gun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/Emotes/FX/P_Revenant_FrostKing_Spit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/P_Revenant_FrostKing_HandDrip.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/P_Revenant_FrostKing_Head.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/P_Revenant_FrostKing_Head_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/P_Revenant_FrostKing_Head_Emote.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Particles/Revenant/Skins/FrostKing/P_Revenant_FrostKing_Head_PORT.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/CubeMaps/T_Agora_Cube_Small.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Debris/T_Concrete_ChunkSubUV_N_TGA.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Debris/T_SmallSoftChunk_4x4_01_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Energy/Electricity/T_Electric_Tile.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Energy/Plasma/T_Inky_Smoke.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Energy/Plasma/T_Revenant_Poster_Tendrils_v1_Seamless.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Energy/T_Plasma_Wisps.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Gradients/Masks/T_Portal_Gradient_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Ice/T_Revenant_Hoarfrost_Tweaked_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Liquid/T_Liquid_Reflection.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Masks/T_Radial_Burst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Masks/T_Revenant_HandScreen_01_D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Misc/T_Simple_Gradients_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/MuzzleFlashes/T_Muzzle_Flash.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/NormalShapes/T_Refraction_Depression_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Smoke/Inky/T_ShadowSwirls_v2B.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Smoke/T_CloudSmoke_WispInk_Chromashift_Tile.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Smoke/T_MinionSmokeTile.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Smoke/T_TilingClouds_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Smoke/T_WispySmoke_V2_OCC+Alpha.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Cloud/T_Cloud_Wisp_Chromatic_Tile.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Heat/T_2ndInfectedMapNormal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Noise/T_Inky_Smoke_Tile.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Noise/T_NoiseBubbly_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Noise/T_Soft_Noise.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Noise/T_VectorNoise.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Noise/T_Voronoi_Cells_02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Noise/T_random_noise_highfreq_rgb.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Organic/T_Tiling_Dust.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Tile/Organic/T_tile_vector_noise_soft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/Water/T_Water_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/Textures/trails/T_LiquidTrail_01_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/ParagonRevenant/FX/VectorFields/Taker/VF_TakerPortal_Vortex_8_220.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/Interfaces/InteractableItemInterface.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/Interfaces/InteractableItemInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_ObservingPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_ObservingPawn.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Makefile.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Makefile.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.dll.response" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.dll.response" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.lib.response" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.lib.response" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/Capstone.init.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/Capstone.init.gen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/Timestamp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/Timestamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/UE4.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/UE4.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UE4CC-Windows-AF9D324A47C08FBD1BCA7D96306A5FF1/CrashReportClient.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/Capstone.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/Capstone.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,31 +712,43 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/Navigation/PathFollowingComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/AIController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Camera/CameraComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/Interfaces/InteractableItemInterface.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/SpringArmComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/CapstoneGameModeBase.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/Interfaces/InteractableItemInterface.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Interfaces/InteractableItemInterface.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" />
       </list>
     </option>
   </component>
@@ -273,6 +948,9 @@
       <workItem from="1597758544606" duration="3778000" />
       <workItem from="1597855581932" duration="1905000" />
       <workItem from="1597874075009" duration="3419000" />
+      <workItem from="1597928791784" duration="1702000" />
+      <workItem from="1598043506503" duration="2821000" />
+      <workItem from="1598047756770" duration="172000" />
     </task>
     <servers />
   </component>

@@ -43403,12 +43403,18 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source" t="Include">
         <e p="Capstone" t="Include">
+          <e p="Actors" t="Include">
+            <e p="BaseLootActor.cpp" t="Include" />
+            <e p="BaseLootActor.h" t="Include" />
+          </e>
           <e p="Capstone.Build.cs" t="Include" />
           <e p="Capstone.cpp" t="Include" />
           <e p="Capstone.h" t="Include" />
           <e p="CapstoneGameModeBase.cpp" t="Include" />
           <e p="CapstoneGameModeBase.h" t="Include" />
           <e p="Characters" t="Include">
+            <e p="BaseEnemyCharacter.cpp" t="Include" />
+            <e p="BaseEnemyCharacter.h" t="Include" />
             <e p="PlayerCharacter.cpp" t="Include" />
             <e p="PlayerCharacter.h" t="Include" />
           </e>
@@ -43421,6 +43427,10 @@
           <e p="GameModes" t="Include">
             <e p="MainGameMode.cpp" t="Include" />
             <e p="MainGameMode.h" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="InteractableItemInterface.cpp" t="Include" />
+            <e p="InteractableItemInterface.h" t="Include" />
           </e>
           <e p="Pawns" t="Include">
             <e p="ObservingPawn.cpp" t="Include" />

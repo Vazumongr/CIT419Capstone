@@ -22,6 +22,7 @@ void AObservingPlayerController::SetupInputComponent()
     InputComponent->BindAxis("CameraZoom", this, &AObservingPlayerController::CameraZoom);
 }
 
+/** Handle the move command and send the HitResult to the PlayerAIController if we have it */
 void AObservingPlayerController::MoveCommand()
 {
     ensure(PlayerAIController);
@@ -37,8 +38,9 @@ void AObservingPlayerController::MoveCommand()
     bool bHit = UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_Camera),
         false, ActorsToIgnore, EDrawDebugTrace::ForDuration, HitResult, true, FLinearColor::Yellow,
         FLinearColor::White, 5.0f);
-
-    PlayerAIController->MoveToLocation(HitResult.Location);
+    
+    if(bHit) PlayerAIController->ProcessHitResult(HitResult);
+       
     UE_LOG(LogTemp, Warning, TEXT("MoveCommand"));
 }
 

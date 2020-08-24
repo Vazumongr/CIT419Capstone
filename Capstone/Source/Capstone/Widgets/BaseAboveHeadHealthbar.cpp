@@ -4,9 +4,20 @@
 #include "BaseAboveHeadHealthbar.h"
 
 #include "Kismet/KismetMathLibrary.h"
+#include "Capstone/Widgets/AboveHeadHealthBar.h"
+
+void UBaseAboveHeadHealthbar::InitWidget()
+{
+    Super::InitWidget();
+    UAboveHeadHealthBar* WidgetInstance = Cast<UAboveHeadHealthBar>(Widget);
+    if(WidgetInstance)
+    {
+        WidgetInstance->SetOwningActor(GetOwner());
+    }
+}
 
 void UBaseAboveHeadHealthbar::TickComponent(float DeltaTime, ELevelTick TickType,
-    FActorComponentTickFunction* ThisTickFunction)
+                                            FActorComponentTickFunction* ThisTickFunction)
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
     FaceTowardsCamera();
@@ -28,6 +39,8 @@ void UBaseAboveHeadHealthbar::BeginPlay()
         return;
     }
     PlayerCameraManager = PlayerController->PlayerCameraManager;
+
+    
 }
 
 void UBaseAboveHeadHealthbar::FaceTowardsCamera()
@@ -40,7 +53,7 @@ void UBaseAboveHeadHealthbar::FaceTowardsCamera()
     FVector MyLocation = GetComponentLocation();
 
     FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(MyLocation, CameraLocation);
-    LookAtRotation.Pitch = 0;
+    LookAtRotation.Yaw = 180;
 
     SetWorldRotation(LookAtRotation);
 }

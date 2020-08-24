@@ -33,7 +33,6 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 {
 	float DamageToApply = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	Health -= DamageToApply;
-	UE_LOG(LogTemp, Warning, TEXT("Health Remaining: %f"), Health);
 	return DamageToApply;
 }
 
@@ -41,7 +40,6 @@ void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
 {
 	float DamageAmount = 10;
 	FPointDamageEvent PointDamageEvent;
-	//EnemyToDamage->TakeDamage(DamageAmount, PointDamageEvent, GetController(), this);
 	UGameplayStatics::ApplyDamage(EnemyToDamage, DamageAmount, GetController(), this, DamageType);
 }
 

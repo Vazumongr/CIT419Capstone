@@ -40,8 +40,6 @@ void AObservingPlayerController::MoveCommand()
         FLinearColor::White, 5.0f);
     
     if(bHit) PlayerAIController->ProcessHitResult(HitResult);
-       
-    UE_LOG(LogTemp, Warning, TEXT("MoveCommand"));
 }
 
 void AObservingPlayerController::ToggleCameraLock()

@@ -15,6 +15,9 @@ class CAPSTONE_API UBaseAboveHeadHealthbar : public UWidgetComponent
 	GENERATED_BODY()
 
 public:
+
+	virtual void InitWidget() override;
+	
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
 	
 	virtual void BeginPlay() override;

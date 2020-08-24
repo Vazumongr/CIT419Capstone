@@ -43715,6 +43715,8 @@
             <e p="ObservingPawn.h" t="Include" />
           </e>
           <e p="Widgets" t="Include">
+            <e p="AboveHeadHealthBar.cpp" t="Include" />
+            <e p="AboveHeadHealthBar.h" t="Include" />
             <e p="BaseAboveHeadHealthbar.cpp" t="Include" />
             <e p="BaseAboveHeadHealthbar.h" t="Include" />
           </e>

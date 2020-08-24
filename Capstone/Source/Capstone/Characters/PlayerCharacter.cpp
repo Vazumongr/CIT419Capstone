@@ -3,6 +3,9 @@
 
 #include "PlayerCharacter.h"
 
+#include "Capstone/Interfaces/InteractableItemInterface.h"
+#include "Kismet/GameplayStatics.h"
+
 // Sets default values
 APlayerCharacter::APlayerCharacter()
 {
@@ -25,10 +28,25 @@ void APlayerCharacter::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
+	AActor* DamageCauser)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	float DamageToApply = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	Health -= DamageToApply;
+	UE_LOG(LogTemp, Warning, TEXT("Health Remaining: %f"), Health);
+	return DamageToApply;
+}
 
+void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
+{
+	float DamageAmount = 10;
+	FPointDamageEvent PointDamageEvent;
+	//EnemyToDamage->TakeDamage(DamageAmount, PointDamageEvent, GetController(), this);
+	UGameplayStatics::ApplyDamage(EnemyToDamage, DamageAmount, GetController(), this, DamageType);
+}
+
+void APlayerCharacter::InteractWithItem(IInteractableItemInterface* ItemToInteract)
+{
+	ItemToInteract->Interact();
 }
 

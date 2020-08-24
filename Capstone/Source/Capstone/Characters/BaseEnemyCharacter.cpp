@@ -3,6 +3,9 @@
 
 #include "BaseEnemyCharacter.h"
 
+#include "Capstone/Characters/PlayerCharacter.h"
+#include "Capstone/GameModes/MainGameMode.h"
+
 // Sets default values
 ABaseEnemyCharacter::ABaseEnemyCharacter()
 {
@@ -15,20 +18,54 @@ ABaseEnemyCharacter::ABaseEnemyCharacter()
 void ABaseEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	AMainGameMode* MainGameMode = Cast<AMainGameMode>(GetWorld()->GetAuthGameMode());
+	if(MainGameMode != nullptr)
+		PlayerCharacter = MainGameMode->GetPlayerCharacter();
+
+	if(PlayerCharacter == nullptr)
+		UE_LOG(LogTemp, Warning, TEXT("Not finding player character..."));
+}
+
+void ABaseEnemyCharacter::DamagePlayer()
+{
+	ensure(PlayerCharacter);
+	float DamageAmount = 10;
+	FPointDamageEvent PointDamageEvent;
+	FDamageEvent DamageEvent;
+	PlayerCharacter->TakeDamage(DamageAmount, DamageEvent, GetController(), this);
 }
 
 // Called every frame
 void ABaseEnemyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	DamagePlayer();
 
 }
 
-// Called to bind functionality to input
-void ABaseEnemyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	TSubclassOf<UDamageType> InDamageType = DamageEvent.DamageTypeClass;
+	if(DamageType == InDamageType)
+	{
+		DamageAmount = 100.0f;
+	}
+		
+	float DamageApplied = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	Health -= DamageApplied;
+	UE_LOG(LogTemp, Warning, TEXT("Health Remaining: %f"), Health);
+	if(Health <= 0)
+	{
+		DetachFromControllerPendingDestroy();
+		Destroy();
+	}
+		
+	return DamageApplied;
+}
 
+float ABaseEnemyCharacter::GetHealthPercent() const
+{
+	return Health / 100.0f;
 }
 

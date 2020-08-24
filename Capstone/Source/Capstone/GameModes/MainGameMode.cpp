@@ -14,7 +14,7 @@ void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* Ne
     FActorSpawnParameters SpawnParameters;
     SpawnParameters.Owner = NewPlayer;
 
-    APlayerCharacter* PlayerCharacter = GetWorld()->SpawnActor<APlayerCharacter>(PlayerCharacterClass, SpawnParameters);
+    PlayerCharacter = GetWorld()->SpawnActor<APlayerCharacter>(PlayerCharacterClass, SpawnParameters);
     
     APlayerAIController* PlayerAIController = GetWorld()->SpawnActor<APlayerAIController>(PlayerAIControllerClass, SpawnParameters);
     PlayerAIController->Possess(PlayerCharacter);

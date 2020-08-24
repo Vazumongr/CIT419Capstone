@@ -14,18 +14,29 @@ class CAPSTONE_API ABaseEnemyCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ABaseEnemyCharacter();
+	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 
-	FORCEINLINE void TestTakeDamage() { UE_LOG(LogTemp, Warning, TEXT("I am TAKING DAMAGE")); }
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser) override;
+
+	UFUNCTION(BlueprintPure)
+	float GetHealthPercent() const;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+private:
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	void DamagePlayer();
+	
+	float Health = 100.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
+	TSubclassOf<UDamageType> DamageType;
+
+private:
+	class APlayerCharacter* PlayerCharacter = nullptr;
 
 };

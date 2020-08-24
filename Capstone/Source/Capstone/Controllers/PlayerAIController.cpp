@@ -6,6 +6,7 @@
 #include "Capstone/Controllers/ObservingPlayerController.h"
 #include "Capstone/Interfaces/InteractableItemInterface.h"
 #include "Capstone/Characters/BaseEnemyCharacter.h"
+#include "Capstone/Characters/PlayerCharacter.h"
 
 void APlayerAIController::ProcessHitResult(FHitResult HitResult)
 {
@@ -16,7 +17,8 @@ void APlayerAIController::ProcessHitResult(FHitResult HitResult)
     }
     else if(ABaseEnemyCharacter* EnemyCharacter = Cast<ABaseEnemyCharacter>(HitResult.GetActor()))
     {
-        EnemyCharacter->TestTakeDamage();
+        CurrentCommand = FMoveCommandTypes::MoveToAttack;
+        DealDamageToEnemy(EnemyCharacter);
     }
     else
     {
@@ -32,12 +34,18 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
     switch(CurrentCommand)
     {
         case FMoveCommandTypes::MoveToInteractable:
-            if(Result.IsSuccess() && TargetedItem != nullptr)
-                TargetedItem->Interact();
+            if(Result.IsSuccess() && TargetedItem != nullptr && PlayerCharacter != nullptr)
+                PlayerCharacter->InteractWithItem(TargetedItem);
             break;
         case FMoveCommandTypes::MoveToLocation:
             UE_LOG(LogTemp, Warning, TEXT("Movement completed."));
             break;
+        case FMoveCommandTypes::MoveToAttack:
+            if(Result.IsSuccess() && TargetedEnemy != nullptr && PlayerCharacter != nullptr)
+            {
+                PlayerCharacter->DealDamageToEnemy(TargetedEnemy);
+            }
+                
         default:
             break;
     }
@@ -47,6 +55,13 @@ void APlayerAIController::InteractWithItem(FHitResult HitResult, IInteractableIt
 {
     TargetedItem = ItemInterface;
     MoveToActor(HitResult.GetActor(), 300);
+}
+
+void APlayerAIController::DealDamageToEnemy(ABaseEnemyCharacter* EnemyCharacter)
+{
+    TargetedEnemy = EnemyCharacter;
+    MoveToActor(EnemyCharacter, 300);
+    
 }
 
 void APlayerAIController::SetPlayerController(APlayerController* InController)

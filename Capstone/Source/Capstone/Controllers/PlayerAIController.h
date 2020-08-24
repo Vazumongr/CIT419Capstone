@@ -13,7 +13,7 @@ enum class FMoveCommandTypes : uint8
 	None,
 	MoveToLocation,
 	MoveToInteractable,
-	MoveToEnemy
+	MoveToAttack
 };
 
 /**
@@ -32,9 +32,11 @@ public:
 
 private:
 	void InteractWithItem(FHitResult HitResult, class IInteractableItemInterface* ItemInterface);
+	void DealDamageToEnemy(class ABaseEnemyCharacter* EnemyCharacter);
 
 	FMoveCommandTypes CurrentCommand;
 	IInteractableItemInterface* TargetedItem = nullptr;
+	ABaseEnemyCharacter* TargetedEnemy = nullptr;
 
 public:
 	void SetPlayerController( APlayerController* InController);
@@ -44,6 +46,6 @@ public:
 	FORCEINLINE APlayerCharacter* GetPlayerCharacter() const { return PlayerCharacter; }
 
 private:
-	AObservingPlayerController* PlayerController = nullptr;
+	AObservingPlayerController* PlayerController = nullptr;	// TODO I don't think I should be having a ptr to that.
 	APlayerCharacter* PlayerCharacter = nullptr;
 };

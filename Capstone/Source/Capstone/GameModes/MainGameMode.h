@@ -18,16 +18,20 @@ class CAPSTONE_API AMainGameMode : public AGameModeBase
 public:
 	void HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer) override;
 
+	FORCEINLINE class APlayerCharacter* GetPlayerCharacter() { return PlayerCharacter; }
+
 private:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<class APlayerCharacter> PlayerCharacterClass;
+	TSubclassOf<APlayerCharacter> PlayerCharacterClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class AObservingPawn> ObservingPawnClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class AObservingPlayerController> ObservingPlayerControllerClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class APlayerAIController> PlayerAIControllerClass;
+
+	APlayerCharacter* PlayerCharacter = nullptr;
 	
 	
 };

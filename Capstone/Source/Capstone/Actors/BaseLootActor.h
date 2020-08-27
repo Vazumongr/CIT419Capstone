@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Capstone/Interfaces/InteractableItemInterface.h"
 #include "GameFramework/Actor.h"
+
 #include "BaseLootActor.generated.h"
 
 UCLASS()
@@ -15,13 +16,17 @@ class CAPSTONE_API ABaseLootActor : public AActor, public IInteractableItemInter
 public:	
 	// Sets default values for this actor's properties
 	ABaseLootActor();
-	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
-	void Interact() override;
+	virtual void Interact(class APlayerCharacter* PlayerCharacter) override;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+private:
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	class USceneComponent* Root;
+	UPROPERTY(EditDefaultsOnly)
+	class UStaticMeshComponent* StaticMeshComponent = nullptr;
 };

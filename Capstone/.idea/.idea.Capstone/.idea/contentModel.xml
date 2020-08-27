@@ -43684,6 +43684,10 @@
           <e p="Actors" t="Include">
             <e p="BaseLootActor.cpp" t="Include" />
             <e p="BaseLootActor.h" t="Include" />
+            <e p="BaseWeaponActor.cpp" t="Include" />
+            <e p="BaseWeaponActor.h" t="Include" />
+            <e p="BaseWeaponLootActor.cpp" t="Include" />
+            <e p="BaseWeaponLootActor.h" t="Include" />
           </e>
           <e p="Capstone.Build.cs" t="Include" />
           <e p="Capstone.cpp" t="Include" />

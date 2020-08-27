@@ -13,7 +13,8 @@ enum class FMoveCommandTypes : uint8
 	None,
 	MoveToLocation,
 	MoveToInteractable,
-	MoveToAttack
+	MoveToAttack,
+	MoveToWeapon
 };
 
 /**
@@ -33,10 +34,12 @@ public:
 private:
 	void InteractWithItem(FHitResult HitResult, class IInteractableItemInterface* ItemInterface);
 	void DealDamageToEnemy(class ABaseEnemyCharacter* EnemyCharacter);
+	void EquipWeapon(class ABaseWeaponLootActor* WeaponActor);
 
 	FMoveCommandTypes CurrentCommand;
 	IInteractableItemInterface* TargetedItem = nullptr;
 	ABaseEnemyCharacter* TargetedEnemy = nullptr;
+	ABaseWeaponLootActor* TargetedWeapon = nullptr;
 
 public:
 	void SetPlayerController( APlayerController* InController);

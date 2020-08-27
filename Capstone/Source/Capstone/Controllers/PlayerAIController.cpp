@@ -7,10 +7,17 @@
 #include "Capstone/Interfaces/InteractableItemInterface.h"
 #include "Capstone/Characters/BaseEnemyCharacter.h"
 #include "Capstone/Characters/PlayerCharacter.h"
+#include "Capstone/Actors/BaseWeaponActor.h"
+#include "Capstone/Actors/BaseWeaponLootActor.h"
 
 void APlayerAIController::ProcessHitResult(FHitResult HitResult)
 {
-    if(IInteractableItemInterface* ItemInterface = Cast<IInteractableItemInterface>(HitResult.GetActor()))
+    if(ABaseWeaponLootActor* WeaponActor = Cast<ABaseWeaponLootActor>(HitResult.GetActor()))
+    {
+        CurrentCommand = FMoveCommandTypes::MoveToWeapon;
+        EquipWeapon(WeaponActor);
+    }
+    else if(IInteractableItemInterface* ItemInterface = Cast<IInteractableItemInterface>(HitResult.GetActor()))
     {
         CurrentCommand = FMoveCommandTypes::MoveToInteractable;
         InteractWithItem(HitResult, ItemInterface);
@@ -37,6 +44,10 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
             if(Result.IsSuccess() && TargetedItem != nullptr && PlayerCharacter != nullptr)
                 PlayerCharacter->InteractWithItem(TargetedItem);
             break;
+        case FMoveCommandTypes::MoveToWeapon:
+            if(Result.IsSuccess() && TargetedWeapon != nullptr && PlayerCharacter != nullptr)
+                PlayerCharacter->EquipWeapon(TargetedWeapon);
+            break;
         case FMoveCommandTypes::MoveToLocation:
             UE_LOG(LogTemp, Warning, TEXT("Movement completed."));
             break;
@@ -62,6 +73,12 @@ void APlayerAIController::DealDamageToEnemy(ABaseEnemyCharacter* EnemyCharacter)
     TargetedEnemy = EnemyCharacter;
     MoveToActor(EnemyCharacter, 300);
     
+}
+
+void APlayerAIController::EquipWeapon(ABaseWeaponLootActor* WeaponActor)
+{
+    TargetedWeapon = WeaponActor;
+    MoveToActor(WeaponActor, 300);
 }
 
 void APlayerAIController::SetPlayerController(APlayerController* InController)

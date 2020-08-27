@@ -35,6 +35,8 @@
 /FUNCTIONPADMIN
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\CapstoneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseLootActor.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseWeaponActor.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseWeaponLootActor.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseEnemyCharacter.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\PlayerCharacter.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\ObservingPlayerController.cpp.obj"
@@ -50,6 +52,8 @@
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseAboveHeadHealthbar.gen.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseEnemyCharacter.gen.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseLootActor.gen.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseWeaponActor.gen.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseWeaponLootActor.gen.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Capstone.init.gen.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\CapstoneGameModeBase.gen.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\InteractableItemInterface.gen.cpp.obj"

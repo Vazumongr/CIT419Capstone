@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Capstone/Actors/BaseWeaponActor.h"
+
+
 #include "PlayerCharacter.generated.h"
 
 UCLASS()
@@ -26,10 +29,19 @@ public:
 	void DealDamageToEnemy(AActor* EnemyToDamage);
 	void InteractWithItem(class IInteractableItemInterface* ItemToInteract);
 
+	void EquipWeapon(class ABaseWeaponLootActor* InWeapon);
+
 private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<UDamageType> DamageType;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
+	TSubclassOf<ABaseWeaponActor> WeaponActorClass;
+	UPROPERTY()
+	//ABaseWeaponActor* WeaponActor = nullptr;
+	ABaseWeaponActor* EquippedWeapon = nullptr;
+
+	FWeaponStats EquippedWeaponStats;
 
 	float Health = 100.0f;
 

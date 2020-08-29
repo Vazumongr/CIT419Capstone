@@ -46,7 +46,7 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
             break;
         case FMoveCommandTypes::MoveToWeapon:
             if(Result.IsSuccess() && TargetedWeapon != nullptr && PlayerCharacter != nullptr)
-                PlayerCharacter->EquipWeapon(TargetedWeapon);
+                PlayerCharacter->PickUpWeapon(TargetedWeapon);
             break;
         case FMoveCommandTypes::MoveToLocation:
             UE_LOG(LogTemp, Warning, TEXT("Movement completed."));

@@ -4,8 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Capstone/DataStructures/GameStructs.h"
 #include "Inventory.generated.h"
 
+struct FWeaponStats;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class CAPSTONE_API UInventory : public UActorComponent
@@ -19,8 +21,8 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	void AddItem(UObject* InObject);
-	FORCEINLINE UObject* GetItem(int32 Index) const { return Inventory[Index]; }
+	void AddItem(FWeaponStats InObject);
+	FORCEINLINE FWeaponStats GetItem(int32 Index) const { return Inventory[Index]; }
 	FORCEINLINE int32 GetInventorySize() const { return Inventory.Num(); }
 
 	void PrintArray();
@@ -31,7 +33,7 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	TArray<UObject*> Inventory;
+	TArray<FWeaponStats> Inventory;
 
 		
 };

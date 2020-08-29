@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Capstone/Actors/BaseWeaponLootActor.h"
+#include "Capstone/Actors/BaseWeaponActor.h"
 
 
 #include "PlayerCharacter.generated.h"
@@ -29,7 +30,8 @@ public:
 	void DealDamageToEnemy(AActor* EnemyToDamage);
 	void InteractWithItem(class IInteractableItemInterface* ItemToInteract);
 
-	void EquipWeapon(class ABaseWeaponLootActor* InWeapon);
+	void PickUpWeapon(class ABaseWeaponLootActor* InWeapon);
+	void EquipWeapon(struct FWeaponStats InWeapon);
 
 	void PrintInventory();
 
@@ -39,8 +41,11 @@ private:
 	TSubclassOf<UDamageType> DamageType;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<ABaseWeaponActor> WeaponActorClass;
+	/*
+	UPROPERTY() TODO Shouldnt need
+	ABaseWeaponLootActor* EquippedWeaponLootActor = nullptr;*/ 
 	UPROPERTY()
-	ABaseWeaponLootActor* EquippedWeaponActor = nullptr;
+	class ABaseWeaponActor* EquippedWeaponActor = nullptr;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UInventory* InventoryComponent;

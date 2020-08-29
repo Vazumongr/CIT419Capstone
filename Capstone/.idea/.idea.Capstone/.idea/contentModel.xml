@@ -43710,6 +43710,10 @@
             <e p="PlayerAIController.cpp" t="Include" />
             <e p="PlayerAIController.h" t="Include" />
           </e>
+          <e p="DataStructures" t="Include">
+            <e p="GameStructs.cpp" t="Include" />
+            <e p="GameStructs.h" t="Include" />
+          </e>
           <e p="GameModes" t="Include">
             <e p="MainGameMode.cpp" t="Include" />
             <e p="MainGameMode.h" t="Include" />

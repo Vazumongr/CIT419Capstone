@@ -30,7 +30,7 @@ void UInventory::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompo
 	// ...
 }
 
-void UInventory::AddItem(UObject* InObject)
+void UInventory::AddItem(FWeaponStats InObject)
 {
 	Inventory.Add(InObject);
 }
@@ -43,9 +43,9 @@ void UInventory::PrintArray()
 FString UInventory::ToString()
 {
 	FString String = TEXT("");
-	for ( UObject* Object : Inventory)
+	for ( FWeaponStats Stats : Inventory)
 	{
-		String = String + Object->GetName() + TEXT(" ");
+		String = String + Stats.WeaponName + TEXT(", ");
 	}
 	return String;
 }

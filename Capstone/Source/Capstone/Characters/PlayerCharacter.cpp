@@ -24,9 +24,6 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	InventoryComponent->PrintArray();
-	InventoryComponent->AddItem(this);
-	InventoryComponent->PrintArray();
 }
 
 // Called every frame
@@ -56,31 +53,35 @@ void APlayerCharacter::InteractWithItem(IInteractableItemInterface* ItemToIntera
 	ItemToInteract->Interact(this);
 }
 
-void APlayerCharacter::EquipWeapon(ABaseWeaponLootActor* InWeapon)
+void APlayerCharacter::PickUpWeapon(ABaseWeaponLootActor* InWeapon)
 {
-	
-	//EquippedWeaponStats = InWeapon->GetWeaponStats();	// Original
- 
-	InventoryComponent->AddItem(InWeapon);	// Adds the weapon to our inventory
-	
-	InWeapon->Interact(this);	// Interacts with it so it does what it needs to do
+	InventoryComponent->AddItem(InWeapon->GetWeaponStats());
+	InWeapon->Interact(this);
+	EquipWeapon(InWeapon->GetWeaponStats());
+}
 
-	int32 WeaponIndex = InventoryComponent->GetInventorySize() - 1;	// Get the index of it in the inventory
+void APlayerCharacter::EquipWeapon(FWeaponStats InStats)
+{
+	if(EquippedWeaponActor != nullptr)
+		EquippedWeaponActor->Destroy();
 	
-	ABaseWeaponLootActor* EquippedWeapon = Cast<ABaseWeaponLootActor>(InventoryComponent->GetItem(WeaponIndex));	// Get the weapon from the inventory
+	EquippedWeaponActor = GetWorld()->SpawnActor<ABaseWeaponActor>(WeaponActorClass);
+	EquippedWeaponActor->InitializeStats(InStats);
 	
-	EquippedWeaponStats = EquippedWeapon->GetWeaponStats();	// Get the stats
+	EquippedWeaponActor->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("WeaponSocket"));	// Attaches the gun to the SM bone
+	EquippedWeaponActor->SetOwner(this);
 
-	// Pointer to our gun actor class
-	//EquippedWeaponActor = InWeapon;
-	InWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("WeaponSocket"));	// Attaches the gun to the SM bone
-	InWeapon->SetOwner(this);	
-	
-	UE_LOG(LogTemp, Warning, TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
+	EquippedWeaponStats = InStats;
+
+	FString DebugMsg = FString::Printf(TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
+
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
+	//UE_LOG(LogTemp, Warning, TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
 }
 
 void APlayerCharacter::PrintInventory()
 {
-	InventoryComponent->PrintArray();
+	FString DebugMsg = FString::Printf(TEXT("Inventory Contents: %s"), *InventoryComponent->ToString());
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
 }
 

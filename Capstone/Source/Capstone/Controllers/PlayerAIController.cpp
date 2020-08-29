@@ -62,6 +62,12 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
     }
 }
 
+void APlayerAIController::PrintInventory()
+{
+    ensure(PlayerCharacter);
+    PlayerCharacter->PrintInventory();
+}
+
 void APlayerAIController::InteractWithItem(FHitResult HitResult, IInteractableItemInterface* ItemInterface)
 {
     TargetedItem = ItemInterface;

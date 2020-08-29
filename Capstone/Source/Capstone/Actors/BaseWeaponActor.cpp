@@ -4,6 +4,7 @@
 #include "BaseWeaponActor.h"
 
 #include "Capstone/Characters/PlayerCharacter.h"
+#include "Capstone/Actors/BaseWeaponLootActor.h"
 
 // Sets default values
 ABaseWeaponActor::ABaseWeaponActor()
@@ -14,7 +15,7 @@ ABaseWeaponActor::ABaseWeaponActor()
 
 void ABaseWeaponActor::Interact(APlayerCharacter* PlayerCharacter)
 {
-	PlayerCharacter->EquipWeapon(this);
+	//PlayerCharacter->EquipWeapon(this);
 }
 
 // Called when the game starts or when spawned

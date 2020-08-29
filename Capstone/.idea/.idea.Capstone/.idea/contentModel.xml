@@ -43681,6 +43681,10 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source" t="Include">
         <e p="Capstone" t="Include">
+          <e p="ActorComponents" t="Include">
+            <e p="Inventory.cpp" t="Include" />
+            <e p="Inventory.h" t="Include" />
+          </e>
           <e p="Actors" t="Include">
             <e p="BaseLootActor.cpp" t="Include" />
             <e p="BaseLootActor.h" t="Include" />
@@ -43713,6 +43717,8 @@
           <e p="Interfaces" t="Include">
             <e p="InteractableItemInterface.cpp" t="Include" />
             <e p="InteractableItemInterface.h" t="Include" />
+            <e p="WeaponStatInterface.cpp" t="Include" />
+            <e p="WeaponStatInterface.h" t="Include" />
           </e>
           <e p="Pawns" t="Include">
             <e p="ObservingPawn.cpp" t="Include" />

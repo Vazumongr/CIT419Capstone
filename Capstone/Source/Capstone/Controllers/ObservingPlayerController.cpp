@@ -19,6 +19,7 @@ void AObservingPlayerController::SetupInputComponent()
     Super::SetupInputComponent();
     InputComponent->BindAction("MoveCommand", IE_Pressed, this, &AObservingPlayerController::MoveCommand);
     InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
+    InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::PrintInventory);
     InputComponent->BindAxis("CameraZoom", this, &AObservingPlayerController::CameraZoom);
 }
 
@@ -55,6 +56,12 @@ void AObservingPlayerController::CameraZoom(float AxisValue)
         ObservingPawn->CameraZoomOut();
     else if(AxisValue > 0)
         ObservingPawn->CameraZoomIn();
+}
+
+void AObservingPlayerController::PrintInventory()
+{
+    ensure(PlayerAIController);
+    PlayerAIController->PrintInventory();
 }
 
 void AObservingPlayerController::SetPlayerAIController(APlayerAIController* InController)

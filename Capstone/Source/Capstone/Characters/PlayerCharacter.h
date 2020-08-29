@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "Capstone/Actors/BaseWeaponActor.h"
+#include "Capstone/Actors/BaseWeaponLootActor.h"
 
 
 #include "PlayerCharacter.generated.h"
@@ -31,6 +31,8 @@ public:
 
 	void EquipWeapon(class ABaseWeaponLootActor* InWeapon);
 
+	void PrintInventory();
+
 private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
@@ -38,8 +40,10 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<ABaseWeaponActor> WeaponActorClass;
 	UPROPERTY()
-	//ABaseWeaponActor* WeaponActor = nullptr;
-	ABaseWeaponActor* EquippedWeapon = nullptr;
+	ABaseWeaponLootActor* EquippedWeaponActor = nullptr;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	class UInventory* InventoryComponent;
 
 	FWeaponStats EquippedWeaponStats;
 

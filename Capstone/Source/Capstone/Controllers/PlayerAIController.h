@@ -31,6 +31,8 @@ public:
 
 	virtual void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result) override;
 
+	void PrintInventory();
+
 private:
 	void InteractWithItem(FHitResult HitResult, class IInteractableItemInterface* ItemInterface);
 	void DealDamageToEnemy(class ABaseEnemyCharacter* EnemyCharacter);

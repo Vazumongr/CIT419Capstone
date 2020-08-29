@@ -26,6 +26,8 @@ private:
     void ToggleCameraLock();
     UFUNCTION()
     void CameraZoom(float AxisValue);
+    UFUNCTION()
+    void PrintInventory();
 
 public:
     void SetPlayerAIController(class APlayerAIController* InController);

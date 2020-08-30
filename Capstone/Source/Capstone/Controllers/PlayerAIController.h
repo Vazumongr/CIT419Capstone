@@ -7,6 +7,8 @@
 #include "PlayerAIController.generated.h"
 
 
+struct FWeaponStats;
+
 UENUM()
 enum class FMoveCommandTypes : uint8
 {
@@ -32,6 +34,8 @@ public:
 	virtual void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result) override;
 
 	void PrintInventory();
+	FString GetInventoryAsText();
+	TArray<FWeaponStats> GetInventoryAsArray();
 
 private:
 	void InteractWithItem(FHitResult HitResult, class IInteractableItemInterface* ItemInterface);

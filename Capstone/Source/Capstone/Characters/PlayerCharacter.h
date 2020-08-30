@@ -29,11 +29,13 @@ public:
 
 	void DealDamageToEnemy(AActor* EnemyToDamage);
 	void InteractWithItem(class IInteractableItemInterface* ItemToInteract);
-
 	void PickUpWeapon(class ABaseWeaponLootActor* InWeapon);
 	void EquipWeapon(struct FWeaponStats InWeapon);
-
 	void PrintInventory();
+	FString GetInventoryAsText();
+	TArray<FWeaponStats> GetInventoryAsArray();
+
+	
 
 private:
 

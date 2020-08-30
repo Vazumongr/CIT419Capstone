@@ -35,6 +35,11 @@ void UInventory::AddItem(FWeaponStats InObject)
 	Inventory.Add(InObject);
 }
 
+TArray<FWeaponStats> UInventory::GetInventoryTArray() const
+{
+	return Inventory;
+}
+
 void UInventory::PrintArray()
 {
 	UE_LOG(LogTemp, Warning, TEXT("%s"), *ToString());

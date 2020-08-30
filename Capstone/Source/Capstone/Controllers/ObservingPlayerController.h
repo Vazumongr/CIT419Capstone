@@ -14,6 +14,8 @@ class CAPSTONE_API AObservingPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 public:
+    AObservingPlayerController();
+    
     virtual void BeginPlay() override;
 
 protected:
@@ -38,5 +40,10 @@ public:
 private:
     APlayerAIController* PlayerAIController = nullptr;
     AObservingPawn* ObservingPawn = nullptr;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
+    TSubclassOf<class UInventoryWidget> InventoryClass;
+
+    class UInventoryWidget* InventoryWidget = nullptr;
     
 };

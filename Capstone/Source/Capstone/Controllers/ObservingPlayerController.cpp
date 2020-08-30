@@ -6,6 +6,12 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "Capstone/Controllers/PlayerAIController.h"
 #include "Capstone/Pawns/ObservingPawn.h"
+#include "Capstone/Widgets/InventoryWidget.h"
+
+AObservingPlayerController::AObservingPlayerController()
+{
+    
+}
 
 void AObservingPlayerController::BeginPlay()
 {
@@ -62,6 +68,33 @@ void AObservingPlayerController::PrintInventory()
 {
     ensure(PlayerAIController);
     PlayerAIController->PrintInventory();
+
+    ensure(InventoryClass);
+    if(InventoryWidget == nullptr)
+    {
+        InventoryWidget = Cast<UInventoryWidget>(CreateWidget(this, InventoryClass));
+        
+        if(InventoryWidget != nullptr)
+        {
+            InventoryWidget->AddToViewport();
+            InventoryWidget->SetInventory(PlayerAIController->GetInventoryAsArray());
+        }
+            
+    }
+    else
+    {
+        if(InventoryWidget->GetVisibility() == ESlateVisibility::Collapsed)
+        {
+            InventoryWidget->SetVisibility(ESlateVisibility::Visible);
+            InventoryWidget->SetInventory(PlayerAIController->GetInventoryAsArray());
+            InventoryWidget->SetText(PlayerAIController->GetInventoryAsText());
+        }
+        else
+            InventoryWidget->SetVisibility(ESlateVisibility::Collapsed);
+    }
+    
+        
+   
 }
 
 void AObservingPlayerController::SetPlayerAIController(APlayerAIController* InController)

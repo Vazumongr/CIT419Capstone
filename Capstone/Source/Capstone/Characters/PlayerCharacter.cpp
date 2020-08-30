@@ -85,3 +85,13 @@ void APlayerCharacter::PrintInventory()
 	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
 }
 
+FString APlayerCharacter::GetInventoryAsText()
+{
+	return InventoryComponent->ToString();
+}
+
+TArray<FWeaponStats> APlayerCharacter::GetInventoryAsArray()
+{
+	return InventoryComponent->GetInventoryTArray();
+}
+

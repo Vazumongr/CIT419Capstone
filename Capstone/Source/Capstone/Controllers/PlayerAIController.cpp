@@ -68,6 +68,18 @@ void APlayerAIController::PrintInventory()
     PlayerCharacter->PrintInventory();
 }
 
+FString APlayerAIController::GetInventoryAsText()
+{
+    ensure(PlayerCharacter);
+    return PlayerCharacter->GetInventoryAsText();
+}
+
+TArray<FWeaponStats> APlayerAIController::GetInventoryAsArray()
+{
+    ensure(PlayerCharacter);
+    return PlayerCharacter->GetInventoryAsArray();
+}
+
 void APlayerAIController::InteractWithItem(FHitResult HitResult, IInteractableItemInterface* ItemInterface)
 {
     TargetedItem = ItemInterface;

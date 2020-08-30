@@ -24,6 +24,7 @@ public:
 	void AddItem(FWeaponStats InObject);
 	FORCEINLINE FWeaponStats GetItem(int32 Index) const { return Inventory[Index]; }
 	FORCEINLINE int32 GetInventorySize() const { return Inventory.Num(); }
+	FORCEINLINE TArray<FWeaponStats> GetInventoryTArray() const;
 
 	void PrintArray();
 	FString ToString();

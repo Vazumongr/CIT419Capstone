@@ -32,6 +32,8 @@ private:
     void PrintInventory();
     UFUNCTION()
     void SwitchWeapon();
+    UFUNCTION()
+    void PlaceTurret();
 
 public:
     void SetPlayerAIController(class APlayerAIController* InController);
@@ -47,6 +49,8 @@ private:
     TSubclassOf<class UInventoryWidget> InventoryClass;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
     TSubclassOf<class UPlayerHUD> HUDClass;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
+    TSubclassOf<class AActor> TurretClass;
 
     UPlayerHUD* HUDWidget = nullptr;
     UInventoryWidget* InventoryWidget = nullptr;

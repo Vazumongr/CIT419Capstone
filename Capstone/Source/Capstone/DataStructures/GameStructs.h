@@ -24,7 +24,7 @@ struct FWeaponStats
 	FWeaponStats()
 	{
 		WeaponName = TEXT("Default Name");
-		WeaponDamage = 10.0f;
+		WeaponDamage = 0.0f;
 		StaticMesh = nullptr;
 	}
 	

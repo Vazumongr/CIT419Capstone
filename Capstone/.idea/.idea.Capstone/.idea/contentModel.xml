@@ -43733,8 +43733,12 @@
             <e p="AboveHeadHealthBar.h" t="Include" />
             <e p="BaseAboveHeadHealthbar.cpp" t="Include" />
             <e p="BaseAboveHeadHealthbar.h" t="Include" />
+            <e p="InventoryItemIcon.cpp" t="Include" />
+            <e p="InventoryItemIcon.h" t="Include" />
             <e p="InventoryWidget.cpp" t="Include" />
             <e p="InventoryWidget.h" t="Include" />
+            <e p="PlayerHUD.cpp" t="Include" />
+            <e p="PlayerHUD.h" t="Include" />
           </e>
         </e>
         <e p="Capstone.Target.cs" t="Include" />

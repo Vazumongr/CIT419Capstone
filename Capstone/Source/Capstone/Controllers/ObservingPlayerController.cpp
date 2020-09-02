@@ -7,6 +7,7 @@
 #include "Capstone/Controllers/PlayerAIController.h"
 #include "Capstone/Pawns/ObservingPawn.h"
 #include "Capstone/Widgets/InventoryWidget.h"
+#include "Capstone/Widgets/PlayerHUD.h"
 
 AObservingPlayerController::AObservingPlayerController()
 {
@@ -18,6 +19,11 @@ void AObservingPlayerController::BeginPlay()
     Super::BeginPlay();
 
     bShowMouseCursor = true;
+    ensure(HUDClass);
+    HUDWidget = CreateWidget<UPlayerHUD>(this, HUDClass, FName(TEXT("HUD")));
+    HUDWidget->AddToViewport();
+    ensure(PlayerAIController);
+    HUDWidget->SetOwningActor(PlayerAIController->GetPawn());
 }
 
 void AObservingPlayerController::SetupInputComponent()
@@ -26,6 +32,7 @@ void AObservingPlayerController::SetupInputComponent()
     InputComponent->BindAction("MoveCommand", IE_Pressed, this, &AObservingPlayerController::MoveCommand);
     InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
     InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::PrintInventory);
+    InputComponent->BindAction("SwitchWeapon", IE_Pressed, this, &AObservingPlayerController::SwitchWeapon);
     InputComponent->BindAxis("CameraZoom", this, &AObservingPlayerController::CameraZoom);
 }
 
@@ -87,7 +94,6 @@ void AObservingPlayerController::PrintInventory()
         {
             InventoryWidget->SetVisibility(ESlateVisibility::Visible);
             InventoryWidget->SetInventory(PlayerAIController->GetInventoryAsArray());
-            InventoryWidget->SetText(PlayerAIController->GetInventoryAsText());
         }
         else
             InventoryWidget->SetVisibility(ESlateVisibility::Collapsed);
@@ -95,6 +101,12 @@ void AObservingPlayerController::PrintInventory()
     
         
    
+}
+
+void AObservingPlayerController::SwitchWeapon()
+{
+    ensure(PlayerAIController);
+    PlayerAIController->SwitchWeapon();
 }
 
 void AObservingPlayerController::SetPlayerAIController(APlayerAIController* InController)

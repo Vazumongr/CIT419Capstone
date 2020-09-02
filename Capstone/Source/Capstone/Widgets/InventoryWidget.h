@@ -25,13 +25,15 @@ public:
 
     void SetInventory(TArray<FWeaponStats> InInventory);
 
+    void CreateInventoryWidget(FWeaponStats* InStats, int32* i);
+
 protected:
     UPROPERTY(meta = (BindWidget))
     class UTextBlock* InventoryTitleText = nullptr;
     UPROPERTY(meta = (BindWidget))
     class UUniformGridPanel* GridPanel = nullptr;
     UPROPERTY(EditAnywhere)
-    TSubclassOf<UUserWidget> InventoryIconClass;
+    TSubclassOf<class UInventoryItemIcon> InventoryIconClass;
 
     FString InventoryAsString = "";
 

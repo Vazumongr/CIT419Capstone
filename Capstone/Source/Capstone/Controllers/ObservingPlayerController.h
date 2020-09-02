@@ -30,6 +30,8 @@ private:
     void CameraZoom(float AxisValue);
     UFUNCTION()
     void PrintInventory();
+    UFUNCTION()
+    void SwitchWeapon();
 
 public:
     void SetPlayerAIController(class APlayerAIController* InController);
@@ -43,7 +45,10 @@ private:
     
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
     TSubclassOf<class UInventoryWidget> InventoryClass;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
+    TSubclassOf<class UPlayerHUD> HUDClass;
 
-    class UInventoryWidget* InventoryWidget = nullptr;
+    UPlayerHUD* HUDWidget = nullptr;
+    UInventoryWidget* InventoryWidget = nullptr;
     
 };

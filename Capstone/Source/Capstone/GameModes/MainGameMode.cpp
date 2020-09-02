@@ -10,11 +10,14 @@
 
 void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
 {
-
-    FActorSpawnParameters SpawnParameters;
+    AActor* SpawnPoint = ChoosePlayerStart(NewPlayer);
+    FVector SpawnLocation = SpawnPoint->GetActorLocation();
+    FRotator SpawnRotation = SpawnPoint->GetActorRotation();
+    
+    FActorSpawnParameters SpawnParameters;    // TODO Set spawn parameters to spawn correctly i.e. rotation
     SpawnParameters.Owner = NewPlayer;
 
-    PlayerCharacter = GetWorld()->SpawnActor<APlayerCharacter>(PlayerCharacterClass, SpawnParameters);
+    PlayerCharacter = GetWorld()->SpawnActor<APlayerCharacter>(PlayerCharacterClass, SpawnLocation, SpawnRotation, SpawnParameters);
     
     APlayerAIController* PlayerAIController = GetWorld()->SpawnActor<APlayerAIController>(PlayerAIControllerClass, SpawnParameters);
     PlayerAIController->Possess(PlayerCharacter);

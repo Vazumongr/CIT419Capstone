@@ -24,7 +24,6 @@ void ABaseLootActor::BeginPlay()
 
 void ABaseLootActor::Interact(class APlayerCharacter* PlayerCharacter)
 {
-	UE_LOG(LogTemp, Warning, TEXT("%s IS BEING LOOTED"), *GetName());
 	Destroy();
 }
 

@@ -25,27 +25,36 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Combat related
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser) override;
 
 	void DealDamageToEnemy(AActor* EnemyToDamage);
+	
 	void InteractWithItem(class IInteractableItemInterface* ItemToInteract);
+
+	UFUNCTION(BlueprintCallable)
+	float GetHealthPercent() const;
+
+	// Loot related
 	void PickUpWeapon(class ABaseWeaponLootActor* InWeapon);
+	
 	void EquipWeapon(struct FWeaponStats InWeapon);
+	
+	void SwitchWeapon();
+	
 	void PrintInventory();
+	
 	FString GetInventoryAsText();
+	
 	TArray<FWeaponStats> GetInventoryAsArray();
 
 	
 
 private:
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
-	TSubclassOf<UDamageType> DamageType;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<ABaseWeaponActor> WeaponActorClass;
-	/*
-	UPROPERTY() TODO Shouldnt need
-	ABaseWeaponLootActor* EquippedWeaponLootActor = nullptr;*/ 
+	
 	UPROPERTY()
 	class ABaseWeaponActor* EquippedWeaponActor = nullptr;
 

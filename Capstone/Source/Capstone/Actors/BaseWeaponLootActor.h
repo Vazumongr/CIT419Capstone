@@ -9,7 +9,7 @@
 
 
 /**
- * 	TODO Gonna refactor all this weapon stuff again later.
+ * 	
  */
 UCLASS()
 class CAPSTONE_API ABaseWeaponLootActor : public ABaseLootActor

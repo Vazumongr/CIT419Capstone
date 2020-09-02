@@ -30,7 +30,7 @@ void ABaseEnemyCharacter::BeginPlay()
 void ABaseEnemyCharacter::DamagePlayer()
 {
 	ensure(PlayerCharacter);
-	float DamageAmount = 10;
+	float DamageAmount = 0;
 	FPointDamageEvent PointDamageEvent;
 	FDamageEvent DamageEvent;
 	PlayerCharacter->TakeDamage(DamageAmount, DamageEvent, GetController(), this);
@@ -54,7 +54,6 @@ float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Da
 		
 	float DamageApplied = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	Health -= DamageApplied;
-	UE_LOG(LogTemp, Warning, TEXT("Health Remaining: %f"), Health);
 	if(Health <= 0)
 	{
 		DetachFromControllerPendingDestroy();

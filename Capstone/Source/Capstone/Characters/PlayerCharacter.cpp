@@ -44,6 +44,7 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
 {
 	float DamageAmount = EquippedWeaponStats.WeaponDamage;
+	TSubclassOf<UDamageType> DamageType = EquippedWeaponStats.DamageType;
 	FPointDamageEvent PointDamageEvent;
 	UGameplayStatics::ApplyDamage(EnemyToDamage, DamageAmount, GetController(), this, DamageType);
 }
@@ -51,6 +52,11 @@ void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
 void APlayerCharacter::InteractWithItem(IInteractableItemInterface* ItemToInteract)
 {
 	ItemToInteract->Interact(this);
+}
+
+float APlayerCharacter::GetHealthPercent() const
+{
+	return Health / 100.0f;
 }
 
 void APlayerCharacter::PickUpWeapon(ABaseWeaponLootActor* InWeapon)
@@ -76,7 +82,20 @@ void APlayerCharacter::EquipWeapon(FWeaponStats InStats)
 	FString DebugMsg = FString::Printf(TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
 
 	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
-	//UE_LOG(LogTemp, Warning, TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
+	UE_LOG(LogTemp, Warning, TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
+}
+
+void APlayerCharacter::SwitchWeapon()
+{
+	TArray<FWeaponStats> Inventory = InventoryComponent->GetInventoryTArray();
+	for( FWeaponStats Stats : Inventory)
+	{
+		if(!Stats.WeaponName.Equals(EquippedWeaponStats.WeaponName))
+		{
+			EquipWeapon(Stats);
+			break;
+		}
+	}
 }
 
 void APlayerCharacter::PrintInventory()

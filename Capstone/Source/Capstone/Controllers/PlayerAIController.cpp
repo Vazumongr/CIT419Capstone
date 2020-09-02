@@ -49,7 +49,6 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
                 PlayerCharacter->PickUpWeapon(TargetedWeapon);
             break;
         case FMoveCommandTypes::MoveToLocation:
-            UE_LOG(LogTemp, Warning, TEXT("Movement completed."));
             break;
         case FMoveCommandTypes::MoveToAttack:
             if(Result.IsSuccess() && TargetedEnemy != nullptr && PlayerCharacter != nullptr)
@@ -60,6 +59,12 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
         default:
             break;
     }
+}
+
+void APlayerAIController::SwitchWeapon()
+{
+    ensure(PlayerCharacter);
+    PlayerCharacter->SwitchWeapon();
 }
 
 void APlayerAIController::PrintInventory()

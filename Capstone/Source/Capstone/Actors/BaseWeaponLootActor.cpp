@@ -17,6 +17,5 @@ void ABaseWeaponLootActor::BeginPlay()
 
 void ABaseWeaponLootActor::Interact(APlayerCharacter* PlayerCharacter)
 {
-    UE_LOG(LogTemp, Warning, TEXT("Destroying..."));
-    //Destroy();
+    Destroy();
 }

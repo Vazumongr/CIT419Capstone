@@ -5,12 +5,15 @@
 
 #include "Capstone/Characters/PlayerCharacter.h"
 #include "Capstone/GameModes/MainGameMode.h"
+#include "Capstone/ActorComponents/LootGenerator.h"
 
 // Sets default values
 ABaseEnemyCharacter::ABaseEnemyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	LootGenerator = CreateDefaultSubobject<ULootGenerator>(FName(TEXT("Loot Generator")));
 
 }
 
@@ -36,6 +39,13 @@ void ABaseEnemyCharacter::DamagePlayer()
 	PlayerCharacter->TakeDamage(DamageAmount, DamageEvent, GetController(), this);
 }
 
+void ABaseEnemyCharacter::Die()
+{
+	LootGenerator->SpawnWeapon();
+	DetachFromControllerPendingDestroy();
+	Destroy();
+}
+
 // Called every frame
 void ABaseEnemyCharacter::Tick(float DeltaTime)
 {
@@ -56,8 +66,7 @@ float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Da
 	Health -= DamageApplied;
 	if(Health <= 0)
 	{
-		DetachFromControllerPendingDestroy();
-		Destroy();
+		Die();
 	}
 		
 	return DamageApplied;

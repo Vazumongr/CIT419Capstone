@@ -36,7 +36,12 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<UDamageType> DamageType;
 
+	void Die();
+
 private:
 	class APlayerCharacter* PlayerCharacter = nullptr;
+
+	UPROPERTY(EditAnywhere)
+	class ULootGenerator* LootGenerator = nullptr;
 
 };

@@ -5,6 +5,11 @@
 
 #include "BehaviorTree/BlackboardComponent.h"
 
+void AEnemyAIController::Tick(float DeltaSeconds)
+{
+    BlackboardComponent->SetValueAsVector(TEXT("PlayerLocation"),GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation());    // Records start location
+}
+
 void AEnemyAIController::BeginPlay()
 {
     Super::BeginPlay();

@@ -43684,6 +43684,8 @@
           <e p="ActorComponents" t="Include">
             <e p="Inventory.cpp" t="Include" />
             <e p="Inventory.h" t="Include" />
+            <e p="LootGenerator.cpp" t="Include" />
+            <e p="LootGenerator.h" t="Include" />
           </e>
           <e p="Actors" t="Include">
             <e p="BaseLootActor.cpp" t="Include" />
@@ -43705,6 +43707,8 @@
             <e p="PlayerCharacter.h" t="Include" />
           </e>
           <e p="Controllers" t="Include">
+            <e p="EnemyAIController.cpp" t="Include" />
+            <e p="EnemyAIController.h" t="Include" />
             <e p="ObservingPlayerController.cpp" t="Include" />
             <e p="ObservingPlayerController.h" t="Include" />
             <e p="PlayerAIController.cpp" t="Include" />

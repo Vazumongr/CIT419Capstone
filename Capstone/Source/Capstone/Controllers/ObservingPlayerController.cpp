@@ -14,6 +14,18 @@ AObservingPlayerController::AObservingPlayerController()
     
 }
 
+void AObservingPlayerController::TickActor(float DeltaTime, ELevelTick TickType, FActorTickFunction& ThisTickFunction)
+{
+    Super::TickActor(DeltaTime, TickType, ThisTickFunction);
+    if(TurretPlacement != nullptr)
+    {
+        ensure(PlayerAIController);
+        FHitResult HitResult;
+        bool bHit = LineTrace(HitResult);
+        if(bHit) TurretPlacement->SetActorLocation(HitResult.Location);
+    }
+}
+
 void AObservingPlayerController::BeginPlay()
 {
     Super::BeginPlay();
@@ -36,7 +48,7 @@ void AObservingPlayerController::SetupInputComponent()
     InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
     InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::PrintInventory);
     InputComponent->BindAction("SwitchWeapon", IE_Pressed, this, &AObservingPlayerController::SwitchWeapon);
-    InputComponent->BindAction("PlaceTurret", IE_Pressed, this, &AObservingPlayerController::PlaceTurret);
+    InputComponent->BindAction("PlaceTurret", IE_Pressed, this, &AObservingPlayerController::PrepareTurret);
     // Axis Bindings
     InputComponent->BindAxis("CameraZoom", this, &AObservingPlayerController::CameraZoom);
 }
@@ -44,20 +56,18 @@ void AObservingPlayerController::SetupInputComponent()
 /** Handle the move command and send the HitResult to the PlayerAIController if we have it */
 void AObservingPlayerController::MoveCommand()
 {
-    // TODO Refactor LineTrace into another method
+    if(TurretPlacement != nullptr)
+    {
+        PlaceTurret();
+        TurretPlacement->Destroy();
+        TurretPlacement = nullptr;
+        return;
+    }
+    
     ensure(PlayerAIController);
     FHitResult HitResult;
-    FVector WorldLocation, WorldDirection;
-    DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
 
-    FVector StartLocation = PlayerCameraManager->GetCameraLocation();
-    FVector EndLocation = (StartLocation + (WorldDirection * 50000));    // TODO no magic numbers
-    
-    TArray<AActor*> ActorsToIgnore;
-
-    bool bHit = UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_Camera),
-        false, ActorsToIgnore, EDrawDebugTrace::ForDuration, HitResult, true, FLinearColor::Yellow,
-        FLinearColor::White, 5.0f);
+    bool bHit = LineTrace(HitResult);
     
     if(bHit) PlayerAIController->ProcessHitResult(HitResult);
 }
@@ -104,9 +114,6 @@ void AObservingPlayerController::PrintInventory()
         else
             InventoryWidget->SetVisibility(ESlateVisibility::Collapsed);
     }
-    
-        
-   
 }
 
 void AObservingPlayerController::SwitchWeapon()
@@ -115,9 +122,30 @@ void AObservingPlayerController::SwitchWeapon()
     PlayerAIController->SwitchWeapon();
 }
 
+void AObservingPlayerController::PrepareTurret()
+{
+    if(TurretPlacement != nullptr)
+    {
+        TurretPlacement->Destroy();
+        TurretPlacement = nullptr;
+        return;
+    }
+    FHitResult HitResult;
+    bool bHit = LineTrace(HitResult);
+
+    if(bHit)
+    {
+        ensure(TurretClass);
+        FActorSpawnParameters Params;
+        FRotator Rotation;
+        TurretPlacement = GetWorld()->SpawnActor<AActor>(TurretPlacementClass, HitResult.Location, Rotation, Params);
+    }
+}
+
 void AObservingPlayerController::PlaceTurret()
 {
     FHitResult HitResult;
+    /*
     FVector WorldLocation, WorldDirection;
     DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
 
@@ -129,6 +157,10 @@ void AObservingPlayerController::PlaceTurret()
     bool bHit = UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_Camera),
         false, ActorsToIgnore, EDrawDebugTrace::ForDuration, HitResult, true, FLinearColor::Yellow,
         FLinearColor::White, 5.0f);
+    */
+
+    bool bHit = LineTrace(HitResult);
+
 
     if(bHit)
     {
@@ -137,6 +169,23 @@ void AObservingPlayerController::PlaceTurret()
         FRotator Rotation;
         GetWorld()->SpawnActor<AActor>(TurretClass, HitResult.Location, Rotation, Params);
     }
+}
+
+bool AObservingPlayerController::LineTrace(FHitResult& HitResult)
+{
+    FVector WorldLocation, WorldDirection;
+    DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
+
+    FVector StartLocation = PlayerCameraManager->GetCameraLocation();
+    FVector EndLocation = (StartLocation + (WorldDirection * LineTraceRange));    // TODO no magic numbers
+    
+    TArray<AActor*> ActorsToIgnore;
+    if(TurretPlacement != nullptr)
+        ActorsToIgnore.Add(TurretPlacement);
+
+    return UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_Camera),
+        false, ActorsToIgnore, EDrawDebugTrace::ForDuration, HitResult, true, FLinearColor::Yellow,
+        FLinearColor::White, 5.0f);
 }
 
 void AObservingPlayerController::SetPlayerAIController(APlayerAIController* InController)

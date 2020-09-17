@@ -16,12 +16,17 @@ class CAPSTONE_API AObservingPlayerController : public APlayerController
 public:
     AObservingPlayerController();
     
+    
+    virtual void TickActor(float DeltaTime, enum ELevelTick TickType, FActorTickFunction& ThisTickFunction) override;
+    
     virtual void BeginPlay() override;
 
 protected:
     virtual void SetupInputComponent() override;
 
 private:
+
+    // UFUNCTIONS
     UFUNCTION()
     void MoveCommand();
     UFUNCTION()
@@ -33,7 +38,17 @@ private:
     UFUNCTION()
     void SwitchWeapon();
     UFUNCTION()
+    void PrepareTurret();
+    UFUNCTION()
     void PlaceTurret();
+
+    // FUNCTIONS
+    bool LineTrace(FHitResult& HitResult);
+
+    // VARIABLES
+    AActor* TurretPlacement = nullptr;
+
+    float LineTraceRange = 50000.0f;
 
 public:
     void SetPlayerAIController(class APlayerAIController* InController);
@@ -49,8 +64,10 @@ private:
     TSubclassOf<class UInventoryWidget> InventoryClass;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
     TSubclassOf<class UPlayerHUD> HUDClass;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Structures", meta = (AllowPrivateAccess = "true"))
     TSubclassOf<class AActor> TurretClass;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Structures", meta = (AllowPrivateAccess = "true"))
+    TSubclassOf<class AActor> TurretPlacementClass;
 
     UPlayerHUD* HUDWidget = nullptr;
     UInventoryWidget* InventoryWidget = nullptr;

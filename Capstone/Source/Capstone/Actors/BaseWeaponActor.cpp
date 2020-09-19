@@ -30,6 +30,7 @@ void ABaseWeaponActor::InitializeStats(FWeaponStats InStats)
 void ABaseWeaponActor::BeginPlay()
 {
 	Super::BeginPlay();
+	UE_LOG(LogTemp, Warning, TEXT("I AM BEING USED AHA"));
 }
 
 // Called every frame

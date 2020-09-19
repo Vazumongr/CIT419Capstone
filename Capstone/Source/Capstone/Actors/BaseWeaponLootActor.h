@@ -22,6 +22,7 @@ public:
 	virtual void BeginPlay() override;
 	
 	FORCEINLINE FWeaponStats GetWeaponStats() const { return WeaponStats; }
+	void SetWeaponStats(FWeaponStats InStats);
 	
 	virtual void Interact(class APlayerCharacter* PlayerCharacter) override;
 

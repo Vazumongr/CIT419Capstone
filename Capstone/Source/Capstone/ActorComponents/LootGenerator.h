@@ -32,5 +32,10 @@ private:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<ABaseWeaponLootActor> WeaponClass;
 
+	UPROPERTY()
+	UStaticMesh* WeaponMesh = nullptr;
+
+	static TArray<UStaticMesh*> MeshLibrary;
+
 		
 };

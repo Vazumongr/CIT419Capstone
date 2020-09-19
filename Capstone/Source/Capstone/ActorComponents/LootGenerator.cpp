@@ -4,13 +4,22 @@
 #include "LootGenerator.h"
 
 #include "Capstone/DataStructures/GameStructs.h"
+#include "Capstone/Actors/BaseWeaponLootActor.h"
 
 // Sets default values for this component's properties
 ULootGenerator::ULootGenerator()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
-	PrimaryComponentTick.bCanEverTick = true;
+	PrimaryComponentTick.bCanEverTick = false;
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> StaticMeshObject(TEXT("/Game/Meshes/SM_Rifle"));
+	if(!ensure(StaticMeshObject.Object))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Weapon mesh not found..."));
+		return;
+	}
+	WeaponMesh = StaticMeshObject.Object;
 
 	// ...
 }
@@ -19,7 +28,16 @@ void ULootGenerator::SpawnWeapon()
 {
 	FActorSpawnParameters SpawnParams;
 	FVector SpawnLocation = GetOwner()->GetActorLocation();
-	GetWorld()->SpawnActor<ABaseWeaponLootActor>(WeaponClass, SpawnLocation, FRotator::ZeroRotator);
+	
+	ABaseWeaponLootActor* SpawnedWeapon = GetWorld()->SpawnActor<ABaseWeaponLootActor>(WeaponClass, SpawnLocation, FRotator::ZeroRotator);
+	
+	FWeaponStats WeaponsStats;
+	WeaponsStats.WeaponDamage = 30.0f;
+	WeaponsStats.WeaponName = FString(TEXT("SpawnedWeapon"));
+	if(WeaponMesh != nullptr)
+		WeaponsStats.StaticMesh = WeaponMesh;
+	SpawnedWeapon->SetWeaponStats(WeaponsStats);
+	
 }
 
 

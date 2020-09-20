@@ -26,13 +26,11 @@
       <change afterPath="$PROJECT_DIR$/Content/UI/Inventory/WBP_InventoryItemIcon.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/Inventory/WBP_Inventory.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Inventory/WBP_Inventory.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/Inventory/WBP_InventoryItemsIcon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Inventory/WBP_InventoryItemsIcon.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.exp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.suppressed.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.suppressed.exp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/Capstone.init.gen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/Capstone.init.gen.cpp" afterDir="false" />
@@ -593,7 +591,7 @@
       <workItem from="1600384386644" duration="1215000" />
       <workItem from="1600467712594" duration="716000" />
       <workItem from="1600548679646" duration="4362000" />
-      <workItem from="1600622227914" duration="10539000" />
+      <workItem from="1600622227914" duration="10695000" />
     </task>
     <servers />
   </component>

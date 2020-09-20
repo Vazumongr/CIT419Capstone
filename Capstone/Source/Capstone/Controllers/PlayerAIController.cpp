@@ -61,10 +61,11 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
     }
 }
 
-void APlayerAIController::SwitchWeapon()
+void APlayerAIController::SwitchWeapon(FWeaponStats InStats)
 {
+    UE_LOG(LogTemp, Warning, TEXT("I am calling switchweapon..."));
     ensure(PlayerCharacter);
-    PlayerCharacter->SwitchWeapon();
+    PlayerCharacter->SwitchWeapon(InStats);
 }
 
 void APlayerAIController::PrintInventory()

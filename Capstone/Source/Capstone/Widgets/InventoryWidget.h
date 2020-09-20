@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "InventoryItemIcon.h"
 #include "Blueprint/UserWidget.h"
 #include "Capstone/DataStructures/GameStructs.h"
 
@@ -27,11 +28,23 @@ public:
 
     void CreateInventoryWidget(FWeaponStats* InStats, int32* i);
 
+    void EquipWeapon(UInventoryItemIcon* InIcon);
+
 protected:
     UPROPERTY(meta = (BindWidget))
     class UTextBlock* InventoryTitleText = nullptr;
     UPROPERTY(meta = (BindWidget))
     class UUniformGridPanel* GridPanel = nullptr;
+    UPROPERTY(meta = (BindWidget))
+    class UInventoryItemIcon* Weapon1 = nullptr;
+    UPROPERTY(meta = (BindWidget))
+    class UInventoryItemIcon* Weapon2 = nullptr;
+    UPROPERTY(meta = (BindWidget))
+    class UInventoryItemIcon* Weapon3 = nullptr;
+    UPROPERTY(meta = (BindWidget))
+    class UInventoryItemIcon* Weapon4 = nullptr;
+    UPROPERTY(meta = (BindWidget))
+    class UInventoryItemIcon* Weapon5 = nullptr;
     UPROPERTY(EditAnywhere)
     TSubclassOf<class UInventoryItemIcon> InventoryIconClass;
 
@@ -40,4 +53,11 @@ protected:
 private:
     TArray<FString> Out;
     TArray<FWeaponStats> Inventory;
+    TArray<UInventoryItemIcon*> InventoryIconArray;
+
+    TMap<UInventoryItemIcon*, FWeaponStats> InventoryWeaponMap;
+
+    class AObservingPlayerController* OwningController;
+
+    void InitializeInventoryArray();
 };

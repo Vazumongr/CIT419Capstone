@@ -6,6 +6,8 @@
 #include "GameFramework/PlayerController.h"
 #include "ObservingPlayerController.generated.h"
 
+struct FWeaponStats;
+
 /**
  * 
  */
@@ -20,6 +22,8 @@ public:
     virtual void TickActor(float DeltaTime, enum ELevelTick TickType, FActorTickFunction& ThisTickFunction) override;
     
     virtual void BeginPlay() override;
+
+    void EquipWeapon(FWeaponStats InStats);
 
 protected:
     virtual void SetupInputComponent() override;

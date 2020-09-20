@@ -40,6 +40,12 @@ void AObservingPlayerController::BeginPlay()
     HUDWidget->SetOwningActor(PlayerAIController->GetPawn());
 }
 
+void AObservingPlayerController::EquipWeapon(FWeaponStats InStats)
+{
+    ensure(PlayerAIController);
+    PlayerAIController->SwitchWeapon(InStats);
+}
+
 void AObservingPlayerController::SetupInputComponent()
 {
     Super::SetupInputComponent();
@@ -119,7 +125,7 @@ void AObservingPlayerController::PrintInventory()
 void AObservingPlayerController::SwitchWeapon()
 {
     ensure(PlayerAIController);
-    PlayerAIController->SwitchWeapon();
+    //PlayerAIController->SwitchWeapon();
 }
 
 void AObservingPlayerController::PrepareTurret()

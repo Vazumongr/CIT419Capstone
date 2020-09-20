@@ -26,17 +26,25 @@ ULootGenerator::ULootGenerator()
 
 void ULootGenerator::SpawnWeapon()
 {
+	if(!WeaponClass)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("YOU FORGOT TO ASSING WEAPONCLASS BUD"));
+		return;
+	}
+		
+	
 	FActorSpawnParameters SpawnParams;
 	FVector SpawnLocation = GetOwner()->GetActorLocation();
-	
 	ABaseWeaponLootActor* SpawnedWeapon = GetWorld()->SpawnActor<ABaseWeaponLootActor>(WeaponClass, SpawnLocation, FRotator::ZeroRotator);
 	
 	FWeaponStats WeaponsStats;
 	WeaponsStats.WeaponDamage = 30.0f;
 	WeaponsStats.WeaponName = FString(TEXT("SpawnedWeapon"));
+	ensure(WeaponMesh);
 	if(WeaponMesh != nullptr)
 		WeaponsStats.StaticMesh = WeaponMesh;
-	SpawnedWeapon->SetWeaponStats(WeaponsStats);
+	if(SpawnedWeapon != nullptr)
+		SpawnedWeapon->SetWeaponStats(WeaponsStats);
 	
 }
 

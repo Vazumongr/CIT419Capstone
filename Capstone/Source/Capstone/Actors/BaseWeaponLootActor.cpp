@@ -19,6 +19,7 @@ void ABaseWeaponLootActor::BeginPlay()
 void ABaseWeaponLootActor::SetWeaponStats(FWeaponStats InStats)
 {
     WeaponStats = InStats;
+    ensure(StaticMeshComponent);
     StaticMeshComponent->SetStaticMesh(WeaponStats.StaticMesh);
 }
 

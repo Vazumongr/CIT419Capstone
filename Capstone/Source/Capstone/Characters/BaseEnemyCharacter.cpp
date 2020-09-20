@@ -41,6 +41,7 @@ void ABaseEnemyCharacter::DamagePlayer()
 
 void ABaseEnemyCharacter::Die()
 {
+	ensure(LootGenerator);
 	LootGenerator->SpawnWeapon();
 	DetachFromControllerPendingDestroy();
 	Destroy();

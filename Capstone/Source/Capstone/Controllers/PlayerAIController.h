@@ -33,7 +33,7 @@ public:
 
 	virtual void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result) override;
 
-	void SwitchWeapon();
+	void SwitchWeapon(FWeaponStats InStats);
 
 	void PrintInventory();
 	FString GetInventoryAsText();

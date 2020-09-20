@@ -85,8 +85,11 @@ void APlayerCharacter::EquipWeapon(FWeaponStats InStats)
 	UE_LOG(LogTemp, Warning, TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
 }
 
-void APlayerCharacter::SwitchWeapon()
+void APlayerCharacter::SwitchWeapon(FWeaponStats InStats)
 {
+	UE_LOG(LogTemp, Warning, TEXT("I am calling switchweapon..."));
+	EquipWeapon(InStats);
+	/*
 	TArray<FWeaponStats> Inventory = InventoryComponent->GetInventoryTArray();
 	for( FWeaponStats Stats : Inventory)
 	{
@@ -96,6 +99,7 @@ void APlayerCharacter::SwitchWeapon()
 			break;
 		}
 	}
+	*/
 }
 
 void APlayerCharacter::PrintInventory()

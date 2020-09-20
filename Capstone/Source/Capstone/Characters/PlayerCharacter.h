@@ -40,7 +40,7 @@ public:
 	
 	void EquipWeapon(struct FWeaponStats InWeapon);
 	
-	void SwitchWeapon();
+	void SwitchWeapon(FWeaponStats InStats);
 	
 	void PrintInventory();
 	

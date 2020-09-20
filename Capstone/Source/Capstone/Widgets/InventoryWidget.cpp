@@ -6,16 +6,23 @@
 #include "Components/TextBlock.h"
 #include "Components/UniformGridPanel.h"
 #include "Capstone/Widgets/InventoryItemIcon.h"
+#include "Capstone/Controllers/ObservingPlayerController.h"
 
 bool UInventoryWidget::Initialize()
 {
     bool bSuccess = Super::Initialize();
     if(!bSuccess) return false;
 
+    InitializeInventoryArray();
+
+    if(GetOwningPlayer() != nullptr)
+        OwningController = Cast<AObservingPlayerController>(GetOwningPlayer());
+
 
     return true;;
 }
 
+// TODO I think I can remove this
 void UInventoryWidget::SetText(FString InText)
 {
     InventoryAsString = InText;
@@ -38,10 +45,10 @@ void UInventoryWidget::SetInventory(TArray<FWeaponStats> InInventory)
     int32 i = 0;
     for( FWeaponStats WeaponStats : Inventory)
     {
+        InventoryIconArray[i]->SetStats(WeaponStats.WeaponName, WeaponStats.WeaponDamage);
+        InventoryWeaponMap.Add(InventoryIconArray[i], WeaponStats);
         i++;
-        CreateInventoryWidget(&WeaponStats, &i);
     }
-    //GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, DebugMsg);
 }
 
 void UInventoryWidget::CreateInventoryWidget(FWeaponStats* InStats, int32* i)
@@ -50,4 +57,34 @@ void UInventoryWidget::CreateInventoryWidget(FWeaponStats* InStats, int32* i)
     UInventoryItemIcon* NewWidget = CreateWidget<UInventoryItemIcon>(this, InventoryIconClass, FName(WidgetName));
     GridPanel->AddChildToUniformGrid(NewWidget,0,*i);
     NewWidget->SetStats(InStats->WeaponName, InStats->WeaponDamage);
+}
+
+void UInventoryWidget::EquipWeapon(UInventoryItemIcon* InIcon)
+{
+    for(UInventoryItemIcon* Icon : InventoryIconArray)
+    {
+        if(Icon == InIcon)
+        {
+            if(InventoryWeaponMap.Find(Icon) == nullptr) return;
+            
+            FWeaponStats Stats = *InventoryWeaponMap.Find(Icon);
+            
+            if(OwningController != nullptr)
+                OwningController->EquipWeapon(Stats);
+        }
+    }
+}
+
+void UInventoryWidget::InitializeInventoryArray()
+{
+    InventoryIconArray.Add(Weapon1);
+    InventoryIconArray.Add(Weapon2);
+    InventoryIconArray.Add(Weapon3);
+    InventoryIconArray.Add(Weapon4);
+    InventoryIconArray.Add(Weapon5);
+    for( UInventoryItemIcon* Icon : InventoryIconArray)
+    {
+        Icon->SetStats(TEXT(" "), -1);
+        Icon->SetOwner(this);
+    }
 }

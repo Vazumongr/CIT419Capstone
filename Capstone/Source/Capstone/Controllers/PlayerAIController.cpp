@@ -114,3 +114,13 @@ void APlayerAIController::SetPlayerCharacter(APlayerCharacter* InCharacter)
 {
     PlayerCharacter = InCharacter;
 }
+
+void APlayerAIController::AddSteel(float InSteel)
+{
+    PlayerCharacter->AddSteel(InSteel);
+}
+
+float APlayerAIController::GetSteel() const
+{
+    return PlayerCharacter->GetSteel();
+}

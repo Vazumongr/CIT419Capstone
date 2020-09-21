@@ -4,7 +4,9 @@
 #include "ObservingPlayerController.h"
 
 #include "Kismet/KismetSystemLibrary.h"
+#include "Capstone/Actors/TurretPlacementHighlightActor.h"
 #include "Capstone/Controllers/PlayerAIController.h"
+#include "Capstone/Pawns/BaseTurretPawn.h"
 #include "Capstone/Pawns/ObservingPawn.h"
 #include "Capstone/Widgets/InventoryWidget.h"
 #include "Capstone/Widgets/PlayerHUD.h"
@@ -22,7 +24,18 @@ void AObservingPlayerController::TickActor(float DeltaTime, ELevelTick TickType,
         ensure(PlayerAIController);
         FHitResult HitResult;
         bool bHit = LineTrace(HitResult);
-        if(bHit) TurretPlacement->SetActorLocation(HitResult.Location);
+        if(bHit)
+        {
+            if(Cast<APawn>(HitResult.Actor) || PlayerAIController->GetSteel() < 10)
+            {
+                TurretPlacement->SetBadMaterial();
+            }
+            else
+            {
+                TurretPlacement->SetGoodMaterial();
+            }
+            TurretPlacement->SetActorLocation(HitResult.Location);
+        }
     }
 }
 
@@ -144,38 +157,34 @@ void AObservingPlayerController::PrepareTurret()
         ensure(TurretClass);
         FActorSpawnParameters Params;
         FRotator Rotation;
-        TurretPlacement = GetWorld()->SpawnActor<AActor>(TurretPlacementClass, HitResult.Location, Rotation, Params);
+        TurretPlacement = GetWorld()->SpawnActor<ATurretPlacementHighlightActor>(TurretPlacementClass, HitResult.Location, Rotation, Params);
     }
 }
 
 void AObservingPlayerController::PlaceTurret()
 {
     FHitResult HitResult;
-    /*
-    FVector WorldLocation, WorldDirection;
-    DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
 
-    FVector StartLocation = PlayerCameraManager->GetCameraLocation();
-    FVector EndLocation = (StartLocation + (WorldDirection * 50000));    // TODO no magic numbers
-    
-    TArray<AActor*> ActorsToIgnore;
-
-    bool bHit = UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_Camera),
-        false, ActorsToIgnore, EDrawDebugTrace::ForDuration, HitResult, true, FLinearColor::Yellow,
-        FLinearColor::White, 5.0f);
-    */
-
-    bool bHit = LineTrace(HitResult);
+    // TODO if we ain't clicking on the ground, no placement.
+    const bool bHit = LineTrace(HitResult);
 
 
     if(bHit)
     {
+        // IF we have enough steel
+        if(Cast<APawn>(HitResult.Actor) || PlayerAIController->GetSteel() < 10)
+        {
+            return;
+        }
         ensure(TurretClass);
         FActorSpawnParameters Params;
         FRotator Rotation;
-        GetWorld()->SpawnActor<AActor>(TurretClass, HitResult.Location, Rotation, Params);
+        ABaseTurretPawn* SpawnedTurret = GetWorld()->SpawnActor<ABaseTurretPawn>(TurretClass, HitResult.Location, Rotation, Params);
+        PlayerAIController->AddSteel(-10);
+        SpawnedTurret->SetPlayer(PlayerAIController->GetPawn());
     }
 }
+
 
 bool AObservingPlayerController::LineTrace(FHitResult& HitResult)
 {
@@ -189,8 +198,8 @@ bool AObservingPlayerController::LineTrace(FHitResult& HitResult)
     if(TurretPlacement != nullptr)
         ActorsToIgnore.Add(TurretPlacement);
 
-    return UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_Camera),
-        false, ActorsToIgnore, EDrawDebugTrace::ForDuration, HitResult, true, FLinearColor::Yellow,
+    return UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_GameTraceChannel18),
+        false, ActorsToIgnore, EDrawDebugTrace::None, HitResult, true, FLinearColor::Yellow,
         FLinearColor::White, 5.0f);
 }
 

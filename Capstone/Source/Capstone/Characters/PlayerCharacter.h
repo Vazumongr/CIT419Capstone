@@ -48,6 +48,10 @@ public:
 	
 	TArray<FWeaponStats> GetInventoryAsArray();
 
+	void AddSteel(float InSteel);
+
+	FORCEINLINE float GetSteel() const { return Steel; }
+
 	
 
 private:
@@ -64,6 +68,7 @@ private:
 	FWeaponStats EquippedWeaponStats;
 
 	float Health = 100.0f;
+	float Steel = 0.0f;
 
 
 

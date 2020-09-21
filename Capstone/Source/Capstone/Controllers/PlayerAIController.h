@@ -52,9 +52,11 @@ private:
 public:
 	void SetPlayerController( APlayerController* InController);
 	void SetPlayerCharacter(class APlayerCharacter* InCharacter);
+	void AddSteel(float InSteel);
 
 	FORCEINLINE class AObservingPlayerController* GetPlayerController() const { return PlayerController; }
 	FORCEINLINE APlayerCharacter* GetPlayerCharacter() const { return PlayerCharacter; }
+	float GetSteel() const;
 
 private:
 	AObservingPlayerController* PlayerController = nullptr;	// TODO I don't think I should be having a ptr to that.

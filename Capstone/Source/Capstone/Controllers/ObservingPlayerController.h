@@ -50,7 +50,7 @@ private:
     bool LineTrace(FHitResult& HitResult);
 
     // VARIABLES
-    AActor* TurretPlacement = nullptr;
+    class ATurretPlacementHighlightActor* TurretPlacement = nullptr;
 
     float LineTraceRange = 50000.0f;
 
@@ -69,9 +69,9 @@ private:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
     TSubclassOf<class UPlayerHUD> HUDClass;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Structures", meta = (AllowPrivateAccess = "true"))
-    TSubclassOf<class AActor> TurretClass;
+    TSubclassOf<class ABaseTurretPawn> TurretClass;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Structures", meta = (AllowPrivateAccess = "true"))
-    TSubclassOf<class AActor> TurretPlacementClass;
+    TSubclassOf<class ATurretPlacementHighlightActor> TurretPlacementClass;
 
     UPlayerHUD* HUDWidget = nullptr;
     UInventoryWidget* InventoryWidget = nullptr;

@@ -67,6 +67,8 @@ float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Da
 	Health -= DamageApplied;
 	if(Health <= 0)
 	{
+		if(PlayerCharacter)
+			PlayerCharacter->AddSteel(10);
 		Die();
 	}
 		

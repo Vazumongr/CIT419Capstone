@@ -43694,6 +43694,8 @@
             <e p="BaseWeaponActor.h" t="Include" />
             <e p="BaseWeaponLootActor.cpp" t="Include" />
             <e p="BaseWeaponLootActor.h" t="Include" />
+            <e p="TurretPlacementHighlightActor.cpp" t="Include" />
+            <e p="TurretPlacementHighlightActor.h" t="Include" />
           </e>
           <e p="Capstone.Build.cs" t="Include" />
           <e p="Capstone.cpp" t="Include" />
@@ -43729,6 +43731,8 @@
             <e p="WeaponStatInterface.h" t="Include" />
           </e>
           <e p="Pawns" t="Include">
+            <e p="BaseTurretPawn.cpp" t="Include" />
+            <e p="BaseTurretPawn.h" t="Include" />
             <e p="ObservingPawn.cpp" t="Include" />
             <e p="ObservingPawn.h" t="Include" />
           </e>

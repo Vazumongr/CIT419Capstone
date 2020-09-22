@@ -5,6 +5,7 @@
 
 #include "Capstone/DataStructures/GameStructs.h"
 #include "Capstone/Actors/BaseWeaponLootActor.h"
+#include "Engine/ObjectLibrary.h"
 
 // Sets default values for this component's properties
 ULootGenerator::ULootGenerator()
@@ -20,6 +21,8 @@ ULootGenerator::ULootGenerator()
 		return;
 	}
 	WeaponMesh = StaticMeshObject.Object;
+	
+	
 
 	// ...
 }
@@ -38,11 +41,20 @@ void ULootGenerator::SpawnWeapon()
 	ABaseWeaponLootActor* SpawnedWeapon = GetWorld()->SpawnActor<ABaseWeaponLootActor>(WeaponClass, SpawnLocation, FRotator::ZeroRotator);
 	
 	FWeaponStats WeaponsStats;
-	WeaponsStats.WeaponDamage = 30.0f;
-	WeaponsStats.WeaponName = FString(TEXT("SpawnedWeapon"));
+	
+	WeaponsStats.WeaponDamage = FMath::RandRange(10,100);
+	
+	WeaponsStats.WeaponName = FString::Printf(TEXT("SpawnedWeapon%s"), *FString::SanitizeFloat(FMath::RandRange(1,99)));
+
+	if(MyMeshes.Num() > 0)
+	{
+		WeaponsStats.StaticMesh = MyMeshes[FMath::RandRange(0,MyMeshes.Num()-1)];
+	}
+	/*
 	ensure(WeaponMesh);
 	if(WeaponMesh != nullptr)
 		WeaponsStats.StaticMesh = WeaponMesh;
+	*/
 	if(SpawnedWeapon != nullptr)
 		SpawnedWeapon->SetWeaponStats(WeaponsStats);
 	
@@ -54,7 +66,33 @@ void ULootGenerator::BeginPlay()
 {
 	Super::BeginPlay();
 
+	static TArray<UStaticMesh*> MeshLibrary;
+
 	// ...
+	if(MeshLibrary.Num() == 0)
+	{
+		const TSubclassOf<UStaticMesh> BaseClass;
+        UObjectLibrary* Lib = UObjectLibrary::CreateLibrary(BaseClass, false, false);
+        Lib->AddToRoot();
+        const int32 Loaded = Lib->LoadAssetsFromPath("/Game/Meshes");
+		
+        Lib->GetObjects(MeshLibrary);
+        for(UStaticMesh* Mesh : MeshLibrary)
+        {
+        	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("Loaded %s asset"), *Mesh->GetName()));
+        }
+	}
+	else
+	{
+		for(UStaticMesh* Mesh : MeshLibrary)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("This asset was already loaded for me: %s"), *Mesh->GetName()));
+		}
+	}
+
+	MyMeshes = MeshLibrary;
+	
+	
 	
 }
 

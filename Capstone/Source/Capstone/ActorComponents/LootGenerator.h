@@ -35,7 +35,7 @@ private:
 	UPROPERTY()
 	UStaticMesh* WeaponMesh = nullptr;
 
-	static TArray<UStaticMesh*> MeshLibrary;
+	TArray<UStaticMesh*> MyMeshes;
 
 		
 };

@@ -7,6 +7,9 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraFunctionLibrary.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraComponent.h"
 
 // Sets default values
 ABaseTurretPawn::ABaseTurretPawn()
@@ -88,6 +91,7 @@ void ABaseTurretPawn::Tick(float DeltaTime)
 			const TSubclassOf<UDamageType> DamageType;
 			FPointDamageEvent PointDamageEvent;
 			UGameplayStatics::ApplyDamage(TargetedEnemy, DamageAmount, GetController(), this, DamageType);
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, BeamSystem, GetActorLocation())->SetVectorParameter(FName(TEXT("BeamEnd")),TargetedEnemy->GetActorLocation());
 			LastFireTime = FPlatformTime::Seconds();
 		}
 	}

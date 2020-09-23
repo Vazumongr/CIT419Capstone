@@ -35,6 +35,8 @@ private:
 	UStaticMeshComponent* BaseMesh = nullptr;
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* TurretMesh = nullptr;
+	UPROPERTY(EditAnywhere)
+	class UNiagaraSystem* BeamSystem;
 
 	UPROPERTY(EditAnywhere, Category = "Trace")
 	float TraceRange = 500.0f;

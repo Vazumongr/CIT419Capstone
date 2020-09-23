@@ -31,7 +31,7 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	FString DebugMsg = FString::Printf(TEXT("Current steel: %f"), Steel);
-	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Blue, DebugMsg);
+	//GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Blue, DebugMsg);
 
 }
 
@@ -83,7 +83,7 @@ void APlayerCharacter::EquipWeapon(FWeaponStats InStats)
 
 	FString DebugMsg = FString::Printf(TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
 
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
+	//GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
 	UE_LOG(LogTemp, Warning, TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
 }
 
@@ -107,7 +107,7 @@ void APlayerCharacter::SwitchWeapon(FWeaponStats InStats)
 void APlayerCharacter::PrintInventory()
 {
 	FString DebugMsg = FString::Printf(TEXT("Inventory Contents: %s"), *InventoryComponent->ToString());
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
+	//GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
 }
 
 FString APlayerCharacter::GetInventoryAsText()
@@ -118,6 +118,11 @@ FString APlayerCharacter::GetInventoryAsText()
 TArray<FWeaponStats> APlayerCharacter::GetInventoryAsArray()
 {
 	return InventoryComponent->GetInventoryTArray();
+}
+
+void APlayerCharacter::AddHealth(float InHealth)
+{
+	Health += InHealth;
 }
 
 void APlayerCharacter::AddSteel(float InSteel)

@@ -22,20 +22,34 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	void SpawnWeapon();
+	// Starts the lot spawn sequence
+	void SpawnLoot();
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
 private:
+	// Base class for my weapons
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<ABaseWeaponLootActor> WeaponClass;
+	// Class for health orb
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> HealthOrbClass;
 
+	// Mesh for the weapon. TODO Might not be needed anymore
 	UPROPERTY()
 	UStaticMesh* WeaponMesh = nullptr;
 
+	// Array to hold meshes retrieved during asset loading.
+	UPROPERTY()
 	TArray<UStaticMesh*> MyMeshes;
+	
+	// Spawns the weapon
+	void SpawnWeapon();
+	
+	// Spawns the weapon
+	void SpawnHealthOrb();
 
 		
 };

@@ -41,8 +41,11 @@ private:
 
 	UPROPERTY()
 	AActor* TargetedEnemy = nullptr;
-
+	UPROPERTY()
 	AActor* Player = nullptr;
+
+	float ReloadTime = 2.f;
+	float LastFireTime = 0.f;
 	
 
 };

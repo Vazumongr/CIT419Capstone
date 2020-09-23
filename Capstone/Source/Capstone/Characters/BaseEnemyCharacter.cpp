@@ -33,7 +33,7 @@ void ABaseEnemyCharacter::BeginPlay()
 void ABaseEnemyCharacter::DamagePlayer()
 {
 	ensure(PlayerCharacter);
-	float DamageAmount = 0;
+	float DamageAmount = 0.01;
 	FPointDamageEvent PointDamageEvent;
 	FDamageEvent DamageEvent;
 	PlayerCharacter->TakeDamage(DamageAmount, DamageEvent, GetController(), this);
@@ -42,7 +42,7 @@ void ABaseEnemyCharacter::DamagePlayer()
 void ABaseEnemyCharacter::Die()
 {
 	ensure(LootGenerator);
-	LootGenerator->SpawnWeapon();
+	LootGenerator->SpawnLoot();
 	DetachFromControllerPendingDestroy();
 	Destroy();
 }
@@ -57,7 +57,7 @@ void ABaseEnemyCharacter::Tick(float DeltaTime)
 
 float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	TSubclassOf<UDamageType> InDamageType = DamageEvent.DamageTypeClass;
+	const TSubclassOf<UDamageType> InDamageType = DamageEvent.DamageTypeClass;
 	if(DamageType == InDamageType)
 	{
 		DamageAmount = 100.0f;

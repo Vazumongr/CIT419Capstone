@@ -13,14 +13,12 @@ UInventory::UInventory()
 	// ...
 }
 
-
 // Called when the game starts
 void UInventory::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
-
 
 // Called every frame
 void UInventory::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -32,19 +30,21 @@ void UInventory::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompo
 
 void UInventory::AddItem(FWeaponStats InObject)
 {
-	Inventory.Add(InObject);
+	Inventory.Add(InObject);	// Adds the given object to the inventory
 }
 
 TArray<FWeaponStats> UInventory::GetInventoryTArray() const
 {
-	return Inventory;
+	return Inventory;	// Returns the inventory array. Should do as a pointer.
 }
 
+// TODO I don't think I have a use for this anymore
 void UInventory::PrintArray()
 {
 	UE_LOG(LogTemp, Warning, TEXT("%s"), *ToString());
 }
 
+// TODO only used in PrintArray. Not needed.
 FString UInventory::ToString()
 {
 	FString String = TEXT("");

@@ -6,6 +6,7 @@
 
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ABaseTurretPawn::ABaseTurretPawn()
@@ -71,15 +72,24 @@ void ABaseTurretPawn::Tick(float DeltaTime)
 
 	if(TargetedEnemy == nullptr)
 	{
-		GEngine->AddOnScreenDebugMessage(2, 0, FColor::Green, TEXT("No one is in range"));
+		//GEngine->AddOnScreenDebugMessage(2, 0, FColor::Green, TEXT("No one is in range"));
 	}
 	else
 	{
-		GEngine->AddOnScreenDebugMessage(2, 0, FColor::Green, FString::Printf(TEXT("%s is the closest"), *TargetedEnemy->GetName()));
+		//GEngine->AddOnScreenDebugMessage(2, 0, FColor::Green, FString::Printf(TEXT("%s is the closest"), *TargetedEnemy->GetName()));
 		const FVector StartLocation = TurretMesh->GetComponentLocation();
 		FRotator TurretRotation = UKismetMathLibrary::FindLookAtRotation(StartLocation, TargetedEnemy->GetActorLocation());
 		TurretRotation.Pitch = 0;
 		TurretMesh->SetWorldRotation(TurretRotation);
+		if((FPlatformTime::Seconds() - LastFireTime) > ReloadTime)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("I am shooting..."));
+			const float DamageAmount = 50.0f;
+			const TSubclassOf<UDamageType> DamageType;
+			FPointDamageEvent PointDamageEvent;
+			UGameplayStatics::ApplyDamage(TargetedEnemy, DamageAmount, GetController(), this, DamageType);
+			LastFireTime = FPlatformTime::Seconds();
+		}
 	}
 }
 

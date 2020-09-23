@@ -43694,6 +43694,8 @@
             <e p="BaseWeaponActor.h" t="Include" />
             <e p="BaseWeaponLootActor.cpp" t="Include" />
             <e p="BaseWeaponLootActor.h" t="Include" />
+            <e p="HealthOrb.cpp" t="Include" />
+            <e p="HealthOrb.h" t="Include" />
             <e p="TurretPlacementHighlightActor.cpp" t="Include" />
             <e p="TurretPlacementHighlightActor.h" t="Include" />
           </e>

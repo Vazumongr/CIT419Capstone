@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Capstone.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{902FD5F4-D8FD-42E2-95F4-FABE224B2975}</UniqueIdentifier>
+      <UniqueIdentifier>{365680F6-099F-4403-99EE-BD62DE6F252C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Capstone.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{6EB07911-84C6-4963-91B4-72FF3A4F59E0}</UniqueIdentifier>
+      <UniqueIdentifier>{98674080-E496-4A4F-984E-F7600E95142A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Capstone">
-      <UniqueIdentifier>{CCAAFA09-184D-4D9B-A93A-E1E82891F64F}</UniqueIdentifier>
+      <UniqueIdentifier>{1D3AE9A5-2263-45A2-93B7-60D38BA88FE7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Capstone\Capstone.Build.cs">
       <Filter>Source\Capstone</Filter>
@@ -49,7 +49,7 @@
       <Filter>Source\Capstone</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\ActorComponents">
-      <UniqueIdentifier>{1C26DB18-836F-4ADB-8FC4-2403ECF12082}</UniqueIdentifier>
+      <UniqueIdentifier>{F333A856-98BE-4DB3-971F-C18F92AF2248}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\ActorComponents\Inventory.cpp">
       <Filter>Source\Capstone\ActorComponents</Filter>
@@ -64,7 +64,7 @@
       <Filter>Source\Capstone\ActorComponents</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\Actors">
-      <UniqueIdentifier>{FF0D3724-C4F4-4F3D-A7BC-1462C7D07165}</UniqueIdentifier>
+      <UniqueIdentifier>{F260C4C5-CDC0-498D-902B-BDD9F72D10E1}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\Actors\BaseLootActor.cpp">
       <Filter>Source\Capstone\Actors</Filter>
@@ -84,6 +84,12 @@
     <ClInclude Include="..\..\Source\Capstone\Actors\BaseWeaponLootActor.h">
       <Filter>Source\Capstone\Actors</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Capstone\Actors\HealthOrb.cpp">
+      <Filter>Source\Capstone\Actors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Capstone\Actors\HealthOrb.h">
+      <Filter>Source\Capstone\Actors</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Capstone\Actors\TurretPlacementHighlightActor.cpp">
       <Filter>Source\Capstone\Actors</Filter>
     </ClCompile>
@@ -91,7 +97,7 @@
       <Filter>Source\Capstone\Actors</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\Characters">
-      <UniqueIdentifier>{7F639D76-F792-4CEE-901F-3CF36C089250}</UniqueIdentifier>
+      <UniqueIdentifier>{D6158F21-619B-41C6-A82A-3F53D31AFDFC}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\Characters\BaseEnemyCharacter.cpp">
       <Filter>Source\Capstone\Characters</Filter>
@@ -106,7 +112,7 @@
       <Filter>Source\Capstone\Characters</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\Controllers">
-      <UniqueIdentifier>{B2EB1EFD-F5D7-434A-A743-5F3F2FAE5B5E}</UniqueIdentifier>
+      <UniqueIdentifier>{ED465544-8F8C-4C9A-B309-DF14C9BBE325}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\Controllers\EnemyAIController.cpp">
       <Filter>Source\Capstone\Controllers</Filter>
@@ -127,7 +133,7 @@
       <Filter>Source\Capstone\Controllers</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\DataStructures">
-      <UniqueIdentifier>{437148AC-B4FC-48CB-AF94-287A3D2BC243}</UniqueIdentifier>
+      <UniqueIdentifier>{F1782AE3-B916-41D0-BFFD-3A8215290312}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\DataStructures\GameStructs.cpp">
       <Filter>Source\Capstone\DataStructures</Filter>
@@ -136,7 +142,7 @@
       <Filter>Source\Capstone\DataStructures</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\GameModes">
-      <UniqueIdentifier>{EEA1EA44-ADD8-4C08-9618-8D82E259C170}</UniqueIdentifier>
+      <UniqueIdentifier>{ECCE7683-020A-477D-B944-0C59D6886F1D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\GameModes\MainGameMode.cpp">
       <Filter>Source\Capstone\GameModes</Filter>
@@ -145,7 +151,7 @@
       <Filter>Source\Capstone\GameModes</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\Interfaces">
-      <UniqueIdentifier>{4FAB7606-B34F-48E5-B6AE-3E2811211F51}</UniqueIdentifier>
+      <UniqueIdentifier>{96C535C1-40B0-4AFD-9BA3-1AB0FB9AF6AE}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\Interfaces\InteractableItemInterface.cpp">
       <Filter>Source\Capstone\Interfaces</Filter>
@@ -160,7 +166,7 @@
       <Filter>Source\Capstone\Interfaces</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\Pawns">
-      <UniqueIdentifier>{ECD30E5A-C1BC-4829-8D2F-72631C9B095C}</UniqueIdentifier>
+      <UniqueIdentifier>{EA87F1E2-D5D8-4BC7-A305-92629AE78E02}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\Pawns\BaseTurretPawn.cpp">
       <Filter>Source\Capstone\Pawns</Filter>
@@ -175,7 +181,7 @@
       <Filter>Source\Capstone\Pawns</Filter>
     </ClInclude>
     <Filter Include="Source\Capstone\Widgets">
-      <UniqueIdentifier>{07393884-77AF-4A5D-9236-2E955BCEF6A4}</UniqueIdentifier>
+      <UniqueIdentifier>{7BAC3906-2205-478D-BF60-A6D9D10E7533}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Capstone\Widgets\AboveHeadHealthBar.cpp">
       <Filter>Source\Capstone\Widgets</Filter>

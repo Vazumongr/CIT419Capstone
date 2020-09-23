@@ -21,12 +21,18 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	// Adds a weapon to the inventory, storing it as a struct, essentially it's metadata
 	void AddItem(FWeaponStats InObject);
+	// Returns the weapon struct at a given index
 	FORCEINLINE FWeaponStats GetItem(int32 Index) const { return Inventory[Index]; }
+	// Returns the size of the iventory
 	FORCEINLINE int32 GetInventorySize() const { return Inventory.Num(); }
+	// Returns a copy of the inventory. TODO should probably return a pointer to this so there aren't copies floating around.
 	FORCEINLINE TArray<FWeaponStats> GetInventoryTArray() const;
 
+	// Prints the inventory
 	void PrintArray();
+	// Converts inventory contents to a string
 	FString ToString();
 
 protected:
@@ -34,6 +40,7 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	// This is the inventory array that holds all the data
 	TArray<FWeaponStats> Inventory;
 
 		

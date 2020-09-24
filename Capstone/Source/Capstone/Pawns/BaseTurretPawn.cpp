@@ -67,6 +67,15 @@ void ABaseTurretPawn::DetectEnemies()
 	}
 }
 
+void ABaseTurretPawn::SpawnBeamEffect()
+{
+	FVector BeamEnd = GetTransform().InverseTransformPosition(TargetedEnemy->GetActorLocation());
+
+			
+	UNiagaraComponent* Beam = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, BeamSystem, GetActorLocation());
+	Beam->SetVectorParameter(FName(TEXT("BeamEnd")),BeamEnd);
+}
+
 // Called every frame
 void ABaseTurretPawn::Tick(float DeltaTime)
 {
@@ -87,11 +96,11 @@ void ABaseTurretPawn::Tick(float DeltaTime)
 		if((FPlatformTime::Seconds() - LastFireTime) > ReloadTime)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("I am shooting..."));
-			const float DamageAmount = 50.0f;
+			const float DamageAmount = 10.0f;
 			const TSubclassOf<UDamageType> DamageType;
 			FPointDamageEvent PointDamageEvent;
 			UGameplayStatics::ApplyDamage(TargetedEnemy, DamageAmount, GetController(), this, DamageType);
-			UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, BeamSystem, GetActorLocation())->SetVectorParameter(FName(TEXT("BeamEnd")),TargetedEnemy->GetActorLocation());
+			SpawnBeamEffect();
 			LastFireTime = FPlatformTime::Seconds();
 		}
 	}

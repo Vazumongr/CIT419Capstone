@@ -30,6 +30,7 @@ protected:
 private:
 
 	void DetectEnemies();
+	void SpawnBeamEffect();
 
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* BaseMesh = nullptr;

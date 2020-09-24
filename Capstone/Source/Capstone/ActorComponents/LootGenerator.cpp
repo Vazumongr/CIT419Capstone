@@ -15,6 +15,7 @@ ULootGenerator::ULootGenerator()
 	PrimaryComponentTick.bCanEverTick = false;
 
 	// TODO I don't think I need any of this either.
+	/*
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> StaticMeshObject(TEXT("/Game/Meshes/SM_Rifle"));
 	if(!ensure(StaticMeshObject.Object))
 	{
@@ -22,6 +23,7 @@ ULootGenerator::ULootGenerator()
 		return;
 	}
 	WeaponMesh = StaticMeshObject.Object;
+	*/
 	
 	
 
@@ -42,7 +44,7 @@ void ULootGenerator::BeginPlay()
 		const TSubclassOf<UStaticMesh> BaseClass;	// Get our BaseClass to create the library
         UObjectLibrary* Lib = UObjectLibrary::CreateLibrary(BaseClass, false, false);	// Creates the library to hold the assets
         Lib->AddToRoot();	// Don't allow garbage collection to delete it
-        const int32 Loaded = Lib->LoadAssetsFromPath("/Game/Meshes");	// Load the assets from this folder into the library
+        const int32 Loaded = Lib->LoadAssetsFromPath("/Game/Meshes/WeaponMeshes");	// Load the assets from this folder into the library
 		
         Lib->GetObjects(MeshLibrary);	// Get a TArray of the assets and import it into our own TArray
         for(UStaticMesh* Mesh : MeshLibrary)

@@ -113,15 +113,17 @@ void ULootGenerator::SpawnLoot()
 {
 	if(FMath::RandRange(1,1) == 1)
 	{
-		SpawnHealthOrb();
+		if(HealthOrbClass) SpawnResource(HealthOrbClass);
 	}
 	if(FMath::RandRange(1,2) == 1)
 	{
 		SpawnWeapon();
 	}
+	if(SteelDropClass) SpawnResource(SteelDropClass);
+	
 }
 
-
+// TODO currently negated
 void ULootGenerator::SpawnHealthOrb()
 {
 	if(!HealthOrbClass)
@@ -132,5 +134,17 @@ void ULootGenerator::SpawnHealthOrb()
 	FActorSpawnParameters SpawnParams;
 	FVector SpawnLocation = GetOwner()->GetActorLocation();
 	AActor* SpawnedHealthOrb = GetWorld()->SpawnActor<AActor>(HealthOrbClass, SpawnLocation, FRotator::ZeroRotator);
+}
+
+void ULootGenerator::SpawnResource(TSubclassOf<AActor> ResourceToDrop)
+{
+	if(!ResourceToDrop)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("You forgot to assign something"));
+		return;
+	}
+	FActorSpawnParameters SpawnParams;
+	FVector SpawnLocation = GetOwner()->GetActorLocation();
+	AActor* SpawnedResource = GetWorld()->SpawnActor<AActor>(ResourceToDrop, SpawnLocation, FRotator::ZeroRotator);
 }
 

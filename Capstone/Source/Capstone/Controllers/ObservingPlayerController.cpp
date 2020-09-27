@@ -178,7 +178,7 @@ void AObservingPlayerController::PlaceTurret()
         }
         ensure(TurretClass);
         FActorSpawnParameters Params;
-        FRotator Rotation;
+        FRotator Rotation = FRotator::ZeroRotator;
         ABaseTurretPawn* SpawnedTurret = GetWorld()->SpawnActor<ABaseTurretPawn>(TurretClass, HitResult.Location, Rotation, Params);
         PlayerAIController->AddSteel(-10);
         SpawnedTurret->SetPlayer(PlayerAIController->GetPawn());

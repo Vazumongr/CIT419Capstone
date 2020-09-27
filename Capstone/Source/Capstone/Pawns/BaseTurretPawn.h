@@ -31,13 +31,19 @@ private:
 
 	void DetectEnemies();
 	void SpawnBeamEffect();
+	void SpawnAimingBeam();
 
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* BaseMesh = nullptr;
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* TurretMesh = nullptr;
 	UPROPERTY(EditAnywhere)
-	class UNiagaraSystem* BeamSystem;
+	class UNiagaraSystem* AimBeamSystem;
+	UPROPERTY(EditAnywhere)
+	class UNiagaraSystem* ShotBeamSystem;
+
+	UPROPERTY()
+	class UNiagaraComponent* AimingBeam = nullptr;
 
 	UPROPERTY(EditAnywhere, Category = "Trace")
 	float TraceRange = 500.0f;

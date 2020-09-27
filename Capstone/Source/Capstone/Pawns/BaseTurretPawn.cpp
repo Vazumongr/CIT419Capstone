@@ -67,15 +67,6 @@ void ABaseTurretPawn::DetectEnemies()
 	}
 }
 
-void ABaseTurretPawn::SpawnBeamEffect()
-{
-	FVector BeamEnd = GetTransform().InverseTransformPosition(TargetedEnemy->GetActorLocation());
-
-			
-	UNiagaraComponent* Beam = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, BeamSystem, GetActorLocation());
-	Beam->SetVectorParameter(FName(TEXT("BeamEnd")),BeamEnd);
-}
-
 // Called every frame
 void ABaseTurretPawn::Tick(float DeltaTime)
 {
@@ -85,6 +76,11 @@ void ABaseTurretPawn::Tick(float DeltaTime)
 	if(TargetedEnemy == nullptr)
 	{
 		//GEngine->AddOnScreenDebugMessage(2, 0, FColor::Green, TEXT("No one is in range"));
+		if(AimingBeam != nullptr)
+		{
+			AimingBeam->DestroyComponent();
+			AimingBeam = nullptr;
+		}
 	}
 	else
 	{
@@ -93,6 +89,7 @@ void ABaseTurretPawn::Tick(float DeltaTime)
 		FRotator TurretRotation = UKismetMathLibrary::FindLookAtRotation(StartLocation, TargetedEnemy->GetActorLocation());
 		TurretRotation.Pitch = 0;
 		TurretMesh->SetWorldRotation(TurretRotation);
+
 		if((FPlatformTime::Seconds() - LastFireTime) > ReloadTime)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("I am shooting..."));
@@ -101,7 +98,26 @@ void ABaseTurretPawn::Tick(float DeltaTime)
 			FPointDamageEvent PointDamageEvent;
 			UGameplayStatics::ApplyDamage(TargetedEnemy, DamageAmount, GetController(), this, DamageType);
 			SpawnBeamEffect();
+			if(AimingBeam != nullptr)
+			{
+				AimingBeam->DestroyComponent();
+				AimingBeam = nullptr;
+			}
 			LastFireTime = FPlatformTime::Seconds();
+		}
+		else
+		{
+			if(AimingBeam == nullptr)
+			{
+				SpawnAimingBeam();
+			}
+			else
+			{
+				const FVector BeamEnd = GetTransform().InverseTransformPosition(TargetedEnemy->GetActorLocation());
+				AimingBeam->SetVectorParameter(FName(TEXT("BeamEnd")),BeamEnd);
+				FVector BeamStart = TurretMesh->GetSocketTransform(FName(TEXT("BeamStart"))).GetLocation();
+				AimingBeam->SetVectorParameter(FName(TEXT("BeamStart")),BeamStart);
+			}
 		}
 	}
 }
@@ -115,5 +131,25 @@ void ABaseTurretPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 void ABaseTurretPawn::SetPlayer(AActor* InPlayer)
 {
 	Player = InPlayer;
+}
+
+void ABaseTurretPawn::SpawnAimingBeam()
+{
+	FVector BeamStart = TurretMesh->GetSocketTransform(FName(TEXT("BeamStart"))).GetLocation();
+	//StartBeam = GetTransform().InverseTransformPosition(StartBeam);
+	const FVector BeamEnd = GetTransform().InverseTransformPosition(TargetedEnemy->GetActorLocation());
+
+	ensure(ShotBeamSystem);
+	AimingBeam = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, AimBeamSystem, BeamStart);
+	AimingBeam->SetVectorParameter(FName(TEXT("BeamEnd")),BeamEnd);
+}
+
+void ABaseTurretPawn::SpawnBeamEffect()
+{
+	const FVector BeamEnd = GetTransform().InverseTransformPosition(TargetedEnemy->GetActorLocation());
+
+	ensure(ShotBeamSystem);
+	UNiagaraComponent* Beam = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, ShotBeamSystem, GetActorLocation());
+	Beam->SetVectorParameter(FName(TEXT("BeamEnd")),BeamEnd);
 }
 

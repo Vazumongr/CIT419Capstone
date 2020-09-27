@@ -43696,6 +43696,8 @@
             <e p="BaseWeaponLootActor.h" t="Include" />
             <e p="HealthOrb.cpp" t="Include" />
             <e p="HealthOrb.h" t="Include" />
+            <e p="SteelDrop.cpp" t="Include" />
+            <e p="SteelDrop.h" t="Include" />
             <e p="TurretPlacementHighlightActor.cpp" t="Include" />
             <e p="TurretPlacementHighlightActor.h" t="Include" />
           </e>
@@ -43722,9 +43724,17 @@
             <e p="GameStructs.cpp" t="Include" />
             <e p="GameStructs.h" t="Include" />
           </e>
+          <e p="GameInstances" t="Include">
+            <e p="MainGameInstance.cpp" t="Include" />
+            <e p="MainGameInstance.h" t="Include" />
+          </e>
           <e p="GameModes" t="Include">
             <e p="MainGameMode.cpp" t="Include" />
             <e p="MainGameMode.h" t="Include" />
+          </e>
+          <e p="GameStates" t="Include">
+            <e p="MainGameState.cpp" t="Include" />
+            <e p="MainGameState.h" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
             <e p="InteractableItemInterface.cpp" t="Include" />
@@ -43747,6 +43757,8 @@
             <e p="InventoryItemIcon.h" t="Include" />
             <e p="InventoryWidget.cpp" t="Include" />
             <e p="InventoryWidget.h" t="Include" />
+            <e p="MainMenu.cpp" t="Include" />
+            <e p="MainMenu.h" t="Include" />
             <e p="PlayerHUD.cpp" t="Include" />
             <e p="PlayerHUD.h" t="Include" />
           </e>

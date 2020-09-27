@@ -49,6 +49,12 @@ void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
 	TSubclassOf<UDamageType> DamageType = EquippedWeaponStats.DamageType;
 	FPointDamageEvent PointDamageEvent;
 	UGameplayStatics::ApplyDamage(EnemyToDamage, DamageAmount, GetController(), this, DamageType);
+	if(EquippedWeaponActor != nullptr)
+	{
+		FTransform BoneTransform = GetMesh()->GetBoneTransform(GetMesh()->GetBoneIndex(FName(TEXT("pistol"))));
+		FVector BoneDirection = BoneTransform.GetRotation().Vector();
+		EquippedWeaponActor->SpawnMuzzleFlash(GetActorRotation());
+	}
 }
 
 void APlayerCharacter::InteractWithItem(IInteractableItemInterface* ItemToInteract)

@@ -4,6 +4,9 @@
 #include "BaseWeaponActor.h"
 
 #include "Capstone/Characters/PlayerCharacter.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraFunctionLibrary.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraComponent.h"
 
 // Sets default values
 ABaseWeaponActor::ABaseWeaponActor()
@@ -38,5 +41,15 @@ void ABaseWeaponActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void ABaseWeaponActor::SpawnMuzzleFlash(FRotator InRotation)
+{
+	ensure(MuzzleFlashSystem);
+	FVector StartLocation = StaticMeshComponent->GetSocketTransform(FName(TEXT("BarrelEnd"))).GetLocation();
+	UNiagaraComponent* MuzzleFlash = UNiagaraFunctionLibrary::SpawnSystemAttached(MuzzleFlashSystem, StaticMeshComponent, TEXT("BarrelEnd"), FVector::ZeroVector,
+																			FRotator::ZeroRotator, EAttachLocation::KeepRelativeOffset,false);
+	//FVector VelocityDirection = GetActorRotation().Vector();
+	//MuzzleFlash->SetVectorParameter(FName(TEXT("SpawnDirection")), VelocityDirection);
 }
 

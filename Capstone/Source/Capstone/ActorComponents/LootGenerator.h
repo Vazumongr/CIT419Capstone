@@ -36,6 +36,9 @@ private:
 	// Class for health orb
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor> HealthOrbClass;
+	// Class for steel drop
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> SteelDropClass;
 
 	// Mesh for the weapon. TODO Might not be needed anymore
 	UPROPERTY()
@@ -50,6 +53,8 @@ private:
 	
 	// Spawns the weapon
 	void SpawnHealthOrb();
+	// Spawns the weapon
+	void SpawnResource(TSubclassOf<AActor> ResourceToDrop);
 
 		
 };

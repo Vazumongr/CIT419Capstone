@@ -95,14 +95,14 @@ void APlayerAIController::InteractWithItem(FHitResult HitResult, IInteractableIt
 void APlayerAIController::DealDamageToEnemy(ABaseEnemyCharacter* EnemyCharacter)
 {
     TargetedEnemy = EnemyCharacter;
-    MoveToActor(EnemyCharacter, 300);
+    MoveToActor(EnemyCharacter, 1000);
     
 }
 
 void APlayerAIController::EquipWeapon(ABaseWeaponLootActor* WeaponActor)
 {
     TargetedWeapon = WeaponActor;
-    MoveToActor(WeaponActor, 300);
+    MoveToActor(WeaponActor, 100);
 }
 
 void APlayerAIController::SetPlayerController(APlayerController* InController)

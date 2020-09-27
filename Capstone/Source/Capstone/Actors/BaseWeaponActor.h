@@ -23,6 +23,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	virtual void SpawnMuzzleFlash(FRotator InRotation);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -34,5 +36,7 @@ protected:
 
 private:
 	FWeaponStats WeaponStats;
+	UPROPERTY(EditAnywhere)
+	class UNiagaraSystem* MuzzleFlashSystem;
 
 };

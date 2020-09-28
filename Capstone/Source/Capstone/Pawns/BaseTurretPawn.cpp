@@ -146,7 +146,7 @@ void ABaseTurretPawn::SpawnAimingBeam()
 
 void ABaseTurretPawn::SpawnBeamEffect()
 {
-	FVector BeamStart = TurretMesh->GetSocketTransform(FName(TEXT("BeamStart"))).GetLocation();
+	const FVector BeamStart = TurretMesh->GetSocketTransform(FName(TEXT("BeamStart"))).GetLocation();
 	const FVector BeamEnd = GetTransform().InverseTransformPosition(TargetedEnemy->GetActorLocation());
 
 	ensure(ShotBeamSystem);

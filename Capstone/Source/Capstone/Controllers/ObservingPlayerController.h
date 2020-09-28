@@ -38,7 +38,7 @@ private:
     UFUNCTION()
     void CameraZoom(float AxisValue);
     UFUNCTION()
-    void PrintInventory();
+    void OpenInventory();
     UFUNCTION()
     void SwitchWeapon();
     UFUNCTION()

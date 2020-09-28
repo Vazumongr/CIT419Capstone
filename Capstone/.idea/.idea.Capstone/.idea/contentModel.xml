@@ -43750,6 +43750,8 @@
             <e p="ObservingPawn.cpp" t="Include" />
             <e p="ObservingPawn.h" t="Include" />
           </e>
+          <e p="SampleStructThingy.cpp" t="Include" />
+          <e p="SampleStructThingy.h" t="Include" />
           <e p="Widgets" t="Include">
             <e p="AboveHeadHealthBar.cpp" t="Include" />
             <e p="AboveHeadHealthBar.h" t="Include" />

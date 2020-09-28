@@ -45,7 +45,8 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 
 void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
 {
-	EquippedWeaponActor->DealDamageToEnemy(EnemyToDamage, GetController(), this);
+	if(EquippedWeaponActor != nullptr)
+		EquippedWeaponActor->DealDamageToEnemy(EnemyToDamage, GetController(), this);
 }
 
 void APlayerCharacter::InteractWithItem(IInteractableItemInterface* ItemToInteract)

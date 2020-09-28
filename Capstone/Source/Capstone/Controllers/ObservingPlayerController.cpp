@@ -65,7 +65,7 @@ void AObservingPlayerController::SetupInputComponent()
     // Action Bindings
     InputComponent->BindAction("MoveCommand", IE_Pressed, this, &AObservingPlayerController::MoveCommand);
     InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
-    InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::PrintInventory);
+    InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::OpenInventory);
     InputComponent->BindAction("SwitchWeapon", IE_Pressed, this, &AObservingPlayerController::SwitchWeapon);
     InputComponent->BindAction("PlaceTurret", IE_Pressed, this, &AObservingPlayerController::PrepareTurret);
     // Axis Bindings
@@ -106,32 +106,48 @@ void AObservingPlayerController::CameraZoom(float AxisValue)
         ObservingPawn->CameraZoomIn();
 }
 
-void AObservingPlayerController::PrintInventory()
+void AObservingPlayerController::OpenInventory()
 {
     ensure(PlayerAIController);
     PlayerAIController->PrintInventory();
-
-    ensure(InventoryClass);
-    if(InventoryWidget == nullptr)
+    
+    ensure(InventoryClass);    // We assigned it
+    if(InventoryWidget == nullptr)    // InventoryWidget doesnt exist yet...
     {
-        InventoryWidget = Cast<UInventoryWidget>(CreateWidget(this, InventoryClass));
         
-        if(InventoryWidget != nullptr)
+        InventoryWidget = Cast<UInventoryWidget>(CreateWidget(this, InventoryClass));    // Create it
+        
+        if(InventoryWidget != nullptr)    // Makes sure it was created
         {
-            InventoryWidget->AddToViewport();
-            InventoryWidget->SetInventory(PlayerAIController->GetInventoryAsArray());
+            InventoryWidget->AddToViewport();    // Add it to our viewport
+            InventoryWidget->SetInventory(PlayerAIController->GetInventoryAsArray());    // Set the inventory display
+            
+            FInputModeGameAndUI InputModeData;    // Set UI only so we can access it easily
+            InputModeData.SetWidgetToFocus(InventoryWidget->TakeWidget());
+            SetInputMode(InputModeData);
         }
             
     }
-    else
+    else    // Widget already exists...
     {
-        if(InventoryWidget->GetVisibility() == ESlateVisibility::Collapsed)
+        if(InventoryWidget->GetVisibility() == ESlateVisibility::Collapsed)    // If the widget isn't visible...
         {
-            InventoryWidget->SetVisibility(ESlateVisibility::Visible);
-            InventoryWidget->SetInventory(PlayerAIController->GetInventoryAsArray());
+            InventoryWidget->SetVisibility(ESlateVisibility::Visible);    // Make it visible...
+            InventoryWidget->SetInventory(PlayerAIController->GetInventoryAsArray());    // Set its contents
+            
+            FInputModeGameAndUI InputModeData;
+            InputModeData.SetWidgetToFocus(InventoryWidget->TakeWidget());    // Focus the widget
+            SetInputMode(InputModeData);
         }
-        else
-            InventoryWidget->SetVisibility(ESlateVisibility::Collapsed);
+        else    // Else it is visible
+        {
+            InventoryWidget->SetVisibility(ESlateVisibility::Collapsed);    // Collapse it
+            
+            FInputModeGameOnly InputModeData;
+            InputModeData.SetConsumeCaptureMouseDown(false);
+            SetInputMode(InputModeData);
+        }
+            
     }
 }
 

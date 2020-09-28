@@ -25,6 +25,8 @@ public:
 
 	virtual void SpawnMuzzleFlash(FRotator InRotation);
 
+	virtual void DealDamageToEnemy(AActor* EnemyToDamage, AController* PlayerController, AActor* PlayerActor);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -38,5 +40,8 @@ private:
 	FWeaponStats WeaponStats;
 	UPROPERTY(EditAnywhere)
 	class UNiagaraSystem* MuzzleFlashSystem;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> BulletClass;
+	
 
 };

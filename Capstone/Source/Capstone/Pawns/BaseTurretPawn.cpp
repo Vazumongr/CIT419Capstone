@@ -146,10 +146,12 @@ void ABaseTurretPawn::SpawnAimingBeam()
 
 void ABaseTurretPawn::SpawnBeamEffect()
 {
+	FVector BeamStart = TurretMesh->GetSocketTransform(FName(TEXT("BeamStart"))).GetLocation();
 	const FVector BeamEnd = GetTransform().InverseTransformPosition(TargetedEnemy->GetActorLocation());
 
 	ensure(ShotBeamSystem);
-	UNiagaraComponent* Beam = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, ShotBeamSystem, GetActorLocation());
+	UNiagaraComponent* Beam = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, ShotBeamSystem, BeamStart);
 	Beam->SetVectorParameter(FName(TEXT("BeamEnd")),BeamEnd);
+	Beam->SetVectorParameter(FName(TEXT("BeamStart")),BeamStart);
 }
 

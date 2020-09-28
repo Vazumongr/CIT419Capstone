@@ -25,5 +25,7 @@ private:
 	class UBehaviorTree* AIBehavior = nullptr;
 	UPROPERTY()
 	class UBlackboardComponent* BlackboardComponent = nullptr;
+
+	class APlayerCharacter* PlayerCharacter = nullptr;
 	
 };

@@ -45,16 +45,7 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 
 void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
 {
-	float DamageAmount = EquippedWeaponStats.WeaponDamage;
-	TSubclassOf<UDamageType> DamageType = EquippedWeaponStats.DamageType;
-	FPointDamageEvent PointDamageEvent;
-	UGameplayStatics::ApplyDamage(EnemyToDamage, DamageAmount, GetController(), this, DamageType);
-	if(EquippedWeaponActor != nullptr)
-	{
-		FTransform BoneTransform = GetMesh()->GetBoneTransform(GetMesh()->GetBoneIndex(FName(TEXT("pistol"))));
-		FVector BoneDirection = BoneTransform.GetRotation().Vector();
-		EquippedWeaponActor->SpawnMuzzleFlash(GetActorRotation());
-	}
+	EquippedWeaponActor->DealDamageToEnemy(EnemyToDamage, GetController(), this);
 }
 
 void APlayerCharacter::InteractWithItem(IInteractableItemInterface* ItemToInteract)
@@ -85,6 +76,7 @@ void APlayerCharacter::EquipWeapon(FWeaponStats InStats)
 	EquippedWeaponActor->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("WeaponSocket"));	// Attaches the gun to the SM bone
 	EquippedWeaponActor->SetOwner(this);
 
+	// TODO this should be removed
 	EquippedWeaponStats = InStats;
 
 	FString DebugMsg = FString::Printf(TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);

@@ -36,6 +36,40 @@ struct FWeaponStats
 		StaticMesh = InMesh;
 	}
 };
+
+USTRUCT()
+struct FMyDamageEvent
+{
+	GENERATED_BODY()
+
+	UPROPERTY()
+	AActor* TargetActor;
+	float DamageAmount;
+	TSubclassOf<UDamageType> DamageType;
+	FPointDamageEvent PointDamageEvent;
+	UPROPERTY()
+	AController* PlayerController;
+	UPROPERTY()
+	AActor* PlayerActor;
+
+	FMyDamageEvent()
+	{
+		DamageAmount = 0;
+		TargetActor = nullptr;
+		PlayerController = nullptr;
+		PlayerActor = nullptr;
+	}
+	
+
+	FMyDamageEvent(AActor* EnemyToDamage, float InDamageAmount, AController* InPlayerController, AActor* InPlayerActor, TSubclassOf<UDamageType> InDamageType)
+	{
+		TargetActor = EnemyToDamage;
+		DamageAmount = InDamageAmount;
+		PlayerController = InPlayerController;
+		PlayerActor = InPlayerActor;
+		DamageType = InDamageType;
+	}
+};
 /**
  * 
  */

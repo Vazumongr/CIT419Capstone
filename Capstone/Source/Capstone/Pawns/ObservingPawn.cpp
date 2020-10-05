@@ -37,9 +37,6 @@ void AObservingPawn::BeginPlay()
 void AObservingPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	// TODO set my location to PlayerCharacter location if camera is locked
-	// I need a reference to PlayerCharacter now
 	if(CameraLocked)
 	{
 		ensure(PlayerCharacter);
@@ -60,15 +57,14 @@ void AObservingPawn::ToggleCameraLock()
 	CameraLocked = !CameraLocked;
 }
 
-// TODO get rid of magic numbers
 void AObservingPawn::CameraZoomOut()
 {
-	SpringArmComponent->TargetArmLength = FMath::Clamp(SpringArmComponent->TargetArmLength += 50.0f, 600.0f, 2000.0f);
+	SpringArmComponent->TargetArmLength = FMath::Clamp(SpringArmComponent->TargetArmLength += CameraSensitivity, CameraMinHeight, CameraMaxHeight);
 }
-// TODO get rid of magic numbers
+
 void AObservingPawn::CameraZoomIn()
 {
-	SpringArmComponent->TargetArmLength = FMath::Clamp(SpringArmComponent->TargetArmLength -= 50.0f, 600.0f, 2000.0f);
+	SpringArmComponent->TargetArmLength = FMath::Clamp(SpringArmComponent->TargetArmLength -= CameraSensitivity, CameraMinHeight, CameraMaxHeight);
 }
 
 void AObservingPawn::SetPlayerController(APlayerController* InController)

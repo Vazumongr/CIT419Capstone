@@ -7,6 +7,9 @@
 #include "GameFramework/GameModeBase.h"
 #include "MainGameMode.generated.h"
 
+UDELEGATE()
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FGameOverDelegate);
+
 /**
  * 
  */
@@ -15,10 +18,18 @@ class CAPSTONE_API AMainGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
+
 public:
 	void HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer) override;
 
+	void PlayerDied();
+
 	FORCEINLINE class APlayerCharacter* GetPlayerCharacter() { return PlayerCharacter; }
+
+	FGameOverDelegate GameOver;
+
+	UFUNCTION()
+    void LoadEndingScreen();
 
 private:
 	

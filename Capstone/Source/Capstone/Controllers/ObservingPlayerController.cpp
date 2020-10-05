@@ -53,6 +53,12 @@ void AObservingPlayerController::BeginPlay()
     HUDWidget->SetOwningActor(PlayerAIController->GetPawn());
 }
 
+void AObservingPlayerController::GameHasEnded(AActor* EndGameFocus, bool bIsWinner)
+{
+    Super::GameHasEnded(EndGameFocus, bIsWinner);
+    //Destroy();
+}
+
 void AObservingPlayerController::EquipWeapon(FWeaponStats InStats)
 {
     ensure(PlayerAIController);
@@ -108,9 +114,6 @@ void AObservingPlayerController::CameraZoom(float AxisValue)
 
 void AObservingPlayerController::OpenInventory()
 {
-    ensure(PlayerAIController);
-    PlayerAIController->PrintInventory();
-    
     ensure(InventoryClass);    // We assigned it
     if(InventoryWidget == nullptr)    // InventoryWidget doesnt exist yet...
     {
@@ -181,9 +184,7 @@ void AObservingPlayerController::PlaceTurret()
 {
     FHitResult HitResult;
 
-    // TODO if we ain't clicking on the ground, no placement.
     const bool bHit = LineTrace(HitResult);
-
 
     if(bHit)
     {
@@ -201,14 +202,13 @@ void AObservingPlayerController::PlaceTurret()
     }
 }
 
-
 bool AObservingPlayerController::LineTrace(FHitResult& HitResult)
 {
     FVector WorldLocation, WorldDirection;
     DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
 
     FVector StartLocation = PlayerCameraManager->GetCameraLocation();
-    FVector EndLocation = (StartLocation + (WorldDirection * LineTraceRange));    // TODO no magic numbers
+    FVector EndLocation = (StartLocation + (WorldDirection * LineTraceRange));
     
     TArray<AActor*> ActorsToIgnore;
     if(TurretPlacement != nullptr)

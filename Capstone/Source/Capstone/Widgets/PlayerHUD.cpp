@@ -26,7 +26,6 @@ void UPlayerHUD::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
     const float FTime = GameState->GetServerWorldTimeSeconds();
 
     const int32 Seconds = FMath::FloorToInt(FMath::Fmod(FTime, 60));
-    //UE_LOG(LogTemp, Warning, TEXT("Seconds: %f"), Seconds);
 
     
     
@@ -35,7 +34,6 @@ void UPlayerHUD::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
     const FString Time = FString::Printf(TEXT("%i:%02d"), Minutes, Seconds);
     
     TimerText->SetText(FText::FromString(Time));
-    UE_LOG(LogTemp, Warning, TEXT("Time: %f"), FTime);
     
     
 }

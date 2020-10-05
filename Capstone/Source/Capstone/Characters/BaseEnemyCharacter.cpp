@@ -24,16 +24,28 @@ void ABaseEnemyCharacter::BeginPlay()
 
 	AMainGameMode* MainGameMode = Cast<AMainGameMode>(GetWorld()->GetAuthGameMode());
 	if(MainGameMode != nullptr)
+	{
 		PlayerCharacter = MainGameMode->GetPlayerCharacter();
+		MainGameMode->GameOver.AddUniqueDynamic(this, &ABaseEnemyCharacter::GameIsOver);
+	}
+		
 
 	if(PlayerCharacter == nullptr)
-		UE_LOG(LogTemp, Warning, TEXT("Not finding player character..."));
+		UE_LOG(LogTemp, Error, TEXT("Not finding player character..."));
+}
+
+// Called every frame
+void ABaseEnemyCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	if(bGameOver) return;
+
 }
 
 void ABaseEnemyCharacter::DamagePlayer()
 {
 	ensure(PlayerCharacter);
-	float DamageAmount = 0.01;
+	float DamageAmount = dmg;
 	FPointDamageEvent PointDamageEvent;
 	FDamageEvent DamageEvent;
 	PlayerCharacter->TakeDamage(DamageAmount, DamageEvent, GetController(), this);
@@ -47,12 +59,10 @@ void ABaseEnemyCharacter::Die()
 	Destroy();
 }
 
-// Called every frame
-void ABaseEnemyCharacter::Tick(float DeltaTime)
+void ABaseEnemyCharacter::GameIsOver()
 {
-	Super::Tick(DeltaTime);
-	DamagePlayer();
-
+	bGameOver = true;
+	DetachFromControllerPendingDestroy();
 }
 
 float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)

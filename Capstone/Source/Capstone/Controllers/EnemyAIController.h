@@ -16,6 +16,7 @@ class CAPSTONE_API AEnemyAIController : public AAIController
 
 public:
 	virtual void Tick(float DeltaSeconds) override;
+	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 	
 protected:
     virtual void BeginPlay() override;
@@ -25,7 +26,10 @@ private:
 	class UBehaviorTree* AIBehavior = nullptr;
 	UPROPERTY()
 	class UBlackboardComponent* BlackboardComponent = nullptr;
-
+	UPROPERTY()
 	class APlayerCharacter* PlayerCharacter = nullptr;
+
+	UPROPERTY(EditAnywhere)
+	float DetectionRange = 1000.0f;
 	
 };

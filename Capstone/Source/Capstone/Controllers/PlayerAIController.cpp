@@ -32,8 +32,6 @@ void APlayerAIController::ProcessHitResult(FHitResult HitResult)
         CurrentCommand = FMoveCommandTypes::MoveToLocation;
         MoveToLocation(HitResult.Location);
     }
-    // If we clicked on an enemy
-        // Attack the enemy
 }
 
 void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result)
@@ -63,9 +61,14 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
 
 void APlayerAIController::SwitchWeapon(FWeaponStats InStats)
 {
-    UE_LOG(LogTemp, Warning, TEXT("I am calling switchweapon..."));
     ensure(PlayerCharacter);
     PlayerCharacter->SwitchWeapon(InStats);
+}
+
+void APlayerAIController::GameHasEnded(AActor* EndGameFocus, bool bIsWinner)
+{
+    Super::GameHasEnded(EndGameFocus, bIsWinner);
+    //Destroy();
 }
 
 void APlayerAIController::PrintInventory()

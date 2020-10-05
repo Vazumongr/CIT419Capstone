@@ -18,10 +18,11 @@ class CAPSTONE_API AObservingPlayerController : public APlayerController
 public:
     AObservingPlayerController();
     
-    
     virtual void TickActor(float DeltaTime, enum ELevelTick TickType, FActorTickFunction& ThisTickFunction) override;
     
     virtual void BeginPlay() override;
+    
+	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 
     void EquipWeapon(FWeaponStats InStats);
 

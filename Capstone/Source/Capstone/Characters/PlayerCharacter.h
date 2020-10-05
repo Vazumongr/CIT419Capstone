@@ -57,6 +57,12 @@ public:
 	
 
 private:
+
+
+	void Die();
+
+	UFUNCTION()
+	void GameIsOver();
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<ABaseWeaponActor> WeaponActorClass;

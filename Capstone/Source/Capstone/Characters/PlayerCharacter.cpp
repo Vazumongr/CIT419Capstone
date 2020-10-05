@@ -4,9 +4,10 @@
 #include "PlayerCharacter.h"
 
 #include "Capstone/Interfaces/InteractableItemInterface.h"
-#include "Kismet/GameplayStatics.h"
+#include "Capstone/GameModes/MainGameMode.h"
 #include "Capstone/Actors/BaseWeaponLootActor.h"
 #include "Capstone/ActorComponents/Inventory.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -24,6 +25,12 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	AMainGameMode* GameMode = GetWorld()->GetAuthGameMode<AMainGameMode>();
+	if(GameMode != nullptr)
+	{
+		GameMode->GameOver.AddUniqueDynamic(this, &APlayerCharacter::GameIsOver);
+	}
+	
 }
 
 // Called every frame
@@ -40,6 +47,8 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 {
 	float DamageToApply = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	Health -= DamageToApply;
+	if(Health <= 0)
+		Die();
 	return DamageToApply;
 }
 
@@ -79,28 +88,13 @@ void APlayerCharacter::EquipWeapon(FWeaponStats InStats)
 
 	// TODO this should be removed
 	EquippedWeaponStats = InStats;
-
-	FString DebugMsg = FString::Printf(TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
-
-	//GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
+	
 	UE_LOG(LogTemp, Warning, TEXT("Equipped %s, with a damage value of %f"), *EquippedWeaponStats.WeaponName, EquippedWeaponStats.WeaponDamage);
 }
 
 void APlayerCharacter::SwitchWeapon(FWeaponStats InStats)
 {
-	UE_LOG(LogTemp, Warning, TEXT("I am calling switchweapon..."));
 	EquipWeapon(InStats);
-	/*
-	TArray<FWeaponStats> Inventory = InventoryComponent->GetInventoryTArray();
-	for( FWeaponStats Stats : Inventory)
-	{
-		if(!Stats.WeaponName.Equals(EquippedWeaponStats.WeaponName))
-		{
-			EquipWeapon(Stats);
-			break;
-		}
-	}
-	*/
 }
 
 void APlayerCharacter::PrintInventory()
@@ -127,5 +121,21 @@ void APlayerCharacter::AddHealth(float InHealth)
 void APlayerCharacter::AddSteel(float InSteel)
 {
 	Steel += InSteel;
+}
+
+void APlayerCharacter::Die()
+{
+	AMainGameMode* GameMode = GetWorld()->GetAuthGameMode<AMainGameMode>();
+	if(GameMode != nullptr)
+	{
+		GameMode->PlayerDied();
+	}
+	
+	DetachFromControllerPendingDestroy();
+}
+
+void APlayerCharacter::GameIsOver()
+{
+	
 }
 

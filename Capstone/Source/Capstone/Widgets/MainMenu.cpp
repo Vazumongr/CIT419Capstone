@@ -14,6 +14,15 @@ bool UMainMenu::Initialize()
     if(QuitButton != nullptr)
         QuitButton->OnClicked.AddDynamic(this, &UMainMenu::QuitPressed);
 
+    UWorld* World = GetWorld();
+    if(!ensure(World)) return false;
+
+    APlayerController* PlayerController = World->GetFirstPlayerController();
+    if(!ensure(PlayerController)) return false;
+
+    PlayerController->bShowMouseCursor = true;
+    
+
     return true;
 }
 

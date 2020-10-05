@@ -43,6 +43,10 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	bool CameraLocked = true;
 
+	float CameraMaxHeight = 2000.f;
+	float CameraMinHeight = 600.f;
+	float CameraSensitivity = 50.f;
+
 
 	// Setters and Getters. I want them out of my way
 public:

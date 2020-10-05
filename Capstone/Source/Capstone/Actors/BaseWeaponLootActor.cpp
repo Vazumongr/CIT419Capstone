@@ -5,9 +5,7 @@
 
 ABaseWeaponLootActor::ABaseWeaponLootActor()
 {
-    TSubclassOf<UDamageType> DamageType;
-    //WeaponStats = FWeaponStats(TEXT("NewName"), 50, DamageType);
-    UE_LOG(LogTemp, Warning, TEXT("Boring constructor"));
+    
 }
 
 void ABaseWeaponLootActor::BeginPlay()

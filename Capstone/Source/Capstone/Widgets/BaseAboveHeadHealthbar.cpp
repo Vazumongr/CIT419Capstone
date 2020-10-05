@@ -35,7 +35,7 @@ void UBaseAboveHeadHealthbar::BeginPlay()
 
     if(PlayerController == nullptr)
     {
-        UE_LOG(LogTemp, Warning, TEXT("No player controller found..."));
+        UE_LOG(LogTemp, Error, TEXT("No player controller found..."));
         return;
     }
     PlayerCameraManager = PlayerController->PlayerCameraManager;

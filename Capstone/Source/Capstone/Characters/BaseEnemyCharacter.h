@@ -20,6 +20,8 @@ public:
 
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser) override;
 
+	void DamagePlayer();
+
 	UFUNCTION(BlueprintPure)
 	float GetHealthPercent() const;
 
@@ -28,15 +30,19 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	void Die();
 
-	void DamagePlayer();
+	UFUNCTION()
+    void GameIsOver();
 	
 	float Health = 100.0f;
+	bool bGameOver = false;
+
+	UPROPERTY(EditAnywhere)
+	float dmg = 10.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<UDamageType> DamageType;
-
-	void Die();
 
 private:
 	class APlayerCharacter* PlayerCharacter = nullptr;

@@ -23,15 +23,120 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f62275ea-b741-45b3-bda7-a8a130f3606a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Metalness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/noise_mask.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/noise_normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_DetailNormalTiling.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_MapAdjustments.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_Tiling.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_Transmission.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/MS_DefaultMaterial.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Maps/DefaultMap_sharedassets/Grass_LayerInfo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Maps/EndScreenMap.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/Landscape/M_Landscape.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/Landscape/M_Landscape_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/Landscape/MaterialLayers/Grass_ML.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/Landscape/MaterialLayers/Roots_ML.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/Landscape/TargetLayers/DoNotUse_LayerInfo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/Landscape/TargetLayers/Grass_LayerInfo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/Landscape/TargetLayers/Roots_LayerInfo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Binaries/Win64/UE4Editor.modules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Content/Python/unreal_action_settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/MegascansPlugin.uplugin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Resources/Icon128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Resources/Icon40x40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Resources/Logo32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Resources/Logo80x80.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/MegascansPlugin.Build.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImportData.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImportData.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImportDataHandler.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImportDataHandler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImporters/Import3D.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImporters/Import3D.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImporters/Import3DPlant.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImporters/Import3DPlant.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImporters/ImportSurface.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetImporters/ImportSurface.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetPreferencesData.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetPreferencesHandler.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetPreferencesHandler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetsImportController.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/AssetsImportController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/MSPythonBridge.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/MSPythonBridge.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/MegascansLiveLinkModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/TCPServerImp.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/TCPServerImp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/Tools/BlendMaterials.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/Tools/BlendMaterials.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/MSSettings.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/MSSettings.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/MSStyle.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/MSStyle.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/MaterialBlendingDetails.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/MaterialBlendingDetails.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/QMSUIManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/QMSUIManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/SMSWindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/UI/SMSWindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/Utilities/MaterialUtils.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/Utilities/MaterialUtils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/Utilities/MeshOp.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/Utilities/MeshOp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/Utilities/MiscUtils.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Private/Utilities/MiscUtils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Materials/MegascansPlugin/Source/MegascansPlugin/Public/IMegascansLiveLinkModule.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Forest_Roots_2x2_M_00/Forest_Roots_2x2_M_00_inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Forest_Roots_2x2_M_00/smspdebp_8K_AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Forest_Roots_2x2_M_00/smspdebp_8K_Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Forest_Roots_2x2_M_00/smspdebp_8K_Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Forest_Roots_2x2_M_00/smspdebp_8K_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Forest_Roots_2x2_M_00/smspdebp_8K_Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Grass_Wild_2x2_M_00/Grass_Wild_2x2_M_00_inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Grass_Wild_2x2_M_00/sfknaeoa_8K_AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Grass_Wild_2x2_M_00/sfknaeoa_8K_Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Grass_Wild_2x2_M_00/sfknaeoa_8K_Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Grass_Wild_2x2_M_00/sfknaeoa_8K_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Grass_Wild_2x2_M_00/sfknaeoa_8K_Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Icelandic_Sand_With_Pebbles_2x2_M_00/Icelandic_Sand_With_Pebbles_2x2_M_00_inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Icelandic_Sand_With_Pebbles_2x2_M_00/tbjibefn_8K_AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Icelandic_Sand_With_Pebbles_2x2_M_00/tbjibefn_8K_Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Icelandic_Sand_With_Pebbles_2x2_M_00/tbjibefn_8K_Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Icelandic_Sand_With_Pebbles_2x2_M_00/tbjibefn_8K_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Icelandic_Sand_With_Pebbles_2x2_M_00/tbjibefn_8K_Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/WBP_EndScreen.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocationIfSeen.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocationIfSeen.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_ClearBlackboardValue.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_ClearBlackboardValue.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_Shoot.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_Shoot.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/CapstoneEditor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/CapstoneEditor.target" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/BT_Enemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/BT_Enemy.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/PlayerBPs/BP_ObservingPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/PlayerBPs/BP_ObservingPawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ExportedStuff/DrongoAsFBX.fbx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapstoneModuleRules.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapstoneModuleRules.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Makefile.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Makefile.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Metadata.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Metadata.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/LiveCodingInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/LiveCodingInfo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.dll.response" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.dll.response" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.exp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.lib.response" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.lib.response" afterDir="false" />
@@ -41,14 +146,40 @@
       <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/UE4.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/UE4.vcxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/UE4.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/UE4.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/Editor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/Editor.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/Capstone.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/Capstone.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Capstone.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Capstone.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/SampleStructThingy.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/SampleStructThingy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/BaseAboveHeadHealthbar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/BaseAboveHeadHealthbar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/PlayerHUD.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/PlayerHUD.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +197,7 @@
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Plugins/FX/HoudiniNiagara/Source/HoudiniNiagaraEditor/Public/HoudiniNiagaraEditor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/DataStructures/GameStructs.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Editor/ViewportInteraction/ViewportInteractor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/DataStructures/GameStructs.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Editor/AnimGraph/Private/EditModes/LookAtEditMode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraComponent.h" root0="FORCE_HIGHLIGHTING" />
@@ -145,28 +277,37 @@
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Plugins/FX/Niagara/Source/Niagara/Private/NiagaraDataInterfaceExport.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/SteelDrop.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/SteelDrop.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocationIfSeen.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/AR/Apple/AppleARKitFaceSupport/Source/AppleARKitFaceSupport/Private/AppleARKitLiveLinkSource.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/GameStates/MainGameState.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Public/GameDelegates.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/GameStates/MainGameState.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Plugins/Experimental/ModelingToolsEditorMode/Source/ModelingToolsEditorMode/Public/ModelingToolsEditorMode.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocationIfSeen.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/PlayerCharacter.gen.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UdemySimpleShooter/SimpleShooter/Source/SimpleShooter/Characters/ShooterCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/CapstoneEditor.Target.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone.Target.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/Components/MovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_ClearBlackboardValue.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/GameModeBase.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_Shoot.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Capstone.Build.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/CapstoneGameModeBase.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocation.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_Shoot.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_ClearBlackboardValue.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/PrimitiveComponentPhysics.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Engine/EngineBaseTypes.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocation.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/Capstone/SampleStructThingy.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" root0="FORCE_HIGHLIGHTING" />
@@ -177,7 +318,6 @@
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Editor/UMGEditor/Private/TabFactory/HierarchyTabSummoner.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Interfaces/InteractableItemInterface.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/Capstone/SampleStructThingy.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Animation/AnimMontage.h" root0="FORCE_HIGHLIGHTING" />
@@ -185,9 +325,12 @@
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Plugins/Enterprise/MDLImporter/Source/MDLImporter/Private/MDLMapHandler.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/InventoryItemIcon.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/InventoryItemIcon.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BehaviorTreeTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Private/Components/StaticMeshComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTTaskNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Editor/UnrealEd/Public/HierarchicalLOD.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTService.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Engine/World.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/TurretPlacementHighlightActor.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -196,9 +339,12 @@
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/DamageType.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Engine/ObjectLibrary.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Controller.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/Tasks/BTTask_BlackboardBase.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/AboveHeadHealthBar.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/AboveHeadHealthBar.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/AIModule/Classes/BehaviorTree/Services/BTService_BlackboardBase.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/GameModeBase.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Animation/AnimInstance.h" root0="FORCE_HIGHLIGHTING" />
@@ -211,57 +357,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/BaseAboveHeadHealthbar.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/AboveHeadHealthBar.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/AboveHeadHealthBar.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/BaseAboveHeadHealthbar.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Interfaces/InteractableItemInterface.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryItemIcon.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryItemIcon.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/TurretPlacementHighlightActor.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/TurretPlacementHighlightActor.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/Inventory.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/HealthOrb.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Capstone.Build.cs" />
         <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PlayerHUD.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PlayerHUD.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/SteelDrop.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/HealthOrb.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/SteelDrop.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/HomingProjectile.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/DataStructures/GameStructs.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/HomingProjectile.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/Inventory.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/BaseAboveHeadHealthbar.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PlayerHUD.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Capstone.Build.cs" />
+        <option value="$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_ClearBlackboardValue.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_ClearBlackboardValue.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_Shoot.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocation.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocation.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/BTTasks/BTTask_Shoot.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocationIfSeen.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocationIfSeen.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" />
       </list>
     </option>
   </component>
@@ -660,6 +806,15 @@
       <workItem from="1601241366025" duration="2981000" />
       <workItem from="1601297023908" duration="7152000" />
       <workItem from="1601312087270" duration="1687000" />
+      <workItem from="1601315340497" duration="1163000" />
+      <workItem from="1601421153105" duration="583000" />
+      <workItem from="1601474078702" duration="5098000" />
+      <workItem from="1601551490400" duration="1991000" />
+      <workItem from="1601761579485" duration="2096000" />
+      <workItem from="1601825563089" duration="2377000" />
+      <workItem from="1601835964713" duration="3275000" />
+      <workItem from="1601853126729" duration="2110000" />
+      <workItem from="1601904913649" duration="3722000" />
     </task>
     <servers />
   </component>
@@ -761,10 +916,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="514" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597761249673" />
-    <state x="842" y="101" width="960" height="803" key="find.popup" timestamp="1601313581436">
+    <state x="842" y="101" width="960" height="803" key="find.popup" timestamp="1601552503676">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="842" y="101" width="960" height="803" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601313581436" />
+    <state x="842" y="101" width="960" height="803" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601552503676" />
     <state x="638" y="253" width="960" height="534" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599051689651" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600635258936">
       <screen x="0" y="0" width="1920" height="1040" />

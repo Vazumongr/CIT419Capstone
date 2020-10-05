@@ -7,6 +7,7 @@
 #include "Capstone/Characters/PlayerCharacter.h"
 #include "Capstone/Controllers/PlayerAIController.h"
 #include "Capstone/Controllers/ObservingPlayerController.h"
+#include "EngineUtils.h"
 
 void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
 {
@@ -35,4 +36,20 @@ void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* Ne
         ObservingPlayerController->SetPlayerAIController(PlayerAIController);
     }
     
+}
+
+void AMainGameMode::PlayerDied()
+{
+    //GameOver.Broadcast();
+    for(AController* Controller : TActorRange<AController>(GetWorld()))
+    {
+        Controller->GameHasEnded(Controller->GetPawn(), false);
+    }
+    FTimerHandle RestartTimer;
+    GetWorldTimerManager().SetTimer(RestartTimer, this, &AMainGameMode::LoadEndingScreen, 5.f);
+}
+
+void AMainGameMode::LoadEndingScreen()
+{
+    GetWorld()->ServerTravel("/Game/Maps/EndScreenMap");
 }

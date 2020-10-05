@@ -92,7 +92,6 @@ void ABaseTurretPawn::Tick(float DeltaTime)
 
 		if((FPlatformTime::Seconds() - LastFireTime) > ReloadTime)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("I am shooting..."));
 			const float DamageAmount = 10.0f;
 			const TSubclassOf<UDamageType> DamageType;
 			FPointDamageEvent PointDamageEvent;

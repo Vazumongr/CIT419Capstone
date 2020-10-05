@@ -18,9 +18,6 @@ class CAPSTONE_API ULootGenerator : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	ULootGenerator();
-	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Starts the lot spawn sequence
 	void SpawnLoot();
@@ -39,10 +36,6 @@ private:
 	// Class for steel drop
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor> SteelDropClass;
-
-	// Mesh for the weapon. TODO Might not be needed anymore
-	UPROPERTY()
-	UStaticMesh* WeaponMesh = nullptr;
 
 	// Array to hold meshes retrieved during asset loading.
 	UPROPERTY()

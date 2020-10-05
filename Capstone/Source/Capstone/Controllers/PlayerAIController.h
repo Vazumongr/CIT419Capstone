@@ -34,6 +34,8 @@ public:
 	virtual void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result) override;
 
 	void SwitchWeapon(FWeaponStats InStats);
+	
+	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 
 	void PrintInventory();
 	FString GetInventoryAsText();

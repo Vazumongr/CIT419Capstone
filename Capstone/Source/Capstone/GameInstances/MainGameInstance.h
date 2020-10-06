@@ -17,4 +17,12 @@ class CAPSTONE_API UMainGameInstance : public UGameInstance
 public:
     void StartGame();
     void QuitGame();
+    void SetTime(FString& TimeSeconds);
+    FString& GetTime();
+
+    UFUNCTION(BlueprintCallable)
+    void LogTime();
+
+private:
+    FString TimeSeconds;
 };

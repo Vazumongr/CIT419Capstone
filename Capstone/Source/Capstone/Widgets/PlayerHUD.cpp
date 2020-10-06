@@ -4,6 +4,7 @@
 #include "PlayerHUD.h"
 
 #include "Capstone/GameStates/MainGameState.h"
+#include "Capstone/GameInstances/MainGameInstance.h"
 #include "Components/TextBlock.h"
 
 bool UPlayerHUD::Initialize()
@@ -31,9 +32,16 @@ void UPlayerHUD::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
     
     const int32 Minutes = FMath::FloorToInt(FTime / 60);
     
-    const FString Time = FString::Printf(TEXT("%i:%02d"), Minutes, Seconds);
+    Time = FString::Printf(TEXT("%i:%02d"), Minutes, Seconds);
     
     TimerText->SetText(FText::FromString(Time));
     
     
+}
+
+void UPlayerHUD::EndGame()
+{
+    UMainGameInstance* GameInstance = Cast<UMainGameInstance>(GetGameInstance());
+    if(GameInstance != nullptr)
+        GameInstance->SetTime(Time);
 }

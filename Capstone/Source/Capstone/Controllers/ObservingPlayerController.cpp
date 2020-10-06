@@ -56,6 +56,8 @@ void AObservingPlayerController::BeginPlay()
 void AObservingPlayerController::GameHasEnded(AActor* EndGameFocus, bool bIsWinner)
 {
     Super::GameHasEnded(EndGameFocus, bIsWinner);
+    if(HUDWidget != nullptr)
+        HUDWidget->EndGame();
     //Destroy();
 }
 

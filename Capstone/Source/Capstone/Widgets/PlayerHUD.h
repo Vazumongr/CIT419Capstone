@@ -19,6 +19,7 @@ public:
 	UFUNCTION(BlueprintCallable)
     void SetOwningActor(AActor* NewOwner);
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
+	void EndGame();
 
 protected:
 	UPROPERTY(BlueprintReadOnly);
@@ -29,4 +30,5 @@ private:
 	class AMainGameState* GameState = nullptr;
 	UPROPERTY(meta = (BindWidget))
 	class UTextBlock* TimerText = nullptr;
+	FString Time;
 };

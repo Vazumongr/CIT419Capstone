@@ -43834,6 +43834,8 @@
             <e p="AboveHeadHealthBar.h" t="Include" />
             <e p="BaseAboveHeadHealthbar.cpp" t="Include" />
             <e p="BaseAboveHeadHealthbar.h" t="Include" />
+            <e p="EndMenu.cpp" t="Include" />
+            <e p="EndMenu.h" t="Include" />
             <e p="InventoryItemIcon.cpp" t="Include" />
             <e p="InventoryItemIcon.h" t="Include" />
             <e p="InventoryWidget.cpp" t="Include" />

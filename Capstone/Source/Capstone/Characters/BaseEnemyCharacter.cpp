@@ -6,6 +6,10 @@
 #include "Capstone/Characters/PlayerCharacter.h"
 #include "Capstone/GameModes/MainGameMode.h"
 #include "Capstone/ActorComponents/LootGenerator.h"
+#include "Capstone/Actors/HomingProjectile.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraFunctionLibrary.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h"
+#include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraComponent.h"
 
 // Sets default values
 ABaseEnemyCharacter::ABaseEnemyCharacter()
@@ -47,8 +51,24 @@ void ABaseEnemyCharacter::DamagePlayer()
 	ensure(PlayerCharacter);
 	float DamageAmount = dmg;
 	FPointDamageEvent PointDamageEvent;
-	FDamageEvent DamageEvent;
-	PlayerCharacter->TakeDamage(DamageAmount, DamageEvent, GetController(), this);
+	//FDamageEvent DamageEvent;
+	//PlayerCharacter->TakeDamage(DamageAmount, DamageEvent, GetController(), this);
+
+	FVector StartLocation = GetMesh()->GetBoneLocation("gun_pin");
+	FActorSpawnParameters SpawnParams;
+
+	FMyDamageEvent DamageEvent(PlayerCharacter, DamageAmount, GetController(), this, DamageType);
+
+	if(!BulletClass) return;
+	
+	AHomingProjectile* Bullet = GetWorld()->SpawnActor<AHomingProjectile>(BulletClass, StartLocation, FRotator::ZeroRotator);
+	if(Bullet == nullptr) return;
+	Bullet->SetTarget(PlayerCharacter);
+	Bullet->SetDamageEvent(DamageEvent);
+
+	ensure(MuzzleFlashSystem);
+	UNiagaraComponent* MuzzleFlash = UNiagaraFunctionLibrary::SpawnSystemAttached(MuzzleFlashSystem, GetMesh(), TEXT("gun_pin"), FVector::ZeroVector,
+                                                                            FRotator::ZeroRotator, EAttachLocation::KeepRelativeOffset,false);
 }
 
 void ABaseEnemyCharacter::Die()

@@ -8,6 +8,7 @@
 #include "Capstone/Actors/BaseWeaponLootActor.h"
 #include "Capstone/ActorComponents/Inventory.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -54,6 +55,10 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 
 void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
 {
+	FVector StartLocation = GetActorLocation();
+	FVector EndLocation = EnemyToDamage->GetActorLocation();
+	FRotator Rotation = UKismetMathLibrary::FindLookAtRotation(StartLocation, EndLocation);
+	SetActorRotation(Rotation);
 	if(EquippedWeaponActor != nullptr)
 		EquippedWeaponActor->DealDamageToEnemy(EnemyToDamage, GetController(), this);
 }

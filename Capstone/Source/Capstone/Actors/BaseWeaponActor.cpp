@@ -66,13 +66,26 @@ void ABaseWeaponActor::DealDamageToEnemy(AActor* EnemyToDamage, AController* Pla
 	FMyDamageEvent DamageEvent(EnemyToDamage, DamageAmount, PlayerController, PlayerActor, DamageType);
 
 	
-	FVector StartLocation = StaticMeshComponent->GetSocketTransform(FName(TEXT("BarrelEnd"))).GetLocation();
+	FVector SpawnLocation = StaticMeshComponent->GetSocketTransform(FName(TEXT("BarrelEnd"))).GetLocation();
+	
+	FRotator SpawnRotation(0,-45,0);
+	
 	FActorSpawnParameters SpawnParams;
+	SpawnParams.bDeferConstruction = true;
+	SpawnParams.bAllowDuringConstructionScript = false;
+
+	FTransform SpawnTransform(SpawnRotation, SpawnLocation, FVector::OneVector);
 	
 	
-	AHomingProjectile* Bullet = GetWorld()->SpawnActor<AHomingProjectile>(BulletClass, StartLocation, FRotator::ZeroRotator);
+	AHomingProjectile* Bullet = Cast<AHomingProjectile>(UGameplayStatics::BeginDeferredActorSpawnFromClass(this,BulletClass,SpawnTransform,ESpawnActorCollisionHandlingMethod::AlwaysSpawn,PlayerActor));
+	if(Bullet == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("The Bullet is null"));
+		return;
+	}
 	Bullet->SetTarget(EnemyToDamage);
 	Bullet->SetDamageEvent(DamageEvent);
+	UGameplayStatics::FinishSpawningActor(Bullet, SpawnTransform);
 
 	
 	SpawnMuzzleFlash(GetActorRotation());

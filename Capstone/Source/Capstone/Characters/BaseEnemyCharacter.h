@@ -49,5 +49,9 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	class ULootGenerator* LootGenerator = nullptr;
+	UPROPERTY(EditAnywhere)
+	class UNiagaraSystem* MuzzleFlashSystem;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> BulletClass;
 
 };

@@ -10,20 +10,12 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 
-// Sets default values
+// Sets default valuesPre
 AHomingProjectile::AHomingProjectile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Static Mesh Component"));
-	SetRootComponent(StaticMeshComponent);
-	StaticMeshComponent->OnComponentBeginOverlap.AddDynamic(this, &AHomingProjectile::HitEnemy);
 	
-	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Niagara Component"));
-	NiagaraComponent->SetupAttachment(StaticMeshComponent);
-	
-	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
 	ProjectileMovementComponent->bIsHomingProjectile = true;
 }
 
@@ -31,17 +23,7 @@ AHomingProjectile::AHomingProjectile()
 void AHomingProjectile::BeginPlay()
 {
 	Super::BeginPlay();
-}
-
-void AHomingProjectile::HitEnemy(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
-	if(OtherActor == TargetActor)
-	{
-		UGameplayStatics::ApplyDamage(TargetActor, DamageEvent.DamageAmount, DamageEvent.PlayerController, DamageEvent.PlayerActor, DamageEvent.DamageType);
-		Destroy();
-	}
-	
+	StaticMeshComponent->OnComponentBeginOverlap.AddDynamic(this, &AHomingProjectile::HitEnemy);
 }
 
 // Called every frame
@@ -53,12 +35,17 @@ void AHomingProjectile::Tick(float DeltaTime)
 
 void AHomingProjectile::SetTarget(AActor* InTargetActor)
 {
+	if(ProjectileMovementComponent == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("The PMC is null"));
+		return;
+	}
+	if(InTargetActor == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("The ITA is null"));
+		return;
+	}
 	ProjectileMovementComponent->HomingTargetComponent = InTargetActor->GetRootComponent();
 	TargetActor = InTargetActor;
-}
-
-void AHomingProjectile::SetDamageEvent(FMyDamageEvent InDamageEvent)
-{
-	DamageEvent = InDamageEvent;
 }
 

@@ -10,6 +10,7 @@
 #include "Capstone/Pawns/ObservingPawn.h"
 #include "Capstone/Widgets/InventoryWidget.h"
 #include "Capstone/Widgets/PlayerHUD.h"
+#include "Capstone/Widgets/PauseMenu.h"
 
 AObservingPlayerController::AObservingPlayerController()
 {
@@ -74,6 +75,7 @@ void AObservingPlayerController::SetupInputComponent()
     InputComponent->BindAction("MoveCommand", IE_Pressed, this, &AObservingPlayerController::MoveCommand);
     InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
     InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::OpenInventory);
+    InputComponent->BindAction("PauseGame", IE_Pressed, this, &AObservingPlayerController::PauseGame);
     InputComponent->BindAction("SwitchWeapon", IE_Pressed, this, &AObservingPlayerController::SwitchWeapon);
     InputComponent->BindAction("PlaceTurret", IE_Pressed, this, &AObservingPlayerController::PrepareTurret);
     // Axis Bindings
@@ -154,6 +156,15 @@ void AObservingPlayerController::OpenInventory()
         }
             
     }
+}
+
+void AObservingPlayerController::PauseGame()
+{
+    ensure(PauseMenuClass);
+    UPauseMenu* PauseMenu = CreateWidget<UPauseMenu>(this, PauseMenuClass);
+    PauseMenu->AddToViewport();
+    PauseMenu->bIsFocusable = true;
+    UE_LOG(LogTemp, Warning, TEXT("Pausing"));
 }
 
 void AObservingPlayerController::SwitchWeapon()

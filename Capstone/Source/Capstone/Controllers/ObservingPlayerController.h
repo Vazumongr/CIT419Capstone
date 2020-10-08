@@ -41,6 +41,8 @@ private:
     UFUNCTION()
     void OpenInventory();
     UFUNCTION()
+    void PauseGame();
+    UFUNCTION()
     void SwitchWeapon();
     UFUNCTION()
     void PrepareTurret();
@@ -67,6 +69,8 @@ private:
     
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
     TSubclassOf<class UInventoryWidget> InventoryClass;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
+    TSubclassOf<class UPauseMenu> PauseMenuClass;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
     TSubclassOf<class UPlayerHUD> HUDClass;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Structures", meta = (AllowPrivateAccess = "true"))

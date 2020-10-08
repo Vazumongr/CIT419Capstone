@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Capstone.cpp.obj": [
+			"DamageTextComponent.cpp.obj",
 			"Inventory.cpp.obj",
 			"LootGenerator.cpp.obj",
 			"BaseLootActor.cpp.obj",
@@ -18,9 +19,9 @@
 			"BTTask_Shoot.cpp.obj",
 			"Capstone.cpp.obj",
 			"CapstoneGameModeBase.cpp.obj",
+			"BaseEnemyCharacter.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"EnemyAIController.cpp.obj",
-			"ObservingPlayerController.cpp.obj",
 			"PlayerAIController.cpp.obj",
 			"GameStructs.cpp.obj",
 			"MainGameInstance.cpp.obj",
@@ -31,15 +32,15 @@
 			"BaseTurretPawn.cpp.obj",
 			"ObservingPawn.cpp.obj",
 			"AboveHeadHealthBar.cpp.obj",
+			"BaseAboveHeadHealthbar.cpp.obj",
+			"DamageTextWidget.cpp.obj",
+			"EndMenu.cpp.obj",
 			"InventoryItemIcon.cpp.obj",
 			"InventoryWidget.cpp.obj",
 			"MainMenu.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"DamageTextComponent.cpp.obj",
-			"BaseEnemyCharacter.cpp.obj",
-			"BaseAboveHeadHealthbar.cpp.obj",
-			"DamageTextWidget.cpp.obj",
-			"EndMenu.cpp.obj"
+			"ObservingPlayerController.cpp.obj",
+			"PauseMenu.cpp.obj"
 		],
 		"Module.Capstone.gen.cpp.obj": [
 			"AboveHeadHealthBar.gen.cpp.obj",
@@ -72,6 +73,7 @@
 			"MainMenu.gen.cpp.obj",
 			"ObservingPawn.gen.cpp.obj",
 			"ObservingPlayerController.gen.cpp.obj",
+			"PauseMenu.gen.cpp.obj",
 			"PlayerAIController.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",

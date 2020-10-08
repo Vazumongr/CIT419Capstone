@@ -43846,6 +43846,8 @@
             <e p="InventoryWidget.h" t="Include" />
             <e p="MainMenu.cpp" t="Include" />
             <e p="MainMenu.h" t="Include" />
+            <e p="PauseMenu.cpp" t="Include" />
+            <e p="PauseMenu.h" t="Include" />
             <e p="PlayerHUD.cpp" t="Include" />
             <e p="PlayerHUD.h" t="Include" />
           </e>

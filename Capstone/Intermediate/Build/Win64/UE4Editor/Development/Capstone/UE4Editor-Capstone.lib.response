@@ -7,10 +7,11 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\CapstoneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\ObservingPlayerController.cpp.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\MainGameInstance.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\DamageTextComponent.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseEnemyCharacter.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseAboveHeadHealthbar.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\DamageTextWidget.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\EndMenu.cpp.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\PlayerHUD.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Module.Capstone.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Capstone.init.gen.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Module.Capstone.gen.cpp.obj"

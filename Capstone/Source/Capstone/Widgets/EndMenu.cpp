@@ -26,7 +26,7 @@ bool UEndMenu::Initialize()
 
     if(EndMessage == nullptr) return false;
     UMainGameInstance* GameInstance = Cast<UMainGameInstance>(GetGameInstance());
-    EndMessage->SetText(FText::FromString(GameInstance->GetTime()));
+    EndMessage->SetText(FText::FromString(FString::Printf(TEXT("You survived %s!"), *GameInstance->GetTime())));
 
     return true;
 }

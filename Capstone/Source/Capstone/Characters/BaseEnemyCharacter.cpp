@@ -6,10 +6,12 @@
 #include "Capstone/Characters/PlayerCharacter.h"
 #include "Capstone/GameModes/MainGameMode.h"
 #include "Capstone/ActorComponents/LootGenerator.h"
+#include "Capstone/ActorComponents/DamageTextComponent.h"
 #include "Capstone/Actors/HomingProjectile.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraFunctionLibrary.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraComponent.h"
+#include "Blueprint/UserWidget.h"
 
 // Sets default values
 ABaseEnemyCharacter::ABaseEnemyCharacter()
@@ -19,6 +21,8 @@ ABaseEnemyCharacter::ABaseEnemyCharacter()
 
 	LootGenerator = CreateDefaultSubobject<ULootGenerator>(FName(TEXT("Loot Generator")));
 
+	DamageTextComponent = CreateDefaultSubobject<UDamageTextComponent>(FName(TEXT("Damage Text Component")));
+	DamageTextComponent->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned
@@ -99,6 +103,8 @@ float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Da
 	{
 		Die();
 	}
+
+	DamageTextComponent->SpawnDamageText(DamageAmount);
 		
 	return DamageApplied;
 }

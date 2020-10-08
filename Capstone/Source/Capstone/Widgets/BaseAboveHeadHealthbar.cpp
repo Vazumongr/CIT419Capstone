@@ -14,6 +14,7 @@ void UBaseAboveHeadHealthbar::InitWidget()
     {
         WidgetInstance->SetOwningActor(GetOwner());
     }
+    
 }
 
 void UBaseAboveHeadHealthbar::TickComponent(float DeltaTime, ELevelTick TickType,

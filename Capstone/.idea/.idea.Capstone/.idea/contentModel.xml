@@ -43747,6 +43747,8 @@
       <e p="Source" t="Include">
         <e p="Capstone" t="Include">
           <e p="ActorComponents" t="Include">
+            <e p="DamageTextComponent.cpp" t="Include" />
+            <e p="DamageTextComponent.h" t="Include" />
             <e p="Inventory.cpp" t="Include" />
             <e p="Inventory.h" t="Include" />
             <e p="LootGenerator.cpp" t="Include" />
@@ -43834,6 +43836,8 @@
             <e p="AboveHeadHealthBar.h" t="Include" />
             <e p="BaseAboveHeadHealthbar.cpp" t="Include" />
             <e p="BaseAboveHeadHealthbar.h" t="Include" />
+            <e p="DamageTextWidget.cpp" t="Include" />
+            <e p="DamageTextWidget.h" t="Include" />
             <e p="EndMenu.cpp" t="Include" />
             <e p="EndMenu.h" t="Include" />
             <e p="InventoryItemIcon.cpp" t="Include" />

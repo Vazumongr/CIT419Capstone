@@ -43,6 +43,8 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<UDamageType> DamageType;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Text", meta = (AllowPrivateAccess = "true"));
+	TSubclassOf<UUserWidget> DamageTextClass;
 
 private:
 	class APlayerCharacter* PlayerCharacter = nullptr;
@@ -53,5 +55,7 @@ private:
 	class UNiagaraSystem* MuzzleFlashSystem;
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor> BulletClass;
+	UPROPERTY(EditDefaultsOnly)
+	class UDamageTextComponent* DamageTextComponent = nullptr;
 
 };

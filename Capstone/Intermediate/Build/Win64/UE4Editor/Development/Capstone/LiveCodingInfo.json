@@ -36,10 +36,11 @@
 			"DamageTextWidget.cpp.obj",
 			"EndMenu.cpp.obj",
 			"InventoryItemIcon.cpp.obj",
-			"InventoryWidget.cpp.obj",
 			"MainMenu.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"ObservingPlayerController.cpp.obj",
+			"InventoryWidget.cpp.obj",
+			"MenuBase.cpp.obj",
 			"PauseMenu.cpp.obj"
 		],
 		"Module.Capstone.gen.cpp.obj": [
@@ -71,6 +72,7 @@
 			"MainGameMode.gen.cpp.obj",
 			"MainGameState.gen.cpp.obj",
 			"MainMenu.gen.cpp.obj",
+			"MenuBase.gen.cpp.obj",
 			"ObservingPawn.gen.cpp.obj",
 			"ObservingPlayerController.gen.cpp.obj",
 			"PauseMenu.gen.cpp.obj",

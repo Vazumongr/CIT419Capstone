@@ -119,6 +119,26 @@ void AObservingPlayerController::CameraZoom(float AxisValue)
 void AObservingPlayerController::OpenInventory()
 {
     ensure(InventoryClass);    // We assigned it
+    /*
+    static UInventoryWidget* Inventory;
+    if(Inventory == nullptr)
+    {
+        Inventory = CreateWidget<UInventoryWidget>(this, InventoryClass);
+        Inventory->Setup();
+        Inventory->SetInventory(PlayerAIController->GetInventoryAsArray());
+    }
+    else if(!Inventory->IsInViewport())
+    {
+        Inventory->Setup();
+        Inventory->SetInventory(PlayerAIController->GetInventoryAsArray());
+        
+        UE_LOG(LogTemp, Warning, TEXT("Settiingup"));
+    }
+        
+
+    UE_LOG(LogTemp, Warning, TEXT("Jack"));
+    
+    /**/
     if(InventoryWidget == nullptr)    // InventoryWidget doesnt exist yet...
     {
         
@@ -156,14 +176,17 @@ void AObservingPlayerController::OpenInventory()
         }
             
     }
+    /**/
 }
 
 void AObservingPlayerController::PauseGame()
 {
     ensure(PauseMenuClass);
-    UPauseMenu* PauseMenu = CreateWidget<UPauseMenu>(this, PauseMenuClass);
-    PauseMenu->AddToViewport();
-    PauseMenu->bIsFocusable = true;
+    static UPauseMenu* PauseMenu;
+    if(PauseMenu == nullptr)
+        PauseMenu = CreateWidget<UPauseMenu>(this, PauseMenuClass);
+    SetPause(true);
+    PauseMenu->Setup();
     UE_LOG(LogTemp, Warning, TEXT("Pausing"));
 }
 

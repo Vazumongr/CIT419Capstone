@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
+#include "Capstone/Widgets/MenuBase.h"
 #include "PauseMenu.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class CAPSTONE_API UPauseMenu : public UUserWidget
+class CAPSTONE_API UPauseMenu : public UMenuBase
 {
 	GENERATED_BODY()
 

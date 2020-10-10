@@ -3,14 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
+#include "MenuBase.h"
+#include "Capstone/Widgets/MenuBase.h"
 #include "EndMenu.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class CAPSTONE_API UEndMenu : public UUserWidget
+class CAPSTONE_API UEndMenu : public UMenuBase
 {
 	GENERATED_BODY()
 

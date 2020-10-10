@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "InventoryItemIcon.h"
-#include "Blueprint/UserWidget.h"
+#include "Capstone/Widgets/MenuBase.h"
 #include "Capstone/DataStructures/GameStructs.h"
 
 
@@ -15,7 +15,7 @@ struct FWeaponStats;
  * 
  */
 UCLASS()
-class CAPSTONE_API UInventoryWidget : public UUserWidget
+class CAPSTONE_API UInventoryWidget : public UMenuBase
 {
 	GENERATED_BODY()
 
@@ -29,6 +29,7 @@ public:
     void CreateInventoryWidget(FWeaponStats* InStats, int32* i);
 
     void EquipWeapon(UInventoryItemIcon* InIcon);
+
 
 protected:
     UPROPERTY(meta = (BindWidget))

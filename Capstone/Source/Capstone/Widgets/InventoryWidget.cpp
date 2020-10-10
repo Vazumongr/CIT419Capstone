@@ -73,6 +73,8 @@ void UInventoryWidget::EquipWeapon(UInventoryItemIcon* InIcon)
                 OwningController->EquipWeapon(Stats);
         }
     }
+    UE_LOG(LogTemp, Warning, TEXT("Tearing"));
+    //TearDown();
 }
 
 void UInventoryWidget::InitializeInventoryArray()

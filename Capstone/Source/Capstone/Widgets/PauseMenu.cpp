@@ -20,9 +20,10 @@ bool UPauseMenu::Initialize()
 
 void UPauseMenu::ResumeGame()
 {
-    UE_LOG(LogTemp, Warning, TEXT("Resume"));
-    this->RemoveFromViewport();
-    this->bIsFocusable = false;
+    APlayerController* PlayerController = GetWorld()->GetFirstPlayerController();
+    if(!PlayerController) Initialize();
+    PlayerController->SetPause(false);
+    TearDown();
 }
 
 void UPauseMenu::QuitGame()
@@ -31,8 +32,5 @@ void UPauseMenu::QuitGame()
     UWorld* World = GetWorld();
     if(!ensure(World)) return;
 
-    APlayerController* PlayerController = World->GetFirstPlayerController();
-    if(!ensure(PlayerController)) return;
-
-    PlayerController->ConsoleCommand(TEXT("quit"));
+    World->ServerTravel("/Game/Maps/MainMenuMap");
 }

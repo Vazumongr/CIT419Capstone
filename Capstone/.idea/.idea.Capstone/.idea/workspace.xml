@@ -23,15 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f62275ea-b741-45b3-bda7-a8a130f3606a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/MenuBase.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/MenuBase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/InWorld/BP_FloatingDamageNumbersComponent.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Menus/Inventory/WBP_Inventory.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Menus/Inventory/WBP_InventoryItemIcon.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/ActorComponents/FloatingDamageNumbersComponent.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Capstone/ActorComponents/FloatingDamageNumbersComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/PlayerBPs/BP_ObservingPlayerController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/PlayerBPs/BP_ObservingPlayerController.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/EndScreenMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/EndScreenMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/Inventory/WBP_Inventory.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Inventory/WBP_Inventory.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainMenuMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Inventory/WBP_Inventory.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Inventory/WBP_InventoryItemIcon.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Inventory/WBP_InventoryItemsIcon.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" afterDir="false" />
@@ -48,15 +55,13 @@
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/Capstone.vcxproj.filters" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ProjectFiles/UE4.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ProjectFiles/UE4.vcxproj.filters" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/Capstone.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/Capstone.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/EndMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/EndMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/DamageTextWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/DamageTextWidget.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +241,7 @@
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/Object.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Plugins/Editor/AssetManagerEditor/Source/AssetManagerEditor/Public/AssetManagerEditorModule.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/UMG/Public/Components/Visual.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/SceneComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Editor/UnrealEd/Private/Factories/PoseAssetFactory.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Components/SphereComponent.h" root0="FORCE_HIGHLIGHTING" />
@@ -245,6 +251,7 @@
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Camera/CameraComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Plugins/Developer/VisualStudioSourceCodeAccess/Source/VisualStudioSourceCodeAccess/Private/VisualStudioSourceCodeAccessor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/GenericPlatform/GenericPlatformMath.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/ActorComponents/FloatingDamageNumbersComponent.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/SteelDrop.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Actors/SteelDrop.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocationIfSeen.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -269,6 +276,7 @@
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Capstone/ActorComponents/FloatingDamageNumbersComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/Animation/AnimMontage.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/InventoryItemIcon.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Capstone/Widgets/InventoryItemIcon.h" root0="FORCE_HIGHLIGHTING" />
@@ -291,8 +299,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/LootGenerator.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Pawns/ObservingPawn.h" />
@@ -324,13 +330,10 @@
         <option value="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/EndMenu.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/BaseAboveHeadHealthbar.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/AboveHeadHealthBar.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/DamageTextComponent.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/DamageTextWidget.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/DamageTextWidget.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/DamageTextComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.h" />
@@ -342,6 +345,11 @@
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/FloatingDamageNumbersComponent.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/DamageTextWidget.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/FloatingDamageNumbersComponent.cpp" />
       </list>
     </option>
   </component>
@@ -757,6 +765,8 @@
       <workItem from="1602195944543" duration="2451000" />
       <workItem from="1602289575837" duration="588000" />
       <workItem from="1602345623769" duration="6368000" />
+      <workItem from="1602362529519" duration="817000" />
+      <workItem from="1602446514209" duration="6305000" />
     </task>
     <servers />
   </component>
@@ -858,10 +868,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="514" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597761249673" />
-    <state x="842" y="100" width="960" height="803" key="find.popup" timestamp="1602351827438">
+    <state x="842" y="100" width="960" height="803" key="find.popup" timestamp="1602365369321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="842" y="100" width="960" height="803" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602351827438" />
+    <state x="842" y="100" width="960" height="803" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602365369321" />
     <state x="638" y="253" width="960" height="534" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599051689651" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602351855668">
       <screen x="0" y="0" width="1920" height="1040" />

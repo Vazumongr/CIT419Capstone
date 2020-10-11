@@ -7,6 +7,7 @@
 #include "Capstone/GameModes/MainGameMode.h"
 #include "Capstone/ActorComponents/LootGenerator.h"
 #include "Capstone/ActorComponents/DamageTextComponent.h"
+#include "Capstone/ActorComponents/FloatingDamageNumbersComponent.h"
 #include "Capstone/Actors/HomingProjectile.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraFunctionLibrary.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h"
@@ -21,8 +22,8 @@ ABaseEnemyCharacter::ABaseEnemyCharacter()
 
 	LootGenerator = CreateDefaultSubobject<ULootGenerator>(FName(TEXT("Loot Generator")));
 
-	DamageTextComponent = CreateDefaultSubobject<UDamageTextComponent>(FName(TEXT("Damage Text Component")));
-	DamageTextComponent->SetupAttachment(RootComponent);
+	DamageNumberLocation = CreateDefaultSubobject<USceneComponent>(FName(TEXT("Damage Number Location")));
+	DamageNumberLocation->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned
@@ -75,11 +76,24 @@ void ABaseEnemyCharacter::DamagePlayer()
                                                                             FRotator::ZeroRotator, EAttachLocation::KeepRelativeOffset,false);
 }
 
+void ABaseEnemyCharacter::SpawnDamageNumbers(float DamageToDisplay)
+{
+	ensure(FloatingDamageNumbersClass);
+	UFloatingDamageNumbersComponent* FloatingDamageNumbers = NewObject<UFloatingDamageNumbersComponent>(this, FloatingDamageNumbersClass);
+	if(FloatingDamageNumbers)
+	{
+		FloatingDamageNumbers->RegisterComponent();
+		FloatingDamageNumbers->AttachToComponent(DamageNumberLocation, FAttachmentTransformRules::KeepRelativeTransform);
+		FloatingDamageNumbers->SetDamageToDisplay(DamageToDisplay);
+	}
+}
+
 void ABaseEnemyCharacter::Die()
 {
 	ensure(LootGenerator);
 	LootGenerator->SpawnLoot();
 	DetachFromControllerPendingDestroy();
+	DetachAllSceneComponents(DamageNumberLocation, FDetachmentTransformRules::KeepRelativeTransform);
 	Destroy();
 }
 
@@ -104,7 +118,9 @@ float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Da
 		Die();
 	}
 
-	DamageTextComponent->SpawnDamageText(DamageAmount);
+	//DamageTextComponent->SpawnDamageText(DamageAmount);
+
+	SpawnDamageNumbers(DamageAmount);
 		
 	return DamageApplied;
 }

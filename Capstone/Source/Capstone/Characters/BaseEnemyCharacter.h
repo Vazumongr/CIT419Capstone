@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Capstone/ActorComponents/FloatingDamageNumbersComponent.h"
+
+
 #include "BaseEnemyCharacter.generated.h"
 
 UCLASS()
@@ -21,6 +24,8 @@ public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser) override;
 
 	void DamagePlayer();
+
+	void SpawnDamageNumbers(float DamageToDisplay);
 
 	UFUNCTION(BlueprintPure)
 	float GetHealthPercent() const;
@@ -55,7 +60,9 @@ private:
 	class UNiagaraSystem* MuzzleFlashSystem;
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor> BulletClass;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UFloatingDamageNumbersComponent> FloatingDamageNumbersClass;
 	UPROPERTY(EditDefaultsOnly)
-	class UDamageTextComponent* DamageTextComponent = nullptr;
+	class USceneComponent* DamageNumberLocation = nullptr;
 
 };

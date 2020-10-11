@@ -34,10 +34,9 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\CapstoneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\ObservingPlayerController.cpp.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\InventoryWidget.cpp.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\MenuBase.cpp.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\PauseMenu.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\FloatingDamageNumbersComponent.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseEnemyCharacter.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\DamageTextWidget.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Module.Capstone.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Capstone.init.gen.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Module.Capstone.gen.cpp.obj"

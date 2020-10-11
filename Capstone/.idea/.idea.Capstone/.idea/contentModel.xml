@@ -43749,6 +43749,8 @@
           <e p="ActorComponents" t="Include">
             <e p="DamageTextComponent.cpp" t="Include" />
             <e p="DamageTextComponent.h" t="Include" />
+            <e p="FloatingDamageNumbersComponent.cpp" t="Include" />
+            <e p="FloatingDamageNumbersComponent.h" t="Include" />
             <e p="Inventory.cpp" t="Include" />
             <e p="Inventory.h" t="Include" />
             <e p="LootGenerator.cpp" t="Include" />

@@ -21,7 +21,8 @@ void UDamageTextWidget::SetText(float InDamage)
 void UDamageTextWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
     Super::NativeTick(MyGeometry, InDeltaTime);
-    
+
+    return;
     const FVector WorldLocation = Owner->GetComponentLocation();
     FVector2D ScreenLocation;
     

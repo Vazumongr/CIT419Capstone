@@ -15,7 +15,6 @@ class CAPSTONE_API AEnemyAIController : public AAIController
 	GENERATED_BODY()
 
 public:
-	virtual void Tick(float DeltaSeconds) override;
 	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 	
 protected:
@@ -31,5 +30,7 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float DetectionRange = 1000.0f;
+	UPROPERTY(EditAnywhere)
+	float TargetRange = 800.0f;
 	
 };

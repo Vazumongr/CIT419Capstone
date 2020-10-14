@@ -251,8 +251,8 @@ bool AObservingPlayerController::LineTrace(FHitResult& HitResult)
         ActorsToIgnore.Add(TurretPlacement);
 
     return UKismetSystemLibrary::LineTraceSingle(this, StartLocation, EndLocation, UEngineTypes::ConvertToTraceType(ECC_GameTraceChannel18),
-        false, ActorsToIgnore, EDrawDebugTrace::None, HitResult, true, FLinearColor::Yellow,
-        FLinearColor::White, 5.0f);
+        false, ActorsToIgnore, EDrawDebugTrace::None, HitResult, true, FLinearColor::White,
+        FLinearColor::Yellow, 2.0f);
 }
 
 void AObservingPlayerController::SetPlayerAIController(APlayerAIController* InController)

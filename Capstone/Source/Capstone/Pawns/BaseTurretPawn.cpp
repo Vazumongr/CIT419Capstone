@@ -56,7 +56,7 @@ void ABaseTurretPawn::DetectEnemies()
 		float Distance = TraceRange + 1;
 		for(const FHitResult HitResult : HitArray)
 		{
-			const float ComparedDistance = FVector::Distance(Start, HitResult.Location);
+			const float ComparedDistance = FVector::Distance(Start, HitResult.ImpactPoint);
 			if(ComparedDistance < Distance)
 			{
 				TargetedEnemy = HitResult.GetActor();

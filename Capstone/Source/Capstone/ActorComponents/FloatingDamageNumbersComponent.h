@@ -19,5 +19,19 @@ public:
 	void SetDamageToDisplay(float DamageToDisplay);
 
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
+
+private:
+	UPROPERTY(EditAnywhere)
+	float MinDriftRange = 5.f;
+	UPROPERTY(EditAnywhere)
+	float MaxDriftRange = 50.f;
+	UPROPERTY(EditAnywhere)
+	float LerpAlpha = .5f;
+	UFUNCTION()
+	void DestroySelf();
+	
+	FVector EndLocation;
+	FTimerHandle DeathTimerHandle;
+	float LifeLength = 2.f;
 	
 };

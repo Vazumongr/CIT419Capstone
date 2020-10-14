@@ -68,7 +68,7 @@ void ABaseWeaponActor::DealDamageToEnemy(AActor* EnemyToDamage, AController* Pla
 	
 	FVector SpawnLocation = StaticMeshComponent->GetSocketTransform(FName(TEXT("BarrelEnd"))).GetLocation();
 	
-	FRotator SpawnRotation(0,-45,0);
+	FRotator SpawnRotation(0,-PlayerActor->GetActorRotation().Roll,0);
 	
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.bDeferConstruction = true;

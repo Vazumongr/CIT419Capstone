@@ -25,6 +25,7 @@ AProjectileBase::AProjectileBase()
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
 	ProjectileMovementComponent->InitialSpeed = MovementSpeed;
 	ProjectileMovementComponent->MaxSpeed = MovementSpeed;
+	ProjectileMovementComponent->ProjectileGravityScale = 0;
 
 	InitialLifeSpan = 10.f;
 

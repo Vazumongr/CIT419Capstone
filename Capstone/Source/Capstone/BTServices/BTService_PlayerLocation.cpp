@@ -31,7 +31,6 @@ void UBTService_PlayerLocation::TickNode(UBehaviorTreeComponent& OwnerComp, uint
     float DetectionRange = MyBlackboard->GetValueAsFloat(TEXT("DetectionRange"));
     float Dist = FVector::Dist(EnemyPawn->GetActorLocation(), PlayerPawn->GetActorLocation());
 
-    UE_LOG(LogTemp, Warning, TEXT("%f: Distance of: %f"), GetWorld()->RealTimeSeconds, Dist);
 
     if(Dist <= TargetRange)
     {

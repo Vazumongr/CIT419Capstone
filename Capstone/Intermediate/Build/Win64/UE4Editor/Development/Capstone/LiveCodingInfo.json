@@ -6,9 +6,9 @@
 			"Inventory.cpp.obj",
 			"LootGenerator.cpp.obj",
 			"BaseLootActor.cpp.obj",
+			"BaseWeaponLootActor.cpp.obj",
 			"HealthOrb.cpp.obj",
 			"HomingProjectile.cpp.obj",
-			"ProjectileBase.cpp.obj",
 			"SteelDrop.cpp.obj",
 			"TurretPlacementHighlightActor.cpp.obj",
 			"BTService_PlayerLocationIfSeen.cpp.obj",
@@ -16,8 +16,8 @@
 			"BTTask_Shoot.cpp.obj",
 			"Capstone.cpp.obj",
 			"CapstoneGameModeBase.cpp.obj",
-			"BaseEnemyCharacter.cpp.obj",
 			"PlayerCharacter.cpp.obj",
+			"EnemyAIController.cpp.obj",
 			"PlayerAIController.cpp.obj",
 			"GameStructs.cpp.obj",
 			"MainGameInstance.cpp.obj",
@@ -25,6 +25,7 @@
 			"MainGameState.cpp.obj",
 			"InteractableItemInterface.cpp.obj",
 			"WeaponStatInterface.cpp.obj",
+			"BaseTurretPawn.cpp.obj",
 			"ObservingPawn.cpp.obj",
 			"AboveHeadHealthBar.cpp.obj",
 			"BaseAboveHeadHealthbar.cpp.obj",
@@ -38,11 +39,10 @@
 			"PlayerHUD.cpp.obj",
 			"FloatingDamageNumbersComponent.cpp.obj",
 			"BaseWeaponActor.cpp.obj",
-			"BaseWeaponLootActor.cpp.obj",
+			"ProjectileBase.cpp.obj",
 			"BTService_PlayerLocation.cpp.obj",
-			"EnemyAIController.cpp.obj",
-			"ObservingPlayerController.cpp.obj",
-			"BaseTurretPawn.cpp.obj"
+			"BaseEnemyCharacter.cpp.obj",
+			"ObservingPlayerController.cpp.obj"
 		],
 		"Module.Capstone.gen.cpp.obj": [
 			"AboveHeadHealthBar.gen.cpp.obj",
@@ -56,6 +56,7 @@
 			"BTService_PlayerLocationIfSeen.gen.cpp.obj",
 			"BTTask_ClearBlackboardValue.gen.cpp.obj",
 			"BTTask_Shoot.gen.cpp.obj",
+			"Capstone.init.gen.cpp.obj",
 			"CapstoneGameModeBase.gen.cpp.obj",
 			"DamageTextComponent.gen.cpp.obj",
 			"DamageTextWidget.gen.cpp.obj",
@@ -84,8 +85,7 @@
 			"ProjectileBase.gen.cpp.obj",
 			"SteelDrop.gen.cpp.obj",
 			"TurretPlacementHighlightActor.gen.cpp.obj",
-			"WeaponStatInterface.gen.cpp.obj",
-			"Capstone.init.gen.cpp.obj"
+			"WeaponStatInterface.gen.cpp.obj"
 		]
 	}
 }

@@ -8,7 +8,6 @@
 void UFloatingDamageNumbersComponent::InitWidget()
 {
     Super::InitWidget();
-    UE_LOG(LogTemp, Warning, TEXT("MyCustomWidgetComponent"));
     SetWidgetSpace(EWidgetSpace::Screen);
     EndLocation = GetRelativeLocation() + FVector(FMath::RandRange(MinDriftRange, MaxDriftRange),
         FMath::RandRange(MinDriftRange, MaxDriftRange),
@@ -19,7 +18,6 @@ void UFloatingDamageNumbersComponent::InitWidget()
 
 void UFloatingDamageNumbersComponent::SetDamageToDisplay(float DamageToDisplay)
 {
-    UE_LOG(LogTemp, Warning, TEXT("%f"), DamageToDisplay);
     
     if(Widget == nullptr) return;
         

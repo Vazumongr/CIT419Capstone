@@ -9,6 +9,7 @@
 #include "Capstone/ActorComponents/DamageTextComponent.h"
 #include "Capstone/ActorComponents/FloatingDamageNumbersComponent.h"
 #include "Capstone/Actors/HomingProjectile.h"
+#include "Kismet/GameplayStatics.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraFunctionLibrary.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraComponent.h"
@@ -56,8 +57,6 @@ void ABaseEnemyCharacter::DamagePlayer()
 	ensure(PlayerCharacter);
 	float DamageAmount = dmg;
 	FPointDamageEvent PointDamageEvent;
-	//FDamageEvent DamageEvent;
-	//PlayerCharacter->TakeDamage(DamageAmount, DamageEvent, GetController(), this);
 
 	FVector StartLocation = GetMesh()->GetBoneLocation("gun_pin");
 	FActorSpawnParameters SpawnParams;
@@ -65,11 +64,23 @@ void ABaseEnemyCharacter::DamagePlayer()
 	FMyDamageEvent DamageEvent(PlayerCharacter, DamageAmount, GetController(), this, DamageType);
 
 	if(!BulletClass) return;
+
+	FVector SpawnLocation = GetMesh()->GetBoneLocation("gun_pin");
 	
-	AHomingProjectile* Bullet = GetWorld()->SpawnActor<AHomingProjectile>(BulletClass, StartLocation, FRotator::ZeroRotator);
-	if(Bullet == nullptr) return;
+	FRotator SpawnRotation(0,GetActorRotation().Yaw,0);
+
+	FTransform SpawnTransform(SpawnRotation, SpawnLocation, FVector::OneVector);
+	
+	AHomingProjectile* Bullet = Cast<AHomingProjectile>(UGameplayStatics::BeginDeferredActorSpawnFromClass(this,BulletClass,SpawnTransform,ESpawnActorCollisionHandlingMethod::AlwaysSpawn,this));
+	if(Bullet == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("The Bullet is null"));
+		return;
+	}
 	Bullet->SetTarget(PlayerCharacter);
 	Bullet->SetDamageEvent(DamageEvent);
+	UGameplayStatics::FinishSpawningActor(Bullet, SpawnTransform);
+	UE_LOG(LogTemp, Warning, TEXT("Spawned Rotation of: %s"), *Bullet->GetActorRotation().ToString());
 
 	ensure(MuzzleFlashSystem);
 	UNiagaraComponent* MuzzleFlash = UNiagaraFunctionLibrary::SpawnSystemAttached(MuzzleFlashSystem, GetMesh(), TEXT("gun_pin"), FVector::ZeroVector,

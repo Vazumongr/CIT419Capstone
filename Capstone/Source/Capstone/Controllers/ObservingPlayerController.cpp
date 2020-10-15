@@ -185,8 +185,8 @@ void AObservingPlayerController::PauseGame()
     static UPauseMenu* PauseMenu;
     if(PauseMenu == nullptr)
         PauseMenu = CreateWidget<UPauseMenu>(this, PauseMenuClass);
-    SetPause(true);
     PauseMenu->Setup();
+    SetPause(true);
     UE_LOG(LogTemp, Warning, TEXT("Pausing"));
 }
 

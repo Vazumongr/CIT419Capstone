@@ -4,6 +4,7 @@
 #include "BaseWeaponActor.h"
 
 #include "Capstone/Characters/PlayerCharacter.h"
+#include "Capstone/Controllers/PlayerAIController.h"
 #include "Capstone/Actors/HomingProjectile.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraFunctionLibrary.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h"
@@ -68,11 +69,7 @@ void ABaseWeaponActor::DealDamageToEnemy(AActor* EnemyToDamage, AController* Pla
 	
 	FVector SpawnLocation = StaticMeshComponent->GetSocketTransform(FName(TEXT("BarrelEnd"))).GetLocation();
 	
-	FRotator SpawnRotation(0,-PlayerActor->GetActorRotation().Roll,0);
-	
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.bDeferConstruction = true;
-	SpawnParams.bAllowDuringConstructionScript = false;
+	FRotator SpawnRotation(0,PlayerActor->GetActorRotation().Yaw,0);
 
 	FTransform SpawnTransform(SpawnRotation, SpawnLocation, FVector::OneVector);
 	
@@ -89,5 +86,6 @@ void ABaseWeaponActor::DealDamageToEnemy(AActor* EnemyToDamage, AController* Pla
 
 	
 	SpawnMuzzleFlash(GetActorRotation());
+	
 }
 

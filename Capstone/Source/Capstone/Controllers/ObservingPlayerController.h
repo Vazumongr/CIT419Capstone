@@ -43,11 +43,13 @@ private:
     UFUNCTION()
     void PauseGame();
     UFUNCTION()
-    void SwitchWeapon();
-    UFUNCTION()
     void PrepareTurret();
     UFUNCTION()
     void PlaceTurret();
+    UFUNCTION()
+    void SaveGame();
+    UFUNCTION()
+    void LoadGame();
 
     // FUNCTIONS
     bool LineTrace(FHitResult& HitResult);

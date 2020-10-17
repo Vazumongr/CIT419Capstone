@@ -47,6 +47,7 @@ public:
 	FString GetInventoryAsText();
 	
 	TArray<FWeaponStats> GetInventoryAsArray();
+	void SetInventory(TArray<FWeaponStats> InInventory);
 
 	void AddHealth(float InHealth);
 

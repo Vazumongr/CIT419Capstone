@@ -40,6 +40,7 @@ public:
 	void PrintInventory();
 	FString GetInventoryAsText();
 	TArray<FWeaponStats> GetInventoryAsArray();
+	void SetInventory(TArray<FWeaponStats> InInventory);
 
 private:
 	void InteractWithItem(FHitResult HitResult, class IInteractableItemInterface* ItemInterface);

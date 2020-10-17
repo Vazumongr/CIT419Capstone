@@ -58,7 +58,7 @@ void APlayerAIController::OnMoveCompleted(FAIRequestID RequestID, const FPathFol
             break;
     }
 }
-
+// TODO this ain't being used??
 void APlayerAIController::SwitchWeapon(FWeaponStats InStats)
 {
     ensure(PlayerCharacter);
@@ -87,6 +87,12 @@ TArray<FWeaponStats> APlayerAIController::GetInventoryAsArray()
 {
     ensure(PlayerCharacter);
     return PlayerCharacter->GetInventoryAsArray();
+}
+
+void APlayerAIController::SetInventory(TArray<FWeaponStats> InInventory)
+{
+    ensure(PlayerCharacter);
+    PlayerCharacter->SetInventory(InInventory);
 }
 
 void APlayerAIController::InteractWithItem(FHitResult HitResult, IInteractableItemInterface* ItemInterface)

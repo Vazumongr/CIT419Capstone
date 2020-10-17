@@ -4,10 +4,12 @@
 #include "ObservingPlayerController.h"
 
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
 #include "Capstone/Actors/TurretPlacementHighlightActor.h"
 #include "Capstone/Controllers/PlayerAIController.h"
 #include "Capstone/Pawns/BaseTurretPawn.h"
 #include "Capstone/Pawns/ObservingPawn.h"
+#include "Capstone/SaveGames/MySaveGame.h"
 #include "Capstone/Widgets/InventoryWidget.h"
 #include "Capstone/Widgets/PlayerHUD.h"
 #include "Capstone/Widgets/PauseMenu.h"
@@ -76,8 +78,9 @@ void AObservingPlayerController::SetupInputComponent()
     InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
     InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::OpenInventory);
     InputComponent->BindAction("PauseGame", IE_Pressed, this, &AObservingPlayerController::PauseGame);
-    InputComponent->BindAction("SwitchWeapon", IE_Pressed, this, &AObservingPlayerController::SwitchWeapon);
     InputComponent->BindAction("PlaceTurret", IE_Pressed, this, &AObservingPlayerController::PrepareTurret);
+    InputComponent->BindAction("SaveGame", IE_Pressed, this, &AObservingPlayerController::SaveGame);
+    InputComponent->BindAction("LoadGame", IE_Pressed, this, &AObservingPlayerController::LoadGame);
     // Axis Bindings
     InputComponent->BindAxis("CameraZoom", this, &AObservingPlayerController::CameraZoom);
 }
@@ -119,26 +122,6 @@ void AObservingPlayerController::CameraZoom(float AxisValue)
 void AObservingPlayerController::OpenInventory()
 {
     ensure(InventoryClass);    // We assigned it
-    /*
-    static UInventoryWidget* Inventory;
-    if(Inventory == nullptr)
-    {
-        Inventory = CreateWidget<UInventoryWidget>(this, InventoryClass);
-        Inventory->Setup();
-        Inventory->SetInventory(PlayerAIController->GetInventoryAsArray());
-    }
-    else if(!Inventory->IsInViewport())
-    {
-        Inventory->Setup();
-        Inventory->SetInventory(PlayerAIController->GetInventoryAsArray());
-        
-        UE_LOG(LogTemp, Warning, TEXT("Settiingup"));
-    }
-        
-
-    UE_LOG(LogTemp, Warning, TEXT("Jack"));
-    
-    /**/
     if(InventoryWidget == nullptr)    // InventoryWidget doesnt exist yet...
     {
         
@@ -176,7 +159,6 @@ void AObservingPlayerController::OpenInventory()
         }
             
     }
-    /**/
 }
 
 void AObservingPlayerController::PauseGame()
@@ -188,12 +170,6 @@ void AObservingPlayerController::PauseGame()
     PauseMenu->Setup();
     SetPause(true);
     UE_LOG(LogTemp, Warning, TEXT("Pausing"));
-}
-
-void AObservingPlayerController::SwitchWeapon()
-{
-    ensure(PlayerAIController);
-    //PlayerAIController->SwitchWeapon();
 }
 
 void AObservingPlayerController::PrepareTurret()
@@ -236,6 +212,42 @@ void AObservingPlayerController::PlaceTurret()
         PlayerAIController->AddSteel(-10);
         SpawnedTurret->SetPlayer(PlayerAIController->GetPawn());
     }
+}
+
+void AObservingPlayerController::SaveGame()
+{
+    // Create instance of savegame class
+    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
+    // Set the save game instance location equal to the players current location
+    SaveGameInstance->PlayerLocation = this->PlayerAIController->GetPawn()->GetActorLocation();
+    SaveGameInstance->Inventory = PlayerAIController->GetInventoryAsArray();
+    // Save the savegameinstance
+    UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+   
+    UE_LOG(LogTemp, Warning, TEXT("Saving..."));
+}
+
+void AObservingPlayerController::LoadGame()
+{
+    // Create instance of savegame class
+    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
+    // Load the saved game into our savegameinstance variable
+    SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+    // Set the players location from the saved file
+    if(PlayerAIController == nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Debug: It's the AIController"));
+        return;
+    }
+        
+    if(SaveGameInstance == nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Debug: It's the savegameinstance"));
+        return;
+    }
+    PlayerAIController->SetInventory(SaveGameInstance->Inventory);
+    PlayerAIController->GetPawn()->SetActorLocation(SaveGameInstance->PlayerLocation);
+    UE_LOG(LogTemp, Warning, TEXT("Loading..."));
 }
 
 bool AObservingPlayerController::LineTrace(FHitResult& HitResult)

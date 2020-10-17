@@ -43565,6 +43565,10 @@
             <e p="ObservingPawn.cpp" t="Include" />
             <e p="ObservingPawn.h" t="Include" />
           </e>
+          <e p="SaveGames" t="Include">
+            <e p="MySaveGame.cpp" t="Include" />
+            <e p="MySaveGame.h" t="Include" />
+          </e>
           <e p="Widgets" t="Include">
             <e p="AboveHeadHealthBar.cpp" t="Include" />
             <e p="AboveHeadHealthBar.h" t="Include" />

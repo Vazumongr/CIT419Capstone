@@ -118,6 +118,11 @@ TArray<FWeaponStats> APlayerCharacter::GetInventoryAsArray()
 	return InventoryComponent->GetInventoryTArray();
 }
 
+void APlayerCharacter::SetInventory(TArray<FWeaponStats> InInventory)
+{
+	InventoryComponent->Inventory = InInventory;
+}
+
 void APlayerCharacter::AddHealth(float InHealth)
 {
 	Health += InHealth;

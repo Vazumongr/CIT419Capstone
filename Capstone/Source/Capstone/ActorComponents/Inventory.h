@@ -34,14 +34,15 @@ public:
 	void PrintArray();
 	// Converts inventory contents to a string
 	FString ToString();
+	
+	// This is the inventory array that holds all the data
+	TArray<FWeaponStats> Inventory;		// TODO MOVE BACK TO PRIVATE EVENTUALLY
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
 private:
-	// This is the inventory array that holds all the data
-	TArray<FWeaponStats> Inventory;
 
 		
 };

@@ -3,22 +3,25 @@
 	{
 		"Module.Capstone.cpp.obj": [
 			"DamageTextComponent.cpp.obj",
+			"FloatingDamageNumbersComponent.cpp.obj",
 			"Inventory.cpp.obj",
 			"LootGenerator.cpp.obj",
 			"BaseLootActor.cpp.obj",
+			"BaseWeaponActor.cpp.obj",
 			"BaseWeaponLootActor.cpp.obj",
 			"HealthOrb.cpp.obj",
 			"HomingProjectile.cpp.obj",
+			"ProjectileBase.cpp.obj",
 			"SteelDrop.cpp.obj",
 			"TurretPlacementHighlightActor.cpp.obj",
+			"BTService_PlayerLocation.cpp.obj",
 			"BTService_PlayerLocationIfSeen.cpp.obj",
 			"BTTask_ClearBlackboardValue.cpp.obj",
 			"BTTask_Shoot.cpp.obj",
 			"Capstone.cpp.obj",
 			"CapstoneGameModeBase.cpp.obj",
-			"PlayerCharacter.cpp.obj",
+			"BaseEnemyCharacter.cpp.obj",
 			"EnemyAIController.cpp.obj",
-			"PlayerAIController.cpp.obj",
 			"GameStructs.cpp.obj",
 			"MainGameInstance.cpp.obj",
 			"MainGameMode.cpp.obj",
@@ -37,12 +40,10 @@
 			"MenuBase.cpp.obj",
 			"PauseMenu.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"FloatingDamageNumbersComponent.cpp.obj",
-			"BaseWeaponActor.cpp.obj",
-			"ProjectileBase.cpp.obj",
-			"BTService_PlayerLocation.cpp.obj",
-			"BaseEnemyCharacter.cpp.obj",
-			"ObservingPlayerController.cpp.obj"
+			"PlayerCharacter.cpp.obj",
+			"ObservingPlayerController.cpp.obj",
+			"PlayerAIController.cpp.obj",
+			"MySaveGame.cpp.obj"
 		],
 		"Module.Capstone.gen.cpp.obj": [
 			"AboveHeadHealthBar.gen.cpp.obj",
@@ -56,7 +57,6 @@
 			"BTService_PlayerLocationIfSeen.gen.cpp.obj",
 			"BTTask_ClearBlackboardValue.gen.cpp.obj",
 			"BTTask_Shoot.gen.cpp.obj",
-			"Capstone.init.gen.cpp.obj",
 			"CapstoneGameModeBase.gen.cpp.obj",
 			"DamageTextComponent.gen.cpp.obj",
 			"DamageTextWidget.gen.cpp.obj",
@@ -76,6 +76,7 @@
 			"MainGameState.gen.cpp.obj",
 			"MainMenu.gen.cpp.obj",
 			"MenuBase.gen.cpp.obj",
+			"MySaveGame.gen.cpp.obj",
 			"ObservingPawn.gen.cpp.obj",
 			"ObservingPlayerController.gen.cpp.obj",
 			"PauseMenu.gen.cpp.obj",
@@ -85,7 +86,8 @@
 			"ProjectileBase.gen.cpp.obj",
 			"SteelDrop.gen.cpp.obj",
 			"TurretPlacementHighlightActor.gen.cpp.obj",
-			"WeaponStatInterface.gen.cpp.obj"
+			"WeaponStatInterface.gen.cpp.obj",
+			"Capstone.init.gen.cpp.obj"
 		]
 	}
 }

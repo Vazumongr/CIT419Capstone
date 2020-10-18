@@ -43,6 +43,10 @@ public:
 	void SwitchWeapon(FWeaponStats InStats);
 	
 	void PrintInventory();
+
+	void SaveGame();
+
+	void LoadGame(FPlayerSaveData InData);
 	
 	FString GetInventoryAsText();
 	
@@ -76,6 +80,7 @@ private:
 
 	FWeaponStats EquippedWeaponStats;
 
+	float MaxHealth = 100.0f;
 	float Health = 100.0f;
 	float Steel = 0.0f;
 

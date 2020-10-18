@@ -38,6 +38,70 @@ struct FWeaponStats
 };
 
 USTRUCT()
+struct FPlayerSaveData
+{
+	GENERATED_BODY()
+
+	UPROPERTY()
+	FTransform PlayerTransform;
+	UPROPERTY()
+	TArray<FWeaponStats> Inventory;
+	UPROPERTY()
+	float CurrentHealth;
+	UPROPERTY()
+	float MaxHealth;
+	UPROPERTY()
+	float SteelAmount;
+};
+
+USTRUCT()
+struct FTurretSaveData
+{
+	GENERATED_BODY()
+	UPROPERTY()
+	FTransform TurretTransform;
+	UPROPERTY()
+	float TurretHealth;
+};
+
+USTRUCT()
+struct FEnemySaveData
+{
+	GENERATED_BODY()
+
+	UPROPERTY()
+	FTransform EnemyTransform;
+	UPROPERTY()
+	float CurrentHealth;
+	UPROPERTY()
+	float MaxHealth;
+	UPROPERTY()
+	float DamageAmount;
+};
+
+USTRUCT()
+struct FResourceDropSaveData
+{
+	GENERATED_BODY()
+
+	UPROPERTY()
+	FTransform ResourceDropTransform;
+	UPROPERTY()
+	float ResourceValue;
+};
+
+USTRUCT()
+struct FWeaponDropSaveData
+{
+	GENERATED_BODY()
+
+	UPROPERTY()
+	FTransform WeaponDropTransform;
+	UPROPERTY()
+	FWeaponStats WeaponStats;
+};
+
+USTRUCT()
 struct FMyDamageEvent
 {
 	GENERATED_BODY()

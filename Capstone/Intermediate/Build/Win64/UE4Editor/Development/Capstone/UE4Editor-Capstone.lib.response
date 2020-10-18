@@ -7,6 +7,8 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\CapstoneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Inventory.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseWeaponLootActor.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\PlayerCharacter.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\ObservingPlayerController.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\PlayerAIController.cpp.obj"

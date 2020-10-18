@@ -5,5 +5,5 @@
 
 UMySaveGame::UMySaveGame()
 {
-    PlayerLocation = FVector(0.f,0.f,0.f);
+    PlayerLocation = FVector(25,25,25);
 }

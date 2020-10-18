@@ -38,6 +38,11 @@ TArray<FWeaponStats> UInventory::GetInventoryTArray() const
 	return Inventory;	// Returns the inventory array. Should do as a pointer.
 }
 
+void UInventory::SetInventory(TArray<FWeaponStats> InInventory)
+{
+	Inventory = InInventory;
+}
+
 // TODO I don't think I have a use for this anymore
 void UInventory::PrintArray()
 {

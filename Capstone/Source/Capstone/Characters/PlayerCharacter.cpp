@@ -7,6 +7,7 @@
 #include "Capstone/GameModes/MainGameMode.h"
 #include "Capstone/Actors/BaseWeaponLootActor.h"
 #include "Capstone/ActorComponents/Inventory.h"
+#include "Capstone/SaveGames/MySaveGame.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 
@@ -106,6 +107,34 @@ void APlayerCharacter::PrintInventory()
 {
 	FString DebugMsg = FString::Printf(TEXT("Inventory Contents: %s"), *InventoryComponent->ToString());
 	//GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
+}
+
+void APlayerCharacter::SaveGame()
+{
+	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
+
+	FPlayerSaveData MyData;
+	MyData.Inventory = InventoryComponent->GetInventoryTArray();
+	MyData.CurrentHealth = Health;
+	MyData.MaxHealth = MaxHealth;
+	MyData.PlayerTransform = GetActorTransform();
+	MyData.SteelAmount = Steel;
+
+	
+	SaveGameInstance->PlayerSaveData = MyData;
+	
+	
+	// Save the savegameinstance
+	UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+}
+
+void APlayerCharacter::LoadGame(FPlayerSaveData InData)
+{
+	InventoryComponent->SetInventory(InData.Inventory);
+	Health = InData.CurrentHealth;
+	MaxHealth = InData.MaxHealth;
+	SetActorTransform(InData.PlayerTransform);
+	Steel = InData.SteelAmount;
 }
 
 FString APlayerCharacter::GetInventoryAsText()

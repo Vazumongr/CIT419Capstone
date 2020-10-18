@@ -217,22 +217,18 @@ void AObservingPlayerController::PlaceTurret()
 void AObservingPlayerController::SaveGame()
 {
     // Create instance of savegame class
-    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
-    // Set the save game instance location equal to the players current location
-    SaveGameInstance->PlayerLocation = this->PlayerAIController->GetPawn()->GetActorLocation();
-    SaveGameInstance->Inventory = PlayerAIController->GetInventoryAsArray();
-    // Save the savegameinstance
-    UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+    PlayerAIController->SaveGame();    // TODO MAKE THIS A DELEGATE
+    
    
     UE_LOG(LogTemp, Warning, TEXT("Saving..."));
 }
 
+// TODO THIS SHOULD BE HANDLED IN GAME MODE
 void AObservingPlayerController::LoadGame()
 {
     // Create instance of savegame class
-    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
-    // Load the saved game into our savegameinstance variable
-    SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+    
     // Set the players location from the saved file
     if(PlayerAIController == nullptr)
     {
@@ -245,8 +241,13 @@ void AObservingPlayerController::LoadGame()
         UE_LOG(LogTemp, Warning, TEXT("Debug: It's the savegameinstance"));
         return;
     }
-    PlayerAIController->SetInventory(SaveGameInstance->Inventory);
-    PlayerAIController->GetPawn()->SetActorLocation(SaveGameInstance->PlayerLocation);
+
+    
+    FPlayerSaveData MyData = SaveGameInstance->PlayerSaveData;
+    
+    //PlayerAIController->GetPawn()->SetActorTransform(MyData.PlayerTransform);
+    PlayerAIController->LoadGame(MyData);
+    
     UE_LOG(LogTemp, Warning, TEXT("Loading..."));
 }
 

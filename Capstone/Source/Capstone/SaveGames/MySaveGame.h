@@ -8,8 +8,6 @@
 #include "GameFramework/SaveGame.h"
 #include "MySaveGame.generated.h"
 
-enum GameStructs;
-
 /**
  * 
  */
@@ -21,10 +19,15 @@ class CAPSTONE_API UMySaveGame : public USaveGame
 	UMySaveGame();
 	
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY()
 	FVector PlayerLocation;
+	UPROPERTY()
+	FPlayerSaveData PlayerSaveData;
 
-	UPROPERTY(EditAnywhere)
-	TArray<FWeaponStats> Inventory;
+	TArray<FTurretSaveData> TurretSaveDatas;
+	TArray<FEnemySaveData> EnemySaveDatas;
+	TArray<FResourceDropSaveData> ResourceDropSaveDatas;
+	TArray<FWeaponDropSaveData> WeaponDropSaveDatas;
+	
 	
 };

@@ -95,6 +95,17 @@ void APlayerAIController::SetInventory(TArray<FWeaponStats> InInventory)
     PlayerCharacter->SetInventory(InInventory);
 }
 
+void APlayerAIController::SaveGame()
+{
+    ensure(PlayerCharacter);
+    PlayerCharacter->SaveGame();
+}
+
+void APlayerAIController::LoadGame(FPlayerSaveData InData)
+{
+    PlayerCharacter->LoadGame(InData);
+}
+
 void APlayerAIController::InteractWithItem(FHitResult HitResult, IInteractableItemInterface* ItemInterface)
 {
     TargetedItem = ItemInterface;

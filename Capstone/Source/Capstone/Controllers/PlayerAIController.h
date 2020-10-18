@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "Capstone/DataStructures/GameStructs.h"
+
 #include "PlayerAIController.generated.h"
 
 
@@ -38,9 +40,12 @@ public:
 	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 
 	void PrintInventory();
+	void SetInventory(TArray<FWeaponStats> InInventory);
+	void SaveGame();
+	void LoadGame(FPlayerSaveData InData);
+	
 	FString GetInventoryAsText();
 	TArray<FWeaponStats> GetInventoryAsArray();
-	void SetInventory(TArray<FWeaponStats> InInventory);
 
 private:
 	void InteractWithItem(FHitResult HitResult, class IInteractableItemInterface* ItemInterface);

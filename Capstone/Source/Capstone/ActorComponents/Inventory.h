@@ -30,6 +30,8 @@ public:
 	// Returns a copy of the inventory. TODO should probably return a pointer to this so there aren't copies floating around.
 	FORCEINLINE TArray<FWeaponStats> GetInventoryTArray() const;
 
+	void SetInventory(TArray<FWeaponStats> InInventory);
+
 	// Prints the inventory
 	void PrintArray();
 	// Converts inventory contents to a string

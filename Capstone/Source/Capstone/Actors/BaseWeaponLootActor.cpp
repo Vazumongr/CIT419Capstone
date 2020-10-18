@@ -17,7 +17,7 @@ void ABaseWeaponLootActor::BeginPlay()
     UMaterialInterface* NewMat = nullptr;
     for(UMaterialInterface* Material : Materials)
     {
-        UE_LOG(LogTemp, Warning, TEXT("%s"), *Material->GetName());
+        //UE_LOG(LogTemp, Warning, TEXT("%s"), *Material->GetName());
     }
 }
 

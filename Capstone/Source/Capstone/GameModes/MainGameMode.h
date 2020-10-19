@@ -35,6 +35,8 @@ public:
     void LoadEndingScreen();
 
 private:
+
+	void LoadSave();
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<APlayerCharacter> PlayerCharacterClass;
@@ -44,6 +46,8 @@ private:
 	TSubclassOf<class AObservingPlayerController> ObservingPlayerControllerClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class APlayerAIController> PlayerAIControllerClass;
+	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<class ABaseTurretPawn> TurretClass;
 
 	APlayerCharacter* PlayerCharacter = nullptr;
 	

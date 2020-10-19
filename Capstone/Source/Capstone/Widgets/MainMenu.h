@@ -21,11 +21,15 @@ private:
 	UFUNCTION()
 	void StartPressed();
 	UFUNCTION()
+	void LoadPressed();
+	UFUNCTION()
 	void QuitPressed();
 
 	
 	UPROPERTY(meta = (BindWidget))
-	class UButton* StartButton;
+	class UButton* NewGameButton;
+	UPROPERTY(meta = (BindWidget))
+	class UButton* LoadSaveButton;
 	UPROPERTY(meta = (BindWidget))
 	class UButton* QuitButton;
 	

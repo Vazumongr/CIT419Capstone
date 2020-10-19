@@ -4,13 +4,16 @@
 #include "MainMenu.h"
 
 #include "Components/Button.h"
+#include "Capstone/GameInstances/MainGameInstance.h"
 
 bool UMainMenu::Initialize()
 {
     if(!Super::Initialize()) return false;
 
-    if(StartButton != nullptr)
-        StartButton->OnClicked.AddDynamic(this, &UMainMenu::StartPressed);
+    if(NewGameButton != nullptr)
+        NewGameButton->OnClicked.AddDynamic(this, &UMainMenu::StartPressed);
+    if(LoadSaveButton != nullptr)
+        LoadSaveButton->OnClicked.AddDynamic(this, &UMainMenu::LoadPressed);
     if(QuitButton != nullptr)
         QuitButton->OnClicked.AddDynamic(this, &UMainMenu::QuitPressed);
 
@@ -28,6 +31,13 @@ bool UMainMenu::Initialize()
 
 void UMainMenu::StartPressed()
 {
+    GetWorld()->ServerTravel("/Game/Maps/DefaultMap");
+}
+
+void UMainMenu::LoadPressed()
+{
+    UMainGameInstance* GameInstance = Cast<UMainGameInstance>(GetGameInstance());
+    GameInstance->bLoadSave = true;
     GetWorld()->ServerTravel("/Game/Maps/DefaultMap");
 }
 

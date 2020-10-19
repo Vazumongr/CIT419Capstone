@@ -4,6 +4,9 @@
 #include "PauseMenu.h"
 
 #include "Components/Button.h"
+#include "Capstone/SaveGames/MySaveGame.h"
+#include "Kismet/GameplayStatics.h"
+#include "Capstone/GameModes/MainGameMode.h"
 
 bool UPauseMenu::Initialize()
 {
@@ -28,6 +31,22 @@ void UPauseMenu::ResumeGame()
 
 void UPauseMenu::QuitGame()
 {
+    // TODO THIS WILL BE HANDLED ELSEWHERE
+    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+	
+    if(SaveGameInstance != nullptr)
+    {
+        SaveGameInstance->PurgeArrays();
+    }
+    UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+    
+    AMainGameMode* GameMode = GetWorld()->GetAuthGameMode<AMainGameMode>();
+    if(GameMode != nullptr)
+    {
+        GameMode->SaveGame.Broadcast();
+    }
+    // TODO Purge the previous array
+    UE_LOG(LogTemp, Warning, TEXT("Saving..."));
     UE_LOG(LogTemp, Warning, TEXT("Quit"));
     UWorld* World = GetWorld();
     if(!ensure(World)) return;

@@ -15,15 +15,17 @@ UCLASS()
 class CAPSTONE_API UMySaveGame : public USaveGame
 {
 	GENERATED_BODY()
-
-	UMySaveGame();
 	
 public:
+
+	void PurgeArrays();
+	
 	UPROPERTY()
 	float SavedGameTime;
 	
 	UPROPERTY()
 	FPlayerSaveData PlayerSaveData;
+	// TODO ALL THESE NEED PURGED WHEN SAVING
 	UPROPERTY()
 	TArray<FTurretSaveData> TurretSaveDatas;
 	UPROPERTY()

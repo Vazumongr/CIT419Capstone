@@ -29,11 +29,12 @@
     <list default="true" id="f62275ea-b741-45b3-bda7-a8a130f3606a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BaseWeaponLootActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BaseWeaponLootActor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_MainGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_MainGameMode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainMenuMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Menus/WBP_MainMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Menus/WBP_MainMenu.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Makefile.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Makefile.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/LiveCodingInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/LiveCodingInfo.json" afterDir="false" />
@@ -47,16 +48,16 @@
       <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/Capstone.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/Capstone.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/SaveGames/MySaveGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/SaveGames/MySaveGame.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/SaveGames/MySaveGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/SaveGames/MySaveGame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,14 +297,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocationIfSeen.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/HomingProjectile.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/HomingProjectile.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/ProjectileBase.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PlayerHUD.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PlayerHUD.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/EndMenu.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/BaseAboveHeadHealthbar.cpp" />
@@ -313,8 +311,6 @@
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/DamageTextComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/EndMenu.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MenuBase.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MenuBase.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.h" />
@@ -336,16 +332,21 @@
         <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/DataStructures/GameStructs.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponLootActor.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/GameInstances/MainGameInstance.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/SaveGames/MySaveGame.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/SaveGames/MySaveGame.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.cpp" />
       </list>
     </option>
   </component>
@@ -798,6 +799,7 @@
       <workItem from="1602968730059" duration="4188000" />
       <workItem from="1603054659758" duration="8260000" />
       <workItem from="1603112792335" duration="10315000" />
+      <workItem from="1603125279360" duration="3353000" />
     </task>
     <servers />
   </component>

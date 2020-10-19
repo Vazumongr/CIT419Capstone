@@ -3,10 +3,14 @@
 
 #include "MainGameMode.h"
 
-#include "Capstone/Pawns/ObservingPawn.h"
 #include "Capstone/Characters/PlayerCharacter.h"
 #include "Capstone/Controllers/PlayerAIController.h"
 #include "Capstone/Controllers/ObservingPlayerController.h"
+#include "Capstone/GameInstances/MainGameInstance.h"
+#include "Capstone/Pawns/ObservingPawn.h"
+#include "Capstone/Pawns/BaseTurretPawn.h"
+#include "Capstone/SaveGames/MySaveGame.h"
+#include "Kismet/GameplayStatics.h"
 #include "EngineUtils.h"
 
 void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
@@ -35,6 +39,9 @@ void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* Ne
         ObservingPlayerController->SetObservingPawn(ObservingPawn);
         ObservingPlayerController->SetPlayerAIController(PlayerAIController);
     }
+
+    UMainGameInstance* GameInstance = Cast<UMainGameInstance>(GetGameInstance());
+    if(GameInstance->bLoadSave) LoadSave();
     
 }
 
@@ -52,4 +59,35 @@ void AMainGameMode::PlayerDied()
 void AMainGameMode::LoadEndingScreen()
 {
     GetWorld()->ServerTravel("/Game/Maps/EndScreenMap");
+}
+
+void AMainGameMode::LoadSave()
+{
+    // Loading stuff from the save
+    UE_LOG(LogTemp, Warning, TEXT("I am loading a save! (not really)"));
+    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+      
+    if(SaveGameInstance == nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Debug: It's the savegameinstance"));
+        return;
+    }
+    
+#pragma region [LoadingPlayerData]
+    FPlayerSaveData MyData = SaveGameInstance->PlayerSaveData;
+    PlayerCharacter->LoadGame(MyData);
+#pragma endregion
+    
+#pragma region [LoadingTurrets]
+    ensure(TurretClass);
+
+    TArray<FTurretSaveData> Turrets = SaveGameInstance->TurretSaveDatas;
+    UE_LOG(LogTemp, Warning, TEXT("TurretSaveData.Num : %d"), Turrets.Num());
+    for(FTurretSaveData TurretData : Turrets)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("I should be creating a turret..."));
+        ABaseTurretPawn* SpawnedTurret = GetWorld()->SpawnActor<ABaseTurretPawn>(TurretClass, TurretData.TurretTransform);
+        SpawnedTurret->LoadGame(TurretData);
+    }
+#pragma endregion 
 }

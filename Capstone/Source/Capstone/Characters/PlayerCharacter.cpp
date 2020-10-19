@@ -108,7 +108,6 @@ void APlayerCharacter::SwitchWeapon(FWeaponStats InStats)
 void APlayerCharacter::PrintInventory()
 {
 	FString DebugMsg = FString::Printf(TEXT("Inventory Contents: %s"), *InventoryComponent->ToString());
-	//GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, DebugMsg);
 }
 
 void APlayerCharacter::SaveGame()
@@ -116,7 +115,7 @@ void APlayerCharacter::SaveGame()
 	// Load the save if it's there
 	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
 	
-	if(SaveGameInstance == nullptr)
+	if(SaveGameInstance == nullptr) 
 	{
 		// If there wasn't a save loaded, create one
 		SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));

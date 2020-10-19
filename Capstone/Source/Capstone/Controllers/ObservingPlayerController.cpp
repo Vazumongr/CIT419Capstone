@@ -57,6 +57,20 @@ void AObservingPlayerController::BeginPlay()
     HUDWidget->SetOwningActor(PlayerAIController->GetPawn());
 }
 
+void AObservingPlayerController::SetupInputComponent()
+{
+    Super::SetupInputComponent();
+    // Action Bindings
+    InputComponent->BindAction("MoveCommand", IE_Pressed, this, &AObservingPlayerController::MoveCommand);
+    InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
+    InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::OpenInventory);
+    InputComponent->BindAction("PauseGame", IE_Pressed, this, &AObservingPlayerController::PauseGame);
+    InputComponent->BindAction("PlaceTurret", IE_Pressed, this, &AObservingPlayerController::PrepareTurret);
+    InputComponent->BindAction("SaveGame", IE_Pressed, this, &AObservingPlayerController::SaveGame);
+    // Axis Bindings
+    InputComponent->BindAxis("CameraZoom", this, &AObservingPlayerController::CameraZoom);
+}
+
 void AObservingPlayerController::GameHasEnded(AActor* EndGameFocus, bool bIsWinner)
 {
     Super::GameHasEnded(EndGameFocus, bIsWinner);
@@ -69,21 +83,6 @@ void AObservingPlayerController::EquipWeapon(FWeaponStats InStats)
 {
     ensure(PlayerAIController);
     PlayerAIController->SwitchWeapon(InStats);
-}
-
-void AObservingPlayerController::SetupInputComponent()
-{
-    Super::SetupInputComponent();
-    // Action Bindings
-    InputComponent->BindAction("MoveCommand", IE_Pressed, this, &AObservingPlayerController::MoveCommand);
-    InputComponent->BindAction("ToggleCameraLock", IE_Pressed, this, &AObservingPlayerController::ToggleCameraLock);
-    InputComponent->BindAction("PrintInventory", IE_Pressed, this, &AObservingPlayerController::OpenInventory);
-    InputComponent->BindAction("PauseGame", IE_Pressed, this, &AObservingPlayerController::PauseGame);
-    InputComponent->BindAction("PlaceTurret", IE_Pressed, this, &AObservingPlayerController::PrepareTurret);
-    InputComponent->BindAction("SaveGame", IE_Pressed, this, &AObservingPlayerController::SaveGame);
-    InputComponent->BindAction("LoadGame", IE_Pressed, this, &AObservingPlayerController::LoadGame);
-    // Axis Bindings
-    InputComponent->BindAxis("CameraZoom", this, &AObservingPlayerController::CameraZoom);
 }
 
 /** Handle the move command and send the HitResult to the PlayerAIController if we have it */
@@ -218,12 +217,21 @@ void AObservingPlayerController::PlaceTurret()
 // TODO this will eventually be removed from this class completely
 void AObservingPlayerController::SaveGame()
 {
+    // TODO THIS WILL BE HANDLED ELSEWHERE
+    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+	
+    if(SaveGameInstance != nullptr)
+    {
+        SaveGameInstance->PurgeArrays();
+    }
+    UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+    
     AMainGameMode* GameMode = GetWorld()->GetAuthGameMode<AMainGameMode>();
     if(GameMode != nullptr)
     {
         GameMode->SaveGame.Broadcast();
     }
-   
+    // TODO Purge the previous array
     UE_LOG(LogTemp, Warning, TEXT("Saving..."));
 }
 

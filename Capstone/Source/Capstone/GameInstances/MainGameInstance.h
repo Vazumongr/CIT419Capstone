@@ -23,6 +23,8 @@ public:
     UFUNCTION(BlueprintCallable)
     void LogTime();
 
+    bool bLoadSave;
+
 private:
     FString TimeSeconds;
 };

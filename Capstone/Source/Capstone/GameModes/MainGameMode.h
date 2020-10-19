@@ -48,6 +48,8 @@ private:
 	TSubclassOf<class APlayerAIController> PlayerAIControllerClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class ABaseTurretPawn> TurretClass;
+	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<class ABaseEnemyCharacter> EnemyClass;
 
 	APlayerCharacter* PlayerCharacter = nullptr;
 	

@@ -3,7 +3,9 @@
 
 #include "MainGameMode.h"
 
+#include "Capstone/Actors/BaseResourceDropActor.h"
 #include "Capstone/Characters/PlayerCharacter.h"
+#include "Capstone/Characters/BaseEnemyCharacter.h"
 #include "Capstone/Controllers/PlayerAIController.h"
 #include "Capstone/Controllers/ObservingPlayerController.h"
 #include "Capstone/GameInstances/MainGameInstance.h"
@@ -89,5 +91,32 @@ void AMainGameMode::LoadSave()
         ABaseTurretPawn* SpawnedTurret = GetWorld()->SpawnActor<ABaseTurretPawn>(TurretClass, TurretData.TurretTransform);
         SpawnedTurret->LoadGame(TurretData);
     }
-#pragma endregion 
+#pragma endregion
+
+#pragma region [LoadingEnemies]
+    ensure(EnemyClass);
+
+    TArray<FEnemySaveData> Enemies = SaveGameInstance->EnemySaveDatas;
+    UE_LOG(LogTemp, Warning, TEXT("EnemySaveDatas.Num : %d"), Enemies.Num());
+    for(FEnemySaveData EnemyData : Enemies)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("I should be creating a turret..."));
+        ABaseEnemyCharacter* SpawnedEnemy = GetWorld()->SpawnActor<ABaseEnemyCharacter>(EnemyClass, EnemyData.EnemyTransform);
+        SpawnedEnemy->LoadGame(EnemyData);
+    }
+#pragma endregion
+
+#pragma region [LoadingResourceDrops]
+    ensure(EnemyClass);
+
+    TArray<FResourceDropSaveData> ResourceDrops = SaveGameInstance->ResourceDropSaveDatas;
+    UE_LOG(LogTemp, Warning, TEXT("ResourceDropSaveDatas.Num : %d"), ResourceDrops.Num());
+    for(FResourceDropSaveData ResourceDropData : ResourceDrops)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("I should be creating a turret..."));
+        TSubclassOf<ABaseResourceDropActor> ResourceClass = ResourceDropData.ResourceClass;
+        ABaseResourceDropActor* SpawnedResource = GetWorld()->SpawnActor<ABaseResourceDropActor>(ResourceClass, ResourceDropData.ResourceDropTransform);
+        SpawnedResource->LoadGame(ResourceDropData);
+    }
+#pragma endregion
 }

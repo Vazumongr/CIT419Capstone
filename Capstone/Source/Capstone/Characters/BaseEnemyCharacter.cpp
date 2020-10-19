@@ -9,6 +9,8 @@
 #include "Capstone/ActorComponents/DamageTextComponent.h"
 #include "Capstone/ActorComponents/FloatingDamageNumbersComponent.h"
 #include "Capstone/Actors/HomingProjectile.h"
+#include "Capstone/DataStructures/GameStructs.h"
+#include "Capstone/SaveGames/MySaveGame.h"
 #include "Kismet/GameplayStatics.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Public/NiagaraFunctionLibrary.h"
 #include "../../Engine/Plugins/FX/Niagara/Source/Niagara/Classes/NiagaraSystem.h"
@@ -37,6 +39,7 @@ void ABaseEnemyCharacter::BeginPlay()
 	{
 		PlayerCharacter = MainGameMode->GetPlayerCharacter();
 		MainGameMode->GameOver.AddUniqueDynamic(this, &ABaseEnemyCharacter::GameIsOver);
+		MainGameMode->SaveGame.AddUniqueDynamic(this, &ABaseEnemyCharacter::SaveGame);
 	}
 		
 
@@ -55,7 +58,6 @@ void ABaseEnemyCharacter::Tick(float DeltaTime)
 void ABaseEnemyCharacter::DamagePlayer()
 {
 	ensure(PlayerCharacter);
-	float DamageAmount = dmg;
 	FPointDamageEvent PointDamageEvent;
 
 	FVector StartLocation = GetMesh()->GetBoneLocation("gun_pin");
@@ -114,30 +116,61 @@ void ABaseEnemyCharacter::GameIsOver()
 	DetachFromControllerPendingDestroy();
 }
 
-float ABaseEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+float ABaseEnemyCharacter::TakeDamage(float InDamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	const TSubclassOf<UDamageType> InDamageType = DamageEvent.DamageTypeClass;
 	if(DamageType == InDamageType)
 	{
-		DamageAmount = 100.0f;
+		InDamageAmount = 100.0f;
 	}
 		
-	float DamageApplied = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	Health -= DamageApplied;
-	if(Health <= 0)
+	float DamageApplied = Super::TakeDamage(InDamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	CurrentHealth -= DamageApplied;
+	if(CurrentHealth <= 0)
 	{
 		Die();
 	}
 
 	//DamageTextComponent->SpawnDamageText(DamageAmount);
 
-	SpawnDamageNumbers(DamageAmount);
+	SpawnDamageNumbers(InDamageAmount);
 		
 	return DamageApplied;
 }
 
 float ABaseEnemyCharacter::GetHealthPercent() const
 {
-	return Health / 100.0f;
+	return CurrentHealth / 100.0f;
+}
+
+void ABaseEnemyCharacter::SaveGame()
+{
+	// Load the save if it's there
+	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+	
+	if(SaveGameInstance == nullptr) 
+	{
+		// If there wasn't a save loaded, create one
+		SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
+	}
+
+	FEnemySaveData MyData;
+	MyData.CurrentHealth = CurrentHealth;
+	MyData.MaxHealth = MaxHealth;
+	MyData.EnemyTransform = GetActorTransform();
+	MyData.DamageAmount = DamageAmount;
+	
+	SaveGameInstance->EnemySaveDatas.Add(MyData);
+	
+	// Save the savegameinstance
+	UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+}
+
+void ABaseEnemyCharacter::LoadGame(FEnemySaveData InData)
+{
+	CurrentHealth = InData.CurrentHealth;
+	MaxHealth = InData.MaxHealth;
+	SetActorTransform(InData.EnemyTransform);
+	DamageAmount = InData.DamageAmount;
 }
 

@@ -32,25 +32,11 @@ ASteelDrop::ASteelDrop()
 
 }
 
-// Called when the game starts or when spawned
-void ASteelDrop::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
-
-// Called every frame
-void ASteelDrop::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-
 void ASteelDrop::Overlapping(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if(APlayerCharacter* Player = Cast<APlayerCharacter>(OtherActor))
 	{
-		Player->AddSteel(10);
+		Player->AddSteel(ResourceValue);
 		Destroy();
 	}
 	

@@ -2,8 +2,6 @@
 
 
 #include "HealthOrb.h"
-
-#include "Capstone/Characters/PlayerCharacter.h"
 #include "Components/SphereComponent.h"
 
 // Sets default values
@@ -32,27 +30,12 @@ AHealthOrb::AHealthOrb()
 	TriggerZone->OnComponentBeginOverlap.AddDynamic(this, &AHealthOrb::Overlapping);
 }
 
-// Called when the game starts or when spawned
-void AHealthOrb::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
-
 void AHealthOrb::Overlapping(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if(APlayerCharacter* Player = Cast<APlayerCharacter>(OtherActor))
 	{
-		Player->AddHealth(10);
+		Player->AddHealth(ResourceValue);
 		Destroy();
 	}
-	
-}
-
-// Called every frame
-void AHealthOrb::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
 }
 

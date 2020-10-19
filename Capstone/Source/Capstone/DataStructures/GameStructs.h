@@ -88,6 +88,8 @@ struct FResourceDropSaveData
 	FTransform ResourceDropTransform;
 	UPROPERTY()
 	float ResourceValue;
+	UPROPERTY()
+	TSubclassOf<class ABaseResourceDropActor> ResourceClass;
 };
 
 USTRUCT()

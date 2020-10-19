@@ -43491,6 +43491,8 @@
           <e p="Actors" t="Include">
             <e p="BaseLootActor.cpp" t="Include" />
             <e p="BaseLootActor.h" t="Include" />
+            <e p="BaseResourceDropActor.cpp" t="Include" />
+            <e p="BaseResourceDropActor.h" t="Include" />
             <e p="BaseWeaponActor.cpp" t="Include" />
             <e p="BaseWeaponActor.h" t="Include" />
             <e p="BaseWeaponLootActor.cpp" t="Include" />

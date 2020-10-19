@@ -29,6 +29,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	float GetHealthPercent() const;
+	UFUNCTION()
+	void SaveGame();
+	void LoadGame(struct FEnemySaveData InData);
 
 protected:
 	// Called when the game starts or when spawned
@@ -40,11 +43,12 @@ private:
 	UFUNCTION()
     void GameIsOver();
 	
-	float Health = 100.0f;
+	float MaxHealth = 100.0f;
+	float CurrentHealth = MaxHealth;
 	bool bGameOver = false;
 
 	UPROPERTY(EditAnywhere)
-	float dmg = 10.f;
+	float DamageAmount = 10.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage Type", meta = (AllowPrivateAccess = "true"));
 	TSubclassOf<UDamageType> DamageType;

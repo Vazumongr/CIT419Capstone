@@ -26,7 +26,12 @@ public:
 	
 	virtual void Interact(class APlayerCharacter* PlayerCharacter) override;
 
+	//void LoadGame(FWeaponDropSaveData InData);
+
 private:
+	UFUNCTION()
+	void SaveGame();
+	
 	UPROPERTY(EditAnywhere, Category = "Weapon Stats", meta = (AllowPrivateAccess = "true"))
 	FWeaponStats WeaponStats;
 	UPROPERTY(EditAnywhere, Category = "Setup", meta = (AllowPrivateAccess = "true"))

@@ -87,7 +87,6 @@ void AMainGameMode::LoadSave()
     UE_LOG(LogTemp, Warning, TEXT("TurretSaveData.Num : %d"), Turrets.Num());
     for(FTurretSaveData TurretData : Turrets)
     {
-        UE_LOG(LogTemp, Warning, TEXT("I should be creating a turret..."));
         ABaseTurretPawn* SpawnedTurret = GetWorld()->SpawnActor<ABaseTurretPawn>(TurretClass, TurretData.TurretTransform);
         SpawnedTurret->LoadGame(TurretData);
     }
@@ -100,23 +99,34 @@ void AMainGameMode::LoadSave()
     UE_LOG(LogTemp, Warning, TEXT("EnemySaveDatas.Num : %d"), Enemies.Num());
     for(FEnemySaveData EnemyData : Enemies)
     {
-        UE_LOG(LogTemp, Warning, TEXT("I should be creating a turret..."));
         ABaseEnemyCharacter* SpawnedEnemy = GetWorld()->SpawnActor<ABaseEnemyCharacter>(EnemyClass, EnemyData.EnemyTransform);
         SpawnedEnemy->LoadGame(EnemyData);
     }
 #pragma endregion
 
 #pragma region [LoadingResourceDrops]
-    ensure(EnemyClass);
 
     TArray<FResourceDropSaveData> ResourceDrops = SaveGameInstance->ResourceDropSaveDatas;
     UE_LOG(LogTemp, Warning, TEXT("ResourceDropSaveDatas.Num : %d"), ResourceDrops.Num());
     for(FResourceDropSaveData ResourceDropData : ResourceDrops)
     {
-        UE_LOG(LogTemp, Warning, TEXT("I should be creating a turret..."));
         TSubclassOf<ABaseResourceDropActor> ResourceClass = ResourceDropData.ResourceClass;
+        ensure(ResourceClass);
         ABaseResourceDropActor* SpawnedResource = GetWorld()->SpawnActor<ABaseResourceDropActor>(ResourceClass, ResourceDropData.ResourceDropTransform);
         SpawnedResource->LoadGame(ResourceDropData);
     }
 #pragma endregion
+    
+#pragma region [LoadingWeaponDrops]
+    ensure(WeaponDropClass);
+
+    TArray<FWeaponDropSaveData> WeaponDrops = SaveGameInstance->WeaponDropSaveDatas;
+    UE_LOG(LogTemp, Warning, TEXT("WeaponDropSaveDatas.Num : %d"), WeaponDrops.Num());
+    for(FWeaponDropSaveData WeaponDropData : WeaponDrops)
+    {
+        ABaseWeaponLootActor* SpawnedWeapon = GetWorld()->SpawnActor<ABaseWeaponLootActor>(WeaponDropClass, WeaponDropData.WeaponDropTransform);
+        SpawnedWeapon->SetWeaponStats(WeaponDropData.WeaponStats);
+    }
+#pragma endregion
+    
 }

@@ -50,6 +50,8 @@ private:
 	TSubclassOf<class ABaseTurretPawn> TurretClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class ABaseEnemyCharacter> EnemyClass;
+	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<class ABaseWeaponLootActor> WeaponDropClass;
 
 	APlayerCharacter* PlayerCharacter = nullptr;
 	

@@ -87,7 +87,7 @@ void ULootGenerator::SpawnLoot()
 	{
 		if(HealthOrbClass) SpawnResource(HealthOrbClass);
 	}
-	if(FMath::RandRange(1,2) == 1)
+	if(FMath::RandRange(1,1) == 1)
 	{
 		SpawnWeapon();
 	}

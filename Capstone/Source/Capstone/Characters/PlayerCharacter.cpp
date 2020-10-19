@@ -31,7 +31,9 @@ void APlayerCharacter::BeginPlay()
 	if(GameMode != nullptr)
 	{
 		GameMode->GameOver.AddUniqueDynamic(this, &APlayerCharacter::GameIsOver);
+		GameMode->SaveGame.AddUniqueDynamic(this, &APlayerCharacter::SaveGame);
 	}
+	Steel = 100;
 	
 }
 
@@ -111,7 +113,14 @@ void APlayerCharacter::PrintInventory()
 
 void APlayerCharacter::SaveGame()
 {
-	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
+	// Load the save if it's there
+	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+	
+	if(SaveGameInstance == nullptr)
+	{
+		// If there wasn't a save loaded, create one
+		SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
+	}
 
 	FPlayerSaveData MyData;
 	MyData.Inventory = InventoryComponent->GetInventoryTArray();

@@ -12,6 +12,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCapstone_init() {}
 	CAPSTONE_API UFunction* Z_Construct_UDelegateFunction_Capstone_GameOverDelegate__DelegateSignature();
+	CAPSTONE_API UFunction* Z_Construct_UDelegateFunction_Capstone_SaveGameDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_Capstone()
 	{
 		static UPackage* ReturnPackage = nullptr;
@@ -19,14 +20,15 @@ void EmptyLinkFunctionForGeneratedCodeCapstone_init() {}
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_Capstone_GameOverDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_Capstone_SaveGameDelegate__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Capstone",
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x677948A4,
-				0x46BFD1D6,
+				0x8C6B4B7C,
+				0x8F91F903,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

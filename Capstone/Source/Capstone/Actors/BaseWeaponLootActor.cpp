@@ -12,6 +12,7 @@ void ABaseWeaponLootActor::BeginPlay()
 {
     Super::BeginPlay();
     WeaponStats.StaticMesh = StaticMeshComponent->GetStaticMesh();
+    WeaponStats.DamageType = DamageType;
     TArray<UMaterialInterface*> Materials;
     StaticMeshComponent->GetUsedMaterials(Materials);
     UMaterialInterface* NewMat = nullptr;

@@ -20,13 +20,17 @@ class CAPSTONE_API UMySaveGame : public USaveGame
 	
 public:
 	UPROPERTY()
-	FVector PlayerLocation;
+	float SavedGameTime;
+	
 	UPROPERTY()
 	FPlayerSaveData PlayerSaveData;
-
+	UPROPERTY()
 	TArray<FTurretSaveData> TurretSaveDatas;
+	UPROPERTY()
 	TArray<FEnemySaveData> EnemySaveDatas;
+	UPROPERTY()
 	TArray<FResourceDropSaveData> ResourceDropSaveDatas;
+	UPROPERTY()
 	TArray<FWeaponDropSaveData> WeaponDropSaveDatas;
 	
 	

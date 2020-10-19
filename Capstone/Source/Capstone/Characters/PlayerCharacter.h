@@ -43,9 +43,9 @@ public:
 	void SwitchWeapon(FWeaponStats InStats);
 	
 	void PrintInventory();
-
+	UFUNCTION()
 	void SaveGame();
-
+	UFUNCTION()
 	void LoadGame(FPlayerSaveData InData);
 	
 	FString GetInventoryAsText();

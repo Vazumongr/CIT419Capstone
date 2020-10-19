@@ -29,5 +29,7 @@ public:
 private:
 	UPROPERTY(EditAnywhere, Category = "Weapon Stats", meta = (AllowPrivateAccess = "true"))
 	FWeaponStats WeaponStats;
+	UPROPERTY(EditAnywhere, Category = "Setup", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<UDamageType> DamageType;
 	
 };

@@ -3,7 +3,9 @@
 
 #include "BaseTurretPawn.h"
 
-
+#include "Capstone/DataStructures/GameStructs.h"
+#include "Capstone/Gamemodes/MainGameMode.h"
+#include "Capstone/SaveGames/MySaveGame.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/GameplayStatics.h"
@@ -29,6 +31,11 @@ ABaseTurretPawn::ABaseTurretPawn()
 void ABaseTurretPawn::BeginPlay()
 {
 	Super::BeginPlay();
+	AMainGameMode* GameMode = GetWorld()->GetAuthGameMode<AMainGameMode>();
+	if(GameMode != nullptr)
+	{
+		GameMode->SaveGame.AddUniqueDynamic(this, &ABaseTurretPawn::SaveGame);
+	}
 	
 }
 
@@ -130,6 +137,34 @@ void ABaseTurretPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 void ABaseTurretPawn::SetPlayer(AActor* InPlayer)
 {
 	Player = InPlayer;
+}
+
+void ABaseTurretPawn::SaveGame()
+{// Load the save if it's there
+	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
+	
+	if(SaveGameInstance == nullptr)
+	{
+		// If there wasn't a save loaded, create one
+		SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
+	}
+	
+	// Set up the data to be saved
+	FTurretSaveData MyData;
+	MyData.TurretTransform = GetActorTransform();
+	MyData.TurretHealth = 100.f;
+	// Save it to the file
+	SaveGameInstance->TurretSaveDatas.Add(MyData);
+	// Save the savegameinstance
+	
+	UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+	UE_LOG(LogTemp, Warning, TEXT("TurretSaveDatas.Num : %d"), SaveGameInstance->TurretSaveDatas.Num()); // This returns 0 still
+}
+
+void ABaseTurretPawn::LoadGame(FTurretSaveData InData)
+{
+	SetActorTransform(InData.TurretTransform);
+	UE_LOG(LogTemp, Warning, TEXT("Loaded a health value of: %f"), InData.TurretHealth);
 }
 
 void ABaseTurretPawn::SpawnAimingBeam()

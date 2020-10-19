@@ -9,6 +9,8 @@
 
 UDELEGATE()
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FGameOverDelegate);
+UDELEGATE()
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FSaveGameDelegate);
 
 /**
  * 
@@ -27,6 +29,7 @@ public:
 	FORCEINLINE class APlayerCharacter* GetPlayerCharacter() { return PlayerCharacter; }
 
 	FGameOverDelegate GameOver;
+	FSaveGameDelegate SaveGame;
 
 	UFUNCTION()
     void LoadEndingScreen();

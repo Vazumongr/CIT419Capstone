@@ -3,7 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Capstone/DataStructures/GameStructs.h"
 #include "GameFramework/Pawn.h"
+
 #include "BaseTurretPawn.generated.h"
 
 UCLASS()
@@ -22,6 +24,11 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void SetPlayer(AActor* InPlayer);
+
+	UFUNCTION()
+	void SaveGame();
+	UFUNCTION()
+	void LoadGame(FTurretSaveData InData);
 
 protected:
 	// Called when the game starts or when spawned

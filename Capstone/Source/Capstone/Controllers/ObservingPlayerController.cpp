@@ -7,6 +7,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Capstone/Actors/TurretPlacementHighlightActor.h"
 #include "Capstone/Controllers/PlayerAIController.h"
+#include "Capstone/Gamemodes/MainGameMode.h"
 #include "Capstone/Pawns/BaseTurretPawn.h"
 #include "Capstone/Pawns/ObservingPawn.h"
 #include "Capstone/SaveGames/MySaveGame.h"
@@ -214,11 +215,14 @@ void AObservingPlayerController::PlaceTurret()
     }
 }
 
+// TODO this will eventually be removed from this class completely
 void AObservingPlayerController::SaveGame()
 {
-    // Create instance of savegame class
-    PlayerAIController->SaveGame();    // TODO MAKE THIS A DELEGATE
-    
+    AMainGameMode* GameMode = GetWorld()->GetAuthGameMode<AMainGameMode>();
+    if(GameMode != nullptr)
+    {
+        GameMode->SaveGame.Broadcast();
+    }
    
     UE_LOG(LogTemp, Warning, TEXT("Saving..."));
 }
@@ -235,18 +239,27 @@ void AObservingPlayerController::LoadGame()
         UE_LOG(LogTemp, Warning, TEXT("Debug: It's the AIController"));
         return;
     }
-        
+      
     if(SaveGameInstance == nullptr)
     {
         UE_LOG(LogTemp, Warning, TEXT("Debug: It's the savegameinstance"));
         return;
     }
-
+    
     
     FPlayerSaveData MyData = SaveGameInstance->PlayerSaveData;
-    
-    //PlayerAIController->GetPawn()->SetActorTransform(MyData.PlayerTransform);
     PlayerAIController->LoadGame(MyData);
+
+    
+    TArray<FTurretSaveData> Turrets = SaveGameInstance->TurretSaveDatas;
+    UE_LOG(LogTemp, Warning, TEXT("TurretSaveData.Num : %d"), Turrets.Num());
+    for(FTurretSaveData TurretData : Turrets)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("I should be creating a turret..."));
+        ABaseTurretPawn* SpawnedTurret = GetWorld()->SpawnActor<ABaseTurretPawn>(TurretClass, TurretData.TurretTransform);
+        SpawnedTurret->LoadGame(TurretData);
+    }
+    
     
     UE_LOG(LogTemp, Warning, TEXT("Loading..."));
 }

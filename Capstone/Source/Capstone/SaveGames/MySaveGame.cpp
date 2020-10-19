@@ -5,5 +5,6 @@
 
 UMySaveGame::UMySaveGame()
 {
-    PlayerLocation = FVector(25,25,25);
+    TurretSaveDatas.Empty();
+    TurretSaveDatas.Shrink();
 }

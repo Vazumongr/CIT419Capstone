@@ -20,10 +20,13 @@ public:
     void SetOwningActor(AActor* NewOwner);
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 	void EndGame();
+	void LoadGame(float InTime);
 
 protected:
 	UPROPERTY(BlueprintReadOnly);
 	AActor* OwningActor;
+	UFUNCTION()
+	void SaveGame();
 
 private:
 	UPROPERTY()
@@ -31,4 +34,5 @@ private:
 	UPROPERTY(meta = (BindWidget))
 	class UTextBlock* TimerText = nullptr;
 	FString Time;
+	float InitialTime = 0.f;
 };

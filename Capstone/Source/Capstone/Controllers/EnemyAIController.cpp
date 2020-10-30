@@ -34,6 +34,8 @@ void AEnemyAIController::BeginPlay()
     
     BlackboardComponent->SetValueAsFloat(TEXT("DetectionRange"),DetectionRange);
     BlackboardComponent->SetValueAsFloat(TEXT("TargetRange"),TargetRange);
-    
-    BlackboardComponent->SetValueAsVector(TEXT("StartLocation"),GetPawn()->GetActorLocation());    // Records start location
+
+    if(GetPawn() == nullptr)
+        UE_LOG(LogTemp, Warning, TEXT("The controller is not possessing anything in beginplay"));
+    //BlackboardComponent->SetValueAsVector(TEXT("StartLocation"),GetPawn()->GetActorLocation());    // Records start location
 }

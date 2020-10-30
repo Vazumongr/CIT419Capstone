@@ -31,6 +31,7 @@ void UPauseMenu::ResumeGame()
 
 void UPauseMenu::QuitGame()
 {
+    TearDown();
     // TODO THIS WILL BE HANDLED ELSEWHERE
     UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
 	

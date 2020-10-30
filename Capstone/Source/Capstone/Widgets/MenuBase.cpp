@@ -5,6 +5,7 @@
 
 void UMenuBase::Setup()
 {
+    ensure(this);
     this->AddToViewport();
     this->bIsFocusable = true;
 
@@ -17,6 +18,7 @@ void UMenuBase::Setup()
 
     APlayerController* PlayerController = World->GetFirstPlayerController();
     if(!PlayerController) return;
+    
     PlayerController->SetInputMode(InputModeData);
     PlayerController->bShowMouseCursor = true;
 }

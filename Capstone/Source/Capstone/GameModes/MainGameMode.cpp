@@ -4,6 +4,7 @@
 #include "MainGameMode.h"
 
 #include "Capstone/Actors/BaseResourceDropActor.h"
+#include "Capstone/Actors/EnemySpawnPoint.h"
 #include "Capstone/Characters/PlayerCharacter.h"
 #include "Capstone/Characters/BaseEnemyCharacter.h"
 #include "Capstone/Controllers/PlayerAIController.h"
@@ -14,6 +15,7 @@
 #include "Capstone/SaveGames/MySaveGame.h"
 #include "Kismet/GameplayStatics.h"
 #include "EngineUtils.h"
+#include "TimerManager.h"
 
 void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
 {
@@ -36,8 +38,9 @@ void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* Ne
     ObservingPawn->SetPlayerController(NewPlayer);    // TODO this most likely isn't needed. Bad design to have a 2 way street.
     ObservingPawn->SetPlayerCharacter(PlayerCharacter);
 
-    if(AObservingPlayerController* ObservingPlayerController = Cast<AObservingPlayerController>(NewPlayer))
+    if(AObservingPlayerController* PlayerController = Cast<AObservingPlayerController>(NewPlayer))
     {
+        ObservingPlayerController = PlayerController;
         ObservingPlayerController->SetObservingPawn(ObservingPawn);
         ObservingPlayerController->SetPlayerAIController(PlayerAIController);
     }
@@ -63,6 +66,23 @@ void AMainGameMode::LoadEndingScreen()
     GetWorld()->ServerTravel("/Game/Maps/EndScreenMap");
 }
 
+void AMainGameMode::BeginPlay()
+{
+    Super::BeginPlay();
+    TArray<AActor*> TempActors;
+    UGameplayStatics::GetAllActorsOfClass(GetWorld(), AEnemySpawnPoint::StaticClass(), TempActors);
+    for (AActor* Actor : TempActors)
+    {
+        if(AEnemySpawnPoint* SpawnPoint = Cast<AEnemySpawnPoint>(Actor))
+        {
+            EnemySpawnPoints.Add(SpawnPoint);
+            UE_LOG(LogTemp, Warning, TEXT("I have found %d spawn points"), EnemySpawnPoints.Num());
+        }
+    }
+
+    GetWorld()->GetTimerManager().SetTimer(TEnemySpawnHandle, this, &AMainGameMode::SpawnEnemy, SpawnRateSeconds, true);
+}
+
 void AMainGameMode::LoadSave()
 {
     // Loading stuff from the save
@@ -74,13 +94,15 @@ void AMainGameMode::LoadSave()
         UE_LOG(LogTemp, Warning, TEXT("Debug: It's the savegameinstance"));
         return;
     }
+
+    ObservingPlayerController->LoadGame(SaveGameInstance->SavedGameTime);
     
-#pragma region [LoadingPlayerData]
+    #pragma region [LoadingPlayerData]
     FPlayerSaveData MyData = SaveGameInstance->PlayerSaveData;
     PlayerCharacter->LoadGame(MyData);
 #pragma endregion
     
-#pragma region [LoadingTurrets]
+    #pragma region [LoadingTurrets]
     ensure(TurretClass);
 
     TArray<FTurretSaveData> Turrets = SaveGameInstance->TurretSaveDatas;
@@ -92,7 +114,7 @@ void AMainGameMode::LoadSave()
     }
 #pragma endregion
 
-#pragma region [LoadingEnemies]
+    #pragma region [LoadingEnemies]
     ensure(EnemyClass);
 
     TArray<FEnemySaveData> Enemies = SaveGameInstance->EnemySaveDatas;
@@ -104,7 +126,7 @@ void AMainGameMode::LoadSave()
     }
 #pragma endregion
 
-#pragma region [LoadingResourceDrops]
+    #pragma region [LoadingResourceDrops]
 
     TArray<FResourceDropSaveData> ResourceDrops = SaveGameInstance->ResourceDropSaveDatas;
     UE_LOG(LogTemp, Warning, TEXT("ResourceDropSaveDatas.Num : %d"), ResourceDrops.Num());
@@ -117,7 +139,7 @@ void AMainGameMode::LoadSave()
     }
 #pragma endregion
     
-#pragma region [LoadingWeaponDrops]
+    #pragma region [LoadingWeaponDrops]
     ensure(WeaponDropClass);
 
     TArray<FWeaponDropSaveData> WeaponDrops = SaveGameInstance->WeaponDropSaveDatas;
@@ -128,5 +150,19 @@ void AMainGameMode::LoadSave()
         SpawnedWeapon->SetWeaponStats(WeaponDropData.WeaponStats);
     }
 #pragma endregion
-    
+
+}
+
+void AMainGameMode::SpawnEnemy()
+{
+    int RandomIndex = FMath::RandRange(0,EnemySpawnPoints.Num()-1);
+    if(AEnemySpawnPoint* SpawnPoint = EnemySpawnPoints[RandomIndex])
+    {
+        if(ABaseEnemyCharacter* Enemy = GetWorld()->SpawnActor<ABaseEnemyCharacter>(EnemyClass, SpawnPoint->GetTransform()))
+        {
+            UE_LOG(LogTemp, Warning, TEXT("SPAWNING ENEMY"));
+            if(!(SpawnRateSeconds <= MinSpawnRate))
+                SpawnRateSeconds -= .1f;
+        }
+    }
 }

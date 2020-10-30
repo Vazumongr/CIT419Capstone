@@ -55,6 +55,7 @@ void AObservingPlayerController::BeginPlay()
     HUDWidget->AddToViewport();
     ensure(PlayerAIController);
     HUDWidget->SetOwningActor(PlayerAIController->GetPawn());
+    HUDWidget->LoadGame(LoadedTime);
 }
 
 void AObservingPlayerController::SetupInputComponent()
@@ -163,22 +164,18 @@ void AObservingPlayerController::OpenInventory()
 
 void AObservingPlayerController::PauseGame()
 {
-    ensure(PauseMenuClass);
-    static UPauseMenu* PauseMenu;
     if(PauseMenu == nullptr)
     {
         PauseMenu = CreateWidget<UPauseMenu>(this, PauseMenuClass);
         UE_LOG(LogTemp, Warning, TEXT("Creating pause menu"));
     }
-    if(PauseMenu == nullptr)
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Pause menu is null"));
-        return;
-    }
     
-    PauseMenu->Setup();
-    SetPause(true);
-    UE_LOG(LogTemp, Warning, TEXT("Pausing"));
+    if(PauseMenu != nullptr)
+    {
+        PauseMenu->Setup();
+        SetPause(true);
+        UE_LOG(LogTemp, Warning, TEXT("Pausing"));
+    }
 }
 
 void AObservingPlayerController::PrepareTurret()
@@ -223,10 +220,8 @@ void AObservingPlayerController::PlaceTurret()
     }
 }
 
-// TODO this will eventually be removed from this class completely
 void AObservingPlayerController::SaveGame()
 {
-    // TODO THIS WILL BE HANDLED ELSEWHERE
     UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
 	
     if(SaveGameInstance != nullptr)
@@ -244,41 +239,9 @@ void AObservingPlayerController::SaveGame()
     UE_LOG(LogTemp, Warning, TEXT("Saving..."));
 }
 
-// TODO THIS SHOULD BE HANDLED IN GAME MODE
-void AObservingPlayerController::LoadGame()
+void AObservingPlayerController::LoadGame(float InTime)
 {
-    // Create instance of savegame class
-    UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MySlot"), 0));
-    
-    // Set the players location from the saved file
-    if(PlayerAIController == nullptr)
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Debug: It's the AIController"));
-        return;
-    }
-      
-    if(SaveGameInstance == nullptr)
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Debug: It's the savegameinstance"));
-        return;
-    }
-    
-    
-    FPlayerSaveData MyData = SaveGameInstance->PlayerSaveData;
-    PlayerAIController->LoadGame(MyData);
-
-    
-    TArray<FTurretSaveData> Turrets = SaveGameInstance->TurretSaveDatas;
-    UE_LOG(LogTemp, Warning, TEXT("TurretSaveData.Num : %d"), Turrets.Num());
-    for(FTurretSaveData TurretData : Turrets)
-    {
-        UE_LOG(LogTemp, Warning, TEXT("I should be creating a turret..."));
-        ABaseTurretPawn* SpawnedTurret = GetWorld()->SpawnActor<ABaseTurretPawn>(TurretClass, TurretData.TurretTransform);
-        SpawnedTurret->LoadGame(TurretData);
-    }
-    
-    
-    UE_LOG(LogTemp, Warning, TEXT("Loading..."));
+    LoadedTime = InTime;
 }
 
 bool AObservingPlayerController::LineTrace(FHitResult& HitResult)

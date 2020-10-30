@@ -34,10 +34,17 @@ public:
 	UFUNCTION()
     void LoadEndingScreen();
 
-private:
 
+protected:
+
+	virtual void BeginPlay() override;
 	void LoadSave();
+	void SpawnEnemy();
 	
+	UPROPERTY()
+	TArray<class AEnemySpawnPoint*> EnemySpawnPoints;
+
+	#pragma region [PlayerSetup]
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<APlayerCharacter> PlayerCharacterClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
@@ -46,6 +53,8 @@ private:
 	TSubclassOf<class AObservingPlayerController> ObservingPlayerControllerClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class APlayerAIController> PlayerAIControllerClass;
+	#pragma endregion
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class ABaseTurretPawn> TurretClass;
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
@@ -53,7 +62,14 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Character Setup", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class ABaseWeaponLootActor> WeaponDropClass;
 
-	APlayerCharacter* PlayerCharacter = nullptr;
+	FTimerHandle TEnemySpawnHandle;
+	float SpawnRateSeconds = 4.0f;
+	float MinSpawnRate = .5f;
+
+	UPROPERTY()
+	APlayerCharacter* PlayerCharacter;
+	UPROPERTY()
+	AObservingPlayerController* ObservingPlayerController;
 	
 	
 };

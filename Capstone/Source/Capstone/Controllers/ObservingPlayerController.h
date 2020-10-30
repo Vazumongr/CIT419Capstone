@@ -25,6 +25,8 @@ public:
 	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 
     void EquipWeapon(FWeaponStats InStats);
+    
+    void LoadGame(float InTime);
 
 protected:
     virtual void SetupInputComponent() override;
@@ -48,11 +50,11 @@ private:
     void PlaceTurret();
     UFUNCTION()
     void SaveGame();
-    UFUNCTION()
-    void LoadGame();
 
     // FUNCTIONS
     bool LineTrace(FHitResult& HitResult);
+
+    float LoadedTime = 0.f;
 
     // VARIABLES
     class ATurretPlacementHighlightActor* TurretPlacement = nullptr;
@@ -66,7 +68,9 @@ public:
     FORCEINLINE AObservingPawn* GetObservingPawn() const { return ObservingPawn; }
 
 private:
+    UPROPERTY()
     APlayerAIController* PlayerAIController = nullptr;
+    UPROPERTY()
     AObservingPawn* ObservingPawn = nullptr;
     
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess = "true"))
@@ -80,7 +84,12 @@ private:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Structures", meta = (AllowPrivateAccess = "true"))
     TSubclassOf<class ATurretPlacementHighlightActor> TurretPlacementClass;
 
+    
+    UPROPERTY()
     UPlayerHUD* HUDWidget = nullptr;
+    UPROPERTY()
     UInventoryWidget* InventoryWidget = nullptr;
+    UPROPERTY()
+    UPauseMenu* PauseMenu;
     
 };

@@ -2084,7 +2084,7 @@
                 <e p="formatter.h" t="Include" />
                 <e p="fwd.h" t="Include" />
                 <e p="logger-inl.h" t="Include" />
-                <e p="Logger.h" t="Include" />
+                <e p="logger.h" t="Include" />
                 <e p="pattern_formatter-inl.h" t="Include" />
                 <e p="pattern_formatter.h" t="Include" />
                 <e p="sinks" t="Include">
@@ -43497,6 +43497,8 @@
             <e p="BaseWeaponActor.h" t="Include" />
             <e p="BaseWeaponLootActor.cpp" t="Include" />
             <e p="BaseWeaponLootActor.h" t="Include" />
+            <e p="EnemySpawnPoint.cpp" t="Include" />
+            <e p="EnemySpawnPoint.h" t="Include" />
             <e p="HealthOrb.cpp" t="Include" />
             <e p="HealthOrb.h" t="Include" />
             <e p="HomingProjectile.cpp" t="Include" />

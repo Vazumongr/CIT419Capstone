@@ -81,6 +81,7 @@ void ABaseEnemyCharacter::DamagePlayer()
 	}
 	Bullet->SetTarget(PlayerCharacter);
 	Bullet->SetDamageEvent(DamageEvent);
+	Bullet->SetOwningActor(this);
 	UGameplayStatics::FinishSpawningActor(Bullet, SpawnTransform);
 	UE_LOG(LogTemp, Warning, TEXT("Spawned Rotation of: %s"), *Bullet->GetActorRotation().ToString());
 

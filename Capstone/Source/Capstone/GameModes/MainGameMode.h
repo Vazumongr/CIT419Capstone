@@ -63,7 +63,9 @@ protected:
 	TSubclassOf<class ABaseWeaponLootActor> WeaponDropClass;
 
 	FTimerHandle TEnemySpawnHandle;
+	UPROPERTY(EditAnywhere)
 	float SpawnRateSeconds = 4.0f;
+	UPROPERTY(EditAnywhere)
 	float MinSpawnRate = .5f;
 
 	UPROPERTY()

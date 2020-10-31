@@ -28,9 +28,12 @@ void UInventory::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompo
 	// ...
 }
 
-void UInventory::AddItem(FWeaponStats InObject)
+bool UInventory::AddItem(FWeaponStats InObject)
 {
+	if(Inventory.Num() >= 5)	// Inventory is full
+		return false;
 	Inventory.Add(InObject);	// Adds the given object to the inventory
+	return true;
 }
 
 TArray<FWeaponStats> UInventory::GetInventoryTArray() const

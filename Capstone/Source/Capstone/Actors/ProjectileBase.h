@@ -21,6 +21,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void SetDamageEvent(FMyDamageEvent InDamageEvent);
+	void SetOwningActor(AActor* InOwner);
 
 protected:
 	// Called when the game starts or when spawned
@@ -41,7 +42,8 @@ protected:
     void HitEnemy(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 
 private:
-
+	UPROPERTY()
+	AActor* OwningActor;
 	
 	
 

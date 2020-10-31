@@ -78,9 +78,12 @@ float APlayerCharacter::GetHealthPercent() const
 
 void APlayerCharacter::PickUpWeapon(ABaseWeaponLootActor* InWeapon)
 {
-	InventoryComponent->AddItem(InWeapon->GetWeaponStats());
-	InWeapon->Interact(this);
-	EquipWeapon(InWeapon->GetWeaponStats());
+	if(InventoryComponent->AddItem(InWeapon->GetWeaponStats()))
+	{
+		InWeapon->Interact(this);
+		EquipWeapon(InWeapon->GetWeaponStats());
+	}
+	
 }
 
 void APlayerCharacter::EquipWeapon(FWeaponStats InStats)

@@ -22,7 +22,7 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Adds a weapon to the inventory, storing it as a struct, essentially it's metadata
-	void AddItem(FWeaponStats InObject);
+	bool AddItem(FWeaponStats InObject);
 	// Returns the weapon struct at a given index
 	FORCEINLINE FWeaponStats GetItem(int32 Index) const { return Inventory[Index]; }
 	// Returns the size of the iventory

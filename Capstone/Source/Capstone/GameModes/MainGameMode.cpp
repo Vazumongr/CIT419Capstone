@@ -158,7 +158,9 @@ void AMainGameMode::SpawnEnemy()
     int RandomIndex = FMath::RandRange(0,EnemySpawnPoints.Num()-1);
     if(AEnemySpawnPoint* SpawnPoint = EnemySpawnPoints[RandomIndex])
     {
-        if(ABaseEnemyCharacter* Enemy = GetWorld()->SpawnActor<ABaseEnemyCharacter>(EnemyClass, SpawnPoint->GetTransform()))
+        FActorSpawnParameters SpawnParameters;
+        SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+        if(ABaseEnemyCharacter* Enemy = GetWorld()->SpawnActor<ABaseEnemyCharacter>(EnemyClass, SpawnPoint->GetTransform(), SpawnParameters))
         {
             UE_LOG(LogTemp, Warning, TEXT("SPAWNING ENEMY"));
             if(!(SpawnRateSeconds <= MinSpawnRate))

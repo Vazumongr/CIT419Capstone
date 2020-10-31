@@ -47,6 +47,12 @@ void AProjectileBase::HitEnemy(UPrimitiveComponent* OverlappedComponent, AActor*
 		Destroy();
 	}
 	*/
+	if(OtherActor == OwningActor) return;
+	TSubclassOf<AActor> OwnerClass = OwningActor->GetClass();
+	TSubclassOf<AActor> OtherClass = OtherActor->GetClass();
+	
+	if(OwnerClass == OtherClass) return;
+	
 	UGameplayStatics::ApplyDamage(OtherActor, DamageEvent.DamageAmount, DamageEvent.PlayerController, DamageEvent.PlayerActor, DamageEvent.DamageType);
 	UE_LOG(LogTemp, Warning, TEXT("I am destroying..."));
 	Destroy();
@@ -61,5 +67,10 @@ void AProjectileBase::Tick(float DeltaTime)
 void AProjectileBase::SetDamageEvent(FMyDamageEvent InDamageEvent)
 {
 	DamageEvent = InDamageEvent;
+}
+
+void AProjectileBase::SetOwningActor(AActor* InOwner)
+{
+	OwningActor = InOwner;
 }
 

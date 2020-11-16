@@ -23,8 +23,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-	class USceneComponent* Root;
 	UPROPERTY(EditDefaultsOnly)
-	class UStaticMeshComponent* StaticMeshComponent = nullptr;
+	class UStaticMeshComponent* StaticMeshComponent;
+	UPROPERTY(EditDefaultsOnly)
+	class UNiagaraComponent* NiagaraComponent;
 };

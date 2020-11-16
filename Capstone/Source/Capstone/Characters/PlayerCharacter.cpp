@@ -18,9 +18,6 @@ APlayerCharacter::APlayerCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	InventoryComponent = CreateDefaultSubobject<UInventory>(TEXT("Inventory Component"));
-	
-	GetMesh()->HideBoneByName(TEXT("pistol"), EPhysBodyOp::PBO_None);	// Hides the gun in the SM
-	
 }
 
 // Called when the game starts or when spawned
@@ -33,7 +30,7 @@ void APlayerCharacter::BeginPlay()
 		GameMode->GameOver.AddUniqueDynamic(this, &APlayerCharacter::GameIsOver);
 		GameMode->SaveGame.AddUniqueDynamic(this, &APlayerCharacter::SaveGame);
 	}
-	Steel = 100;
+	GetMesh()->HideBoneByName(TEXT("pistol"), EPhysBodyOp::PBO_None);	// Hides the gun in the SM
 	
 }
 
@@ -42,7 +39,7 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	FString DebugMsg = FString::Printf(TEXT("Current steel: %f"), Steel);
-	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Blue, DebugMsg);
+	GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Cyan, DebugMsg);
 
 }
 
@@ -58,12 +55,19 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 
 void APlayerCharacter::DealDamageToEnemy(AActor* EnemyToDamage)
 {
+	if(!bCanShoot) return;
 	FVector StartLocation = GetActorLocation();
 	FVector EndLocation = EnemyToDamage->GetActorLocation();
 	FRotator Rotation = UKismetMathLibrary::FindLookAtRotation(StartLocation, EndLocation);
 	SetActorRotation(Rotation);
 	if(EquippedWeaponActor != nullptr)
+	{
 		EquippedWeaponActor->DealDamageToEnemy(EnemyToDamage, GetController(), this);
+		UWorld* World = GetWorld();
+		bCanShoot = false;
+		World->GetTimerManager().SetTimer(TShootDelayHandle, this, &APlayerCharacter::SetShootBool, .5f, false);
+	}
+		
 }
 
 void APlayerCharacter::InteractWithItem(IInteractableItemInterface* ItemToInteract)
@@ -182,6 +186,11 @@ void APlayerCharacter::Die()
 	}
 	
 	DetachFromControllerPendingDestroy();
+}
+
+void APlayerCharacter::SetShootBool()
+{
+	bCanShoot = true;
 }
 
 void APlayerCharacter::GameIsOver()

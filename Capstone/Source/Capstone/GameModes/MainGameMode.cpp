@@ -17,6 +17,11 @@
 #include "EngineUtils.h"
 #include "TimerManager.h"
 
+AMainGameMode::AMainGameMode()
+{
+    PrimaryActorTick.bCanEverTick = true;
+}
+
 void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
 {
     AActor* SpawnPoint = ChoosePlayerStart(NewPlayer);
@@ -48,6 +53,17 @@ void AMainGameMode::HandleStartingNewPlayer_Implementation(APlayerController* Ne
     UMainGameInstance* GameInstance = Cast<UMainGameInstance>(GetGameInstance());
     if(GameInstance->bLoadSave) LoadSave();
     
+}
+
+void AMainGameMode::Tick(float DeltaSeconds)
+{
+    Super::Tick(DeltaSeconds);
+    if(GEngine!=nullptr)
+    {
+        FString DebugMsg = FString::Printf(TEXT("Enemy spawn timer: %f"), SpawnRateSeconds);
+        GEngine->AddOnScreenDebugMessage(-1,0,FColor::Cyan,DebugMsg);
+        UE_LOG(LogTemp, Warning, TEXT("%s"), *DebugMsg);
+    }
 }
 
 void AMainGameMode::PlayerDied()
@@ -155,12 +171,17 @@ void AMainGameMode::LoadSave()
 
 void AMainGameMode::SpawnEnemy()
 {
-    int RandomIndex = FMath::RandRange(0,EnemySpawnPoints.Num()-1);
+    const int RandomIndex = FMath::RandRange(0,EnemySpawnPoints.Num()-1);
     if(AEnemySpawnPoint* SpawnPoint = EnemySpawnPoints[RandomIndex])
     {
         FActorSpawnParameters SpawnParameters;
         SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
-        if(ABaseEnemyCharacter* Enemy = GetWorld()->SpawnActor<ABaseEnemyCharacter>(EnemyClass, SpawnPoint->GetTransform(), SpawnParameters))
+
+        const FVector SpawnLocationBuffer = FVector((FMath::RandRange(0.f, 80.f), FMath::RandRange(0.f, 80.f), FMath::RandRange(0.f, 80.f)));
+        const FVector SpawnLocation = SpawnPoint->GetActorLocation() + SpawnLocationBuffer;
+        const FRotator SpawnRotation = SpawnPoint->GetActorRotation();
+        
+        if(ABaseEnemyCharacter* Enemy = GetWorld()->SpawnActor<ABaseEnemyCharacter>(EnemyClass, SpawnLocation, SpawnRotation, SpawnParameters))
         {
             UE_LOG(LogTemp, Warning, TEXT("SPAWNING ENEMY"));
             if(!(SpawnRateSeconds <= MinSpawnRate))

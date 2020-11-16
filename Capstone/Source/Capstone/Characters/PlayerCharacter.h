@@ -65,6 +65,7 @@ private:
 
 
 	void Die();
+	void SetShootBool();
 
 	UFUNCTION()
 	void GameIsOver();
@@ -79,10 +80,15 @@ private:
 	class UInventory* InventoryComponent;
 
 	FWeaponStats EquippedWeaponStats;
+	FTimerHandle TShootDelayHandle;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float MaxHealth = 100.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float Health = 100.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float Steel = 0.0f;
+	bool bCanShoot = true;
 
 
 

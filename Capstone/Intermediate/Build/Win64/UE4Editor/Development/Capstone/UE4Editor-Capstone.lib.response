@@ -7,11 +7,14 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\CapstoneEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Inventory.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseLootActor.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseWeaponActor.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\ProjectileBase.cpp.obj"
-"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseEnemyCharacter.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\PlayerCharacter.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\ObservingPlayerController.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\PlayerAIController.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\MainGameMode.cpp.obj"
+"C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\BaseTurretPawn.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Module.Capstone.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Capstone.init.gen.cpp.obj"
 "C:\Users\troy\Documents\Repositories\Githubslabs\CIT419Capstone\Capstone\Intermediate\Build\Win64\UE4Editor\Development\Capstone\Module.Capstone.gen.cpp.obj"

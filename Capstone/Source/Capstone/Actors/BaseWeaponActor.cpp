@@ -82,6 +82,7 @@ void ABaseWeaponActor::DealDamageToEnemy(AActor* EnemyToDamage, AController* Pla
 	}
 	Bullet->SetTarget(EnemyToDamage);
 	Bullet->SetDamageEvent(DamageEvent);
+	Bullet->SetOwningActor(PlayerActor);
 	UGameplayStatics::FinishSpawningActor(Bullet, SpawnTransform);
 
 	

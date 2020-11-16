@@ -48,6 +48,7 @@ void AProjectileBase::HitEnemy(UPrimitiveComponent* OverlappedComponent, AActor*
 	}
 	*/
 	if(OtherActor == OwningActor) return;
+	ensure(OwningActor);
 	TSubclassOf<AActor> OwnerClass = OwningActor->GetClass();
 	TSubclassOf<AActor> OtherClass = OtherActor->GetClass();
 	

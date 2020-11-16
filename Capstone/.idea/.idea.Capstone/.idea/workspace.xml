@@ -27,18 +27,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f62275ea-b741-45b3-bda7-a8a130f3606a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Effects/NE_LootShimmer.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Effects/NE_LootShimmer2_System.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Effects/NS_LootShimmer.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/CapstoneEditor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/CapstoneEditor.target" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor-Capstone.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BaseEnemyCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UE4Editor.modules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BaseWeaponLootActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BaseWeaponLootActor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/PlayerBPs/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/PlayerBPs/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainMenuMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Menus/Inventory/WBP_InventoryItemIcon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Menus/Inventory/WBP_InventoryItemIcon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapstoneModuleRules.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapstoneModuleRules.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapstoneModuleRulesManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/BuildRules/CapstoneModuleRulesManifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/SourceFileCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/ActionHistory.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/CapstoneEditor.uhtmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Makefile.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Makefile.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Metadata.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/CapstoneEditor/Development/Metadata.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/LiveCodingInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/LiveCodingInfo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.dll.response" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.dll.response" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Development/Capstone/UE4Editor-Capstone.exp" afterDir="false" />
@@ -48,18 +52,19 @@
       <change beforePath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/Timestamp" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Build/Win64/UE4Editor/Inc/Capstone/Timestamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/EditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/Windows/Engine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/Capstone.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/Capstone.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/ActorComponents/Inventory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/ActorComponents/Inventory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/ActorComponents/Inventory.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/ActorComponents/Inventory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/ProjectileBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/ProjectileBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Actors/ProjectileBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Actors/ProjectileBase.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,8 +303,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Widgets/EndMenu.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MenuBase.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/InventoryWidget.cpp" />
@@ -309,12 +312,8 @@
         <option value="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocation.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/FloatingDamageNumbersComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/BTServices/BTService_PlayerLocation.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MainMenu.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/SaveGames/MySaveGame.h" />
@@ -336,19 +335,25 @@
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PlayerHUD.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/MenuBase.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.h" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Widgets/PauseMenu.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/EnemySpawnPoint.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/EnemySpawnPoint.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Controllers/EnemyAIController.cpp" />
         <option value="$PROJECT_DIR$/Source/Capstone/Actors/ProjectileBase.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Characters/BaseEnemyCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/Actors/ProjectileBase.cpp" />
-        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/Inventory.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/ActorComponents/Inventory.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseLootActor.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Actors/BaseWeaponActor.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Actors/ProjectileBase.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.h" />
+        <option value="$PROJECT_DIR$/Source/Capstone/GameModes/MainGameMode.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/Capstone/Characters/PlayerCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/PlayerAIController.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Pawns/BaseTurretPawn.cpp" />
+        <option value="$PROJECT_DIR$/Source/Capstone/Controllers/ObservingPlayerController.cpp" />
       </list>
     </option>
   </component>
@@ -362,8 +367,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34950384" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29988974" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -812,6 +817,9 @@
       <workItem from="1604089261211" duration="56000" />
       <workItem from="1604089907760" duration="3132000" />
       <workItem from="1604176622556" duration="2806000" />
+      <workItem from="1604181023731" duration="1673000" />
+      <workItem from="1604446357658" duration="865000" />
+      <workItem from="1605475800164" duration="8719000" />
     </task>
     <servers />
   </component>
@@ -846,73 +854,85 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="364" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598294504780" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1603891892974">
+    <state width="938" height="375" key="GridCell.Tab.0.bottom" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603891892974" />
+    <state width="938" height="375" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808434" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1603891892974">
+    <state width="938" height="375" key="GridCell.Tab.0.center" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603891892974" />
+    <state width="938" height="375" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808434" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1603891892974">
+    <state width="938" height="375" key="GridCell.Tab.0.left" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603891892974" />
+    <state width="938" height="375" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808434" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1603891892974">
+    <state width="938" height="375" key="GridCell.Tab.0.right" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603891892974" />
+    <state width="938" height="375" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808434" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.1.bottom" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1597762808434">
+    <state width="938" height="375" key="GridCell.Tab.1.center" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808434" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1597762808434">
+    <state width="938" height="375" key="GridCell.Tab.1.left" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808434" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.1.right" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808434" />
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.2.bottom" timestamp="1604182711100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.2.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711100" />
     <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
-    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.2.center" timestamp="1604182711100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.2.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711100" />
     <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
-    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.2.left" timestamp="1604182711099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.2.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711099" />
     <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
-    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.2.right" timestamp="1604182711100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.2.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711100" />
     <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.3.bottom" timestamp="1604182711100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.3.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711100" />
     <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
-    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.3.center" timestamp="1604182711100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.3.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711100" />
     <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
-    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.3.left" timestamp="1604182711100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.3.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711100" />
     <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
-    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1597762808435">
+    <state width="938" height="375" key="GridCell.Tab.3.right" timestamp="1604182711100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="938" height="375" key="GridCell.Tab.3.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604182711100" />
     <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597762808435" />
     <state x="514" y="249" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1597761249673">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -922,15 +942,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="567" y="84" width="1508" height="855" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603056555423" />
-    <state x="842" y="100" width="960" height="803" key="find.popup" timestamp="1603890943266">
+    <state x="842" y="100" width="960" height="803" key="find.popup" timestamp="1605484510513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="842" y="100" width="960" height="803" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603890943266" />
+    <state x="842" y="100" width="960" height="803" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605484510513" />
     <state x="638" y="253" width="960" height="534" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599051689651" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602460119907">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604181328266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602460119907" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604181328266" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599051032504" />
     <state x="682" y="432" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1601301401639">
       <screen x="0" y="0" width="1920" height="1040" />

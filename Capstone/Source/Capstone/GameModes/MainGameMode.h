@@ -22,7 +22,11 @@ class CAPSTONE_API AMainGameMode : public AGameModeBase
 
 
 public:
+	AMainGameMode();
+	
+	
 	void HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer) override;
+	void Tick(float DeltaSeconds) override;
 
 	void PlayerDied();
 
